@@ -1,0 +1,630 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesignPatterns", "DesignPatterns", "{7F365772-9267-42F2-AF6C-4B2416DF7DE2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLIDprinciples", "SOLIDprinciples", "{1423524A-1920-448B-B149-3F84268AF170}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BehaviourPatterns", "BehaviourPatterns", "{87F62051-8281-4FB3-9FBA-0C581C02337E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CreationalPatterns", "CreationalPatterns", "{2FDA220A-5723-4A28-943A-7AE044DCD0D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StructuralPatterns", "StructuralPatterns", "{66F2519A-8343-4F99-9AAD-4D590CA61C1D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StrategyPattern", "StrategyPattern", "{39F9BB85-ABB6-4D0A-A0E0-FCA332D0E872}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateMethodPattern", "TemplateMethodPattern", "{722E1075-2124-4A13-AB62-AC58DE79F50C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbstractFactoryPattern", "AbstractFactoryPattern", "{861A4622-9803-4F18-92CC-D55894CE870D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdapterPattern", "AdapterPattern", "{11AEAAEE-0750-495B-AD00-E927AC08567D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecoratorPattern", "DecoratorPattern", "{AB6BC1EE-E793-4049-B970-B8A4E9DE5F72}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacadePattern", "FacadePattern", "{BB77C8D5-D7DE-4BCD-B83F-E3599FA8DFA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_concept", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_concept\StrategyPattern_concept.csproj", "{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StrategyPattern_example", "StrategyPattern_example", "{829DCAFB-ADFC-49F6-97DC-29021E917539}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplateMethodPattern_example", "TemplateMethodPattern_example", "{28FD517A-1359-4FFB-8F1D-6EE6303DCB71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbstractFactoryPattern_example", "AbstractFactoryPattern_example", "{F04CCD20-D2EB-45E4-B66F-1D6D6551CB3A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AdapterPattern_example", "AdapterPattern_example", "{00F7229C-7503-4A56-A25F-FEBED95DA635}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecoratorPattern_example", "DecoratorPattern_example", "{58F823C8-4F36-4BC4-BB14-643796675C2B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacadePattern_example", "FacadePattern_example", "{A3FE4252-D71B-48F0-947D-C2B40CE454F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatern_problem", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPatern_problem\StrategyPatern_problem.csproj", "{ADF6D80D-1E01-40ED-9830-E23E66893FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_challenge", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challenge\StrategyPattern_challenge.csproj", "{0474524B-3B99-4CF8-814D-09B44362631B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_challengeSolved", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challengeSolved\StrategyPattern_challengeSolved.csproj", "{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_concept", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethodPattern_concept\TemplatePattern_concept.csproj", "{291B9907-31AC-488C-A086-DB6B9A203170}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_problem", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_problem\TemplatePattern_problem.csproj", "{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_challenge", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challenge\TemplatePattern_challenge.csproj", "{FF196B19-FC02-4934-BEF2-9193049697FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_challengeSolved", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challengeSolved\TemplatePattern_challengeSolved.csproj", "{843CC056-EFDB-4399-ADAB-1A9278452894}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryPattern_concept", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_concept\AbstractFactoryPattern_concept.csproj", "{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_problem", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_problem\AbstractFactory_problem.csproj", "{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_challenge", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challenge\AbstractFactory_challenge.csproj", "{1BC0FFA3-5E96-4D08-9965-4874C016EC62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_challengeSolved", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challengeSolved\AbstractFactory_challengeSolved.csproj", "{7043727A-407A-46E8-ABB8-E838071751D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_concept", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_concept\AdapterPattern_concept.csproj", "{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_problem", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_problem\AdapterPattern_problem.csproj", "{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_challenge", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challenge\AdapterPattern_challenge.csproj", "{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_challengeSolved", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challengeSolved\AdapterPattern_challengeSolved.csproj", "{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_concept", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_concept\DecoratorPattern_concept.csproj", "{C3C0A0F0-39A9-4271-B257-ACA013022961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_problem", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_problem\DecoratorPattern_problem.csproj", "{183809F6-1B69-4E63-A326-41F0A1975866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_challenge", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challenge\DecoratorPattern_challenge.csproj", "{211D6D60-381F-4930-A43B-6F67F0902DFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_challengeSolved", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challengeSolved\DecoratorPattern_challengeSolved.csproj", "{0BB25D22-7975-4B7B-A284-C3F5A2D49854}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_concept", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_concept\FacadePattern_concept.csproj", "{922307D7-EFC0-4D77-9B0B-4B66381320F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_problem", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_problem\FacadePattern_problem.csproj", "{55C9F033-A3EC-4A6C-B45A-096F3D850675}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_challenge", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challenge\FacadePattern_challenge.csproj", "{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_challengedSolved", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challengedSolved\FacadePattern_challengedSolved.csproj", "{155264B4-51BF-43C1-B47D-FC0060B44F2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SingleResponsibility", "SingleResponsibility", "{7F5F06FB-97DA-4913-BBD1-AD0BC2DA78D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OpenClosed", "OpenClosed", "{7BF5E3A7-1597-4825-8F8B-A5E661A8A864}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LiskovSubstitution", "LiskovSubstitution", "{DAAEB0DB-6AC3-4EF9-A090-81E9EC742229}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfaceSegregation", "InterfaceSegregation", "{590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInversion", "DependencyInversion", "{47BEC897-3D6A-4F91-AD40-632532EFE32B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility_BadDesign", "SOLIDprinciples\SingleResponsibility\SingleResponsibility-BadDesign\SingleResponsibility_BadDesign.csproj", "{37675E19-8139-426F-AC20-A72AB44DF5B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility_GoodDesign", "SOLIDprinciples\SingleResponsibility\SingleResponsibility_BetterDesign\SingleResponsibility_GoodDesign.csproj", "{852D481B-E72C-4119-B9CF-72CADF226511}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility_FacadePattern", "SOLIDprinciples\SingleResponsibility\SingleResponsibility_FacadePattern\SingleResponsibility_FacadePattern.csproj", "{4D54BE32-273A-4428-8D4C-DF78A92B6539}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_BadDesign", "SOLIDprinciples\OpenClosed\OpenClosed_BadDesign\OpenClosed_BadDesign.csproj", "{362B4FCD-AD07-4CF1-B3FD-B4864D79125D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_GoodDesign", "SOLIDprinciples\OpenClosed\OpenClosed_GoodDesign\OpenClosed_GoodDesign.csproj", "{AA5CA453-863E-46F4-9590-8D7297F4116B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_StrategyPattern", "SOLIDprinciples\OpenClosed\OpenClosed_StrategyPattern\OpenClosed_StrategyPattern.csproj", "{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_DecoratorPattern", "SOLIDprinciples\OpenClosed\OpenClosed_DecoratorPattern\OpenClosed_DecoratorPattern.csproj", "{B155E890-BFC4-404F-B8DF-CD6A1899C42E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Labs", "Labs", "{24700602-2E3B-40B5-B4B4-C30F7C14D419}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_FacadeLab", "SOLIDprinciples\OpenClosed\Labs\OpenClosed_FacadeLab\OpenClosed_FacadeLab.csproj", "{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_StrategyLab", "SOLIDprinciples\OpenClosed\Labs\OpenClosed_StrategyLab\OpenClosed_StrategyLab.csproj", "{167033AC-5C6B-4CA3-90B7-9A865D856AE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution__BadDesign", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution__BadDesign\LiskovSubstitution__BadDesign.csproj", "{64905000-B630-4F0A-A37A-261F234FA489}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution__GoodDesign(wTemplatePattern)", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution__GoodDesign\LiskovSubstitution__GoodDesign(wTemplatePattern).csproj", "{5344382D-CD22-421F-80FB-7F505E177F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution__CodeContracts", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution__CodeContracts\LiskovSubstitution__CodeContracts.csproj", "{1EB38764-6BB9-43D8-AA6B-5C9D609138A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation__BadDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation__BadDesign\InterfaceSegregation__BadDesign.csproj", "{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_BetterDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BetterDesign\InterfaceSegregation_BetterDesign.csproj", "{74BF2352-8D13-4F66-ABB6-147D46122E2C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_GoodDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_GoodDesign\InterfaceSegregation_GoodDesign.csproj", "{091CB734-12CB-41D7-84BD-BF5859E902EF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_AdapterPattern", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_AdapterPattern\InterfaceSegregation_AdapterPattern.csproj", "{D214BCF3-F56C-4061-A4FD-CD35B118649B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion__BadDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion__BadDesign\DependencyInversion__BadDesign.csproj", "{AF2C711B-FAF7-43A8-81C6-5E4237CE3060}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion__BetterDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion__BetterDesign\DependencyInversion__BetterDesign.csproj", "{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion__GoodDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion__GoodDesign\DependencyInversion__GoodDesign.csproj", "{F3C7B8EE-1414-4E71-957A-8C74AA59E24E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_AbstractFactoryPattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_AbstractFactoryPattern\DependencyInversion_AbstractFactoryPattern.csproj", "{26ABBD81-34AA-44BB-9799-198753E32193}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_fluidInterfacePattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_fluidInterfacePattern\DependencyInversion_fluidInterfacePattern.csproj", "{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_AspectOrientedProgramming", "SOLIDprinciples\DependencyInversion\DependencyInversion_AspectOrientedProgramming\DependencyInversion_AspectOrientedProgramming.csproj", "{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_Ninject", "SOLIDprinciples\DependencyInversion\DependencyInversion_Ninject\DependencyInversion_Ninject.csproj", "{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_WindsorCastle", "SOLIDprinciples\DependencyInversion\DependencyInversion_WindsorCastle\DependencyInversion_WindsorCastle.csproj", "{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_Lab1", "SOLIDprinciples\DependencyInversion\DependencyInversion_Lab1\DependencyInversion_Lab1.csproj", "{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADF6D80D-1E01-40ED-9830-E23E66893FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADF6D80D-1E01-40ED-9830-E23E66893FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADF6D80D-1E01-40ED-9830-E23E66893FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADF6D80D-1E01-40ED-9830-E23E66893FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0474524B-3B99-4CF8-814D-09B44362631B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0474524B-3B99-4CF8-814D-09B44362631B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0474524B-3B99-4CF8-814D-09B44362631B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0474524B-3B99-4CF8-814D-09B44362631B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{291B9907-31AC-488C-A086-DB6B9A203170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{291B9907-31AC-488C-A086-DB6B9A203170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{291B9907-31AC-488C-A086-DB6B9A203170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{291B9907-31AC-488C-A086-DB6B9A203170}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF196B19-FC02-4934-BEF2-9193049697FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF196B19-FC02-4934-BEF2-9193049697FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF196B19-FC02-4934-BEF2-9193049697FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF196B19-FC02-4934-BEF2-9193049697FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{843CC056-EFDB-4399-ADAB-1A9278452894}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{843CC056-EFDB-4399-ADAB-1A9278452894}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{843CC056-EFDB-4399-ADAB-1A9278452894}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{843CC056-EFDB-4399-ADAB-1A9278452894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BC0FFA3-5E96-4D08-9965-4874C016EC62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BC0FFA3-5E96-4D08-9965-4874C016EC62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BC0FFA3-5E96-4D08-9965-4874C016EC62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BC0FFA3-5E96-4D08-9965-4874C016EC62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7043727A-407A-46E8-ABB8-E838071751D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7043727A-407A-46E8-ABB8-E838071751D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7043727A-407A-46E8-ABB8-E838071751D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7043727A-407A-46E8-ABB8-E838071751D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3C0A0F0-39A9-4271-B257-ACA013022961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C0A0F0-39A9-4271-B257-ACA013022961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C0A0F0-39A9-4271-B257-ACA013022961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C0A0F0-39A9-4271-B257-ACA013022961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{183809F6-1B69-4E63-A326-41F0A1975866}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{183809F6-1B69-4E63-A326-41F0A1975866}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{183809F6-1B69-4E63-A326-41F0A1975866}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{183809F6-1B69-4E63-A326-41F0A1975866}.Release|Any CPU.Build.0 = Release|Any CPU
+		{211D6D60-381F-4930-A43B-6F67F0902DFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{211D6D60-381F-4930-A43B-6F67F0902DFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{211D6D60-381F-4930-A43B-6F67F0902DFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{211D6D60-381F-4930-A43B-6F67F0902DFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BB25D22-7975-4B7B-A284-C3F5A2D49854}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BB25D22-7975-4B7B-A284-C3F5A2D49854}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BB25D22-7975-4B7B-A284-C3F5A2D49854}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BB25D22-7975-4B7B-A284-C3F5A2D49854}.Release|Any CPU.Build.0 = Release|Any CPU
+		{922307D7-EFC0-4D77-9B0B-4B66381320F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{922307D7-EFC0-4D77-9B0B-4B66381320F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{922307D7-EFC0-4D77-9B0B-4B66381320F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{922307D7-EFC0-4D77-9B0B-4B66381320F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55C9F033-A3EC-4A6C-B45A-096F3D850675}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55C9F033-A3EC-4A6C-B45A-096F3D850675}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55C9F033-A3EC-4A6C-B45A-096F3D850675}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55C9F033-A3EC-4A6C-B45A-096F3D850675}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{155264B4-51BF-43C1-B47D-FC0060B44F2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{155264B4-51BF-43C1-B47D-FC0060B44F2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{155264B4-51BF-43C1-B47D-FC0060B44F2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{155264B4-51BF-43C1-B47D-FC0060B44F2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37675E19-8139-426F-AC20-A72AB44DF5B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37675E19-8139-426F-AC20-A72AB44DF5B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37675E19-8139-426F-AC20-A72AB44DF5B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37675E19-8139-426F-AC20-A72AB44DF5B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{852D481B-E72C-4119-B9CF-72CADF226511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852D481B-E72C-4119-B9CF-72CADF226511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852D481B-E72C-4119-B9CF-72CADF226511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852D481B-E72C-4119-B9CF-72CADF226511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D54BE32-273A-4428-8D4C-DF78A92B6539}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D54BE32-273A-4428-8D4C-DF78A92B6539}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D54BE32-273A-4428-8D4C-DF78A92B6539}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D54BE32-273A-4428-8D4C-DF78A92B6539}.Release|Any CPU.Build.0 = Release|Any CPU
+		{362B4FCD-AD07-4CF1-B3FD-B4864D79125D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362B4FCD-AD07-4CF1-B3FD-B4864D79125D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362B4FCD-AD07-4CF1-B3FD-B4864D79125D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362B4FCD-AD07-4CF1-B3FD-B4864D79125D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA5CA453-863E-46F4-9590-8D7297F4116B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA5CA453-863E-46F4-9590-8D7297F4116B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA5CA453-863E-46F4-9590-8D7297F4116B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA5CA453-863E-46F4-9590-8D7297F4116B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B155E890-BFC4-404F-B8DF-CD6A1899C42E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B155E890-BFC4-404F-B8DF-CD6A1899C42E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B155E890-BFC4-404F-B8DF-CD6A1899C42E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B155E890-BFC4-404F-B8DF-CD6A1899C42E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167033AC-5C6B-4CA3-90B7-9A865D856AE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167033AC-5C6B-4CA3-90B7-9A865D856AE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167033AC-5C6B-4CA3-90B7-9A865D856AE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167033AC-5C6B-4CA3-90B7-9A865D856AE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64905000-B630-4F0A-A37A-261F234FA489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64905000-B630-4F0A-A37A-261F234FA489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64905000-B630-4F0A-A37A-261F234FA489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64905000-B630-4F0A-A37A-261F234FA489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5344382D-CD22-421F-80FB-7F505E177F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5344382D-CD22-421F-80FB-7F505E177F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5344382D-CD22-421F-80FB-7F505E177F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5344382D-CD22-421F-80FB-7F505E177F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EB38764-6BB9-43D8-AA6B-5C9D609138A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EB38764-6BB9-43D8-AA6B-5C9D609138A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EB38764-6BB9-43D8-AA6B-5C9D609138A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EB38764-6BB9-43D8-AA6B-5C9D609138A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74BF2352-8D13-4F66-ABB6-147D46122E2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74BF2352-8D13-4F66-ABB6-147D46122E2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74BF2352-8D13-4F66-ABB6-147D46122E2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74BF2352-8D13-4F66-ABB6-147D46122E2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091CB734-12CB-41D7-84BD-BF5859E902EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{091CB734-12CB-41D7-84BD-BF5859E902EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{091CB734-12CB-41D7-84BD-BF5859E902EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{091CB734-12CB-41D7-84BD-BF5859E902EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D214BCF3-F56C-4061-A4FD-CD35B118649B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D214BCF3-F56C-4061-A4FD-CD35B118649B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D214BCF3-F56C-4061-A4FD-CD35B118649B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D214BCF3-F56C-4061-A4FD-CD35B118649B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF2C711B-FAF7-43A8-81C6-5E4237CE3060}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF2C711B-FAF7-43A8-81C6-5E4237CE3060}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF2C711B-FAF7-43A8-81C6-5E4237CE3060}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF2C711B-FAF7-43A8-81C6-5E4237CE3060}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26ABBD81-34AA-44BB-9799-198753E32193}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26ABBD81-34AA-44BB-9799-198753E32193}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26ABBD81-34AA-44BB-9799-198753E32193}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26ABBD81-34AA-44BB-9799-198753E32193}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{87F62051-8281-4FB3-9FBA-0C581C02337E} = {7F365772-9267-42F2-AF6C-4B2416DF7DE2}
+		{2FDA220A-5723-4A28-943A-7AE044DCD0D7} = {7F365772-9267-42F2-AF6C-4B2416DF7DE2}
+		{66F2519A-8343-4F99-9AAD-4D590CA61C1D} = {7F365772-9267-42F2-AF6C-4B2416DF7DE2}
+		{39F9BB85-ABB6-4D0A-A0E0-FCA332D0E872} = {87F62051-8281-4FB3-9FBA-0C581C02337E}
+		{722E1075-2124-4A13-AB62-AC58DE79F50C} = {87F62051-8281-4FB3-9FBA-0C581C02337E}
+		{861A4622-9803-4F18-92CC-D55894CE870D} = {2FDA220A-5723-4A28-943A-7AE044DCD0D7}
+		{11AEAAEE-0750-495B-AD00-E927AC08567D} = {66F2519A-8343-4F99-9AAD-4D590CA61C1D}
+		{AB6BC1EE-E793-4049-B970-B8A4E9DE5F72} = {66F2519A-8343-4F99-9AAD-4D590CA61C1D}
+		{BB77C8D5-D7DE-4BCD-B83F-E3599FA8DFA7} = {66F2519A-8343-4F99-9AAD-4D590CA61C1D}
+		{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0} = {39F9BB85-ABB6-4D0A-A0E0-FCA332D0E872}
+		{829DCAFB-ADFC-49F6-97DC-29021E917539} = {39F9BB85-ABB6-4D0A-A0E0-FCA332D0E872}
+		{28FD517A-1359-4FFB-8F1D-6EE6303DCB71} = {722E1075-2124-4A13-AB62-AC58DE79F50C}
+		{F04CCD20-D2EB-45E4-B66F-1D6D6551CB3A} = {861A4622-9803-4F18-92CC-D55894CE870D}
+		{00F7229C-7503-4A56-A25F-FEBED95DA635} = {11AEAAEE-0750-495B-AD00-E927AC08567D}
+		{58F823C8-4F36-4BC4-BB14-643796675C2B} = {AB6BC1EE-E793-4049-B970-B8A4E9DE5F72}
+		{A3FE4252-D71B-48F0-947D-C2B40CE454F7} = {BB77C8D5-D7DE-4BCD-B83F-E3599FA8DFA7}
+		{ADF6D80D-1E01-40ED-9830-E23E66893FAE} = {829DCAFB-ADFC-49F6-97DC-29021E917539}
+		{0474524B-3B99-4CF8-814D-09B44362631B} = {829DCAFB-ADFC-49F6-97DC-29021E917539}
+		{18EEA3A3-02D1-44DC-9B02-D517A286DDD0} = {829DCAFB-ADFC-49F6-97DC-29021E917539}
+		{291B9907-31AC-488C-A086-DB6B9A203170} = {722E1075-2124-4A13-AB62-AC58DE79F50C}
+		{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4} = {28FD517A-1359-4FFB-8F1D-6EE6303DCB71}
+		{FF196B19-FC02-4934-BEF2-9193049697FF} = {28FD517A-1359-4FFB-8F1D-6EE6303DCB71}
+		{843CC056-EFDB-4399-ADAB-1A9278452894} = {28FD517A-1359-4FFB-8F1D-6EE6303DCB71}
+		{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3} = {861A4622-9803-4F18-92CC-D55894CE870D}
+		{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E} = {F04CCD20-D2EB-45E4-B66F-1D6D6551CB3A}
+		{1BC0FFA3-5E96-4D08-9965-4874C016EC62} = {F04CCD20-D2EB-45E4-B66F-1D6D6551CB3A}
+		{7043727A-407A-46E8-ABB8-E838071751D3} = {F04CCD20-D2EB-45E4-B66F-1D6D6551CB3A}
+		{5DF4F8A9-F078-42A8-8F68-9F7640F3880C} = {11AEAAEE-0750-495B-AD00-E927AC08567D}
+		{F6F811B6-2B5B-497C-B311-69C3DCFE9F83} = {00F7229C-7503-4A56-A25F-FEBED95DA635}
+		{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7} = {00F7229C-7503-4A56-A25F-FEBED95DA635}
+		{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308} = {00F7229C-7503-4A56-A25F-FEBED95DA635}
+		{C3C0A0F0-39A9-4271-B257-ACA013022961} = {AB6BC1EE-E793-4049-B970-B8A4E9DE5F72}
+		{183809F6-1B69-4E63-A326-41F0A1975866} = {58F823C8-4F36-4BC4-BB14-643796675C2B}
+		{211D6D60-381F-4930-A43B-6F67F0902DFF} = {58F823C8-4F36-4BC4-BB14-643796675C2B}
+		{0BB25D22-7975-4B7B-A284-C3F5A2D49854} = {58F823C8-4F36-4BC4-BB14-643796675C2B}
+		{922307D7-EFC0-4D77-9B0B-4B66381320F0} = {BB77C8D5-D7DE-4BCD-B83F-E3599FA8DFA7}
+		{55C9F033-A3EC-4A6C-B45A-096F3D850675} = {A3FE4252-D71B-48F0-947D-C2B40CE454F7}
+		{C9D6B043-0497-4BE1-AA2E-D0F348C5821A} = {A3FE4252-D71B-48F0-947D-C2B40CE454F7}
+		{155264B4-51BF-43C1-B47D-FC0060B44F2D} = {A3FE4252-D71B-48F0-947D-C2B40CE454F7}
+		{7F5F06FB-97DA-4913-BBD1-AD0BC2DA78D3} = {1423524A-1920-448B-B149-3F84268AF170}
+		{7BF5E3A7-1597-4825-8F8B-A5E661A8A864} = {1423524A-1920-448B-B149-3F84268AF170}
+		{DAAEB0DB-6AC3-4EF9-A090-81E9EC742229} = {1423524A-1920-448B-B149-3F84268AF170}
+		{590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF} = {1423524A-1920-448B-B149-3F84268AF170}
+		{47BEC897-3D6A-4F91-AD40-632532EFE32B} = {1423524A-1920-448B-B149-3F84268AF170}
+		{37675E19-8139-426F-AC20-A72AB44DF5B5} = {7F5F06FB-97DA-4913-BBD1-AD0BC2DA78D3}
+		{852D481B-E72C-4119-B9CF-72CADF226511} = {7F5F06FB-97DA-4913-BBD1-AD0BC2DA78D3}
+		{4D54BE32-273A-4428-8D4C-DF78A92B6539} = {7F5F06FB-97DA-4913-BBD1-AD0BC2DA78D3}
+		{362B4FCD-AD07-4CF1-B3FD-B4864D79125D} = {7BF5E3A7-1597-4825-8F8B-A5E661A8A864}
+		{AA5CA453-863E-46F4-9590-8D7297F4116B} = {7BF5E3A7-1597-4825-8F8B-A5E661A8A864}
+		{9C83A5DF-D24B-4D7F-B5EA-059900B4FD92} = {7BF5E3A7-1597-4825-8F8B-A5E661A8A864}
+		{B155E890-BFC4-404F-B8DF-CD6A1899C42E} = {7BF5E3A7-1597-4825-8F8B-A5E661A8A864}
+		{24700602-2E3B-40B5-B4B4-C30F7C14D419} = {7BF5E3A7-1597-4825-8F8B-A5E661A8A864}
+		{610DA3E5-AFE0-4B20-BEC5-A89F5634C2F4} = {24700602-2E3B-40B5-B4B4-C30F7C14D419}
+		{167033AC-5C6B-4CA3-90B7-9A865D856AE9} = {24700602-2E3B-40B5-B4B4-C30F7C14D419}
+		{64905000-B630-4F0A-A37A-261F234FA489} = {DAAEB0DB-6AC3-4EF9-A090-81E9EC742229}
+		{5344382D-CD22-421F-80FB-7F505E177F42} = {DAAEB0DB-6AC3-4EF9-A090-81E9EC742229}
+		{1EB38764-6BB9-43D8-AA6B-5C9D609138A5} = {DAAEB0DB-6AC3-4EF9-A090-81E9EC742229}
+		{6A27D8C0-FD92-4808-ADC6-4DF60B14FED0} = {590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF}
+		{74BF2352-8D13-4F66-ABB6-147D46122E2C} = {590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF}
+		{091CB734-12CB-41D7-84BD-BF5859E902EF} = {590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF}
+		{D214BCF3-F56C-4061-A4FD-CD35B118649B} = {590E1BF8-DFB9-4FD2-9367-EC7C4F8128EF}
+		{AF2C711B-FAF7-43A8-81C6-5E4237CE3060} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{7B5CD6F7-CCD3-4400-9DA2-93B2E94BF333} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{26ABBD81-34AA-44BB-9799-198753E32193} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{76C9A6D4-8DBC-4539-9ACC-F108FABF1EA0} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+		{C3BF1241-5C7A-4DD7-8F18-EAFEB16A886E} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 50
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mortennorgaard.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_concept\\StrategyPattern_concept.csproj
+		SccProjectTopLevelParentUniqueName1 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName1 = DesignPatterns/BehaviourPatterns/StrategyPattern/StrategyPattern_concept
+		SccLocalPath1 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_concept
+		SccProjectUniqueName2 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPatern_problem\\StrategyPatern_problem.csproj
+		SccProjectTopLevelParentUniqueName2 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName2 = DesignPatterns/BehaviourPatterns/StrategyPattern/StrategyPattern_example/StrategyPatern_problem
+		SccLocalPath2 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPatern_problem
+		SccProjectUniqueName3 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPattern_challenge\\StrategyPattern_challenge.csproj
+		SccProjectTopLevelParentUniqueName3 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName3 = DesignPatterns/BehaviourPatterns/StrategyPattern/StrategyPattern_example/StrategyPattern_challenge
+		SccLocalPath3 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPattern_challenge
+		SccProjectUniqueName4 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPattern_challengeSolved\\StrategyPattern_challengeSolved.csproj
+		SccProjectTopLevelParentUniqueName4 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName4 = DesignPatterns/BehaviourPatterns/StrategyPattern/StrategyPattern_example/StrategyPattern_challengeSolved
+		SccLocalPath4 = DesignPatterns\\BehaviourPatterns\\StrategyPattern\\StrategyPattern_example\\StrategyPattern_challengeSolved
+		SccProjectUniqueName5 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_challenge\\TemplatePattern_challenge.csproj
+		SccProjectTopLevelParentUniqueName5 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName5 = DesignPatterns/BehaviourPatterns/TemplateMethodPattern/TemplateMethod_example/TemplatePattern_challenge
+		SccLocalPath5 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_challenge
+		SccProjectUniqueName6 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_challengeSolved\\TemplatePattern_challengeSolved.csproj
+		SccProjectTopLevelParentUniqueName6 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName6 = DesignPatterns/BehaviourPatterns/TemplateMethodPattern/TemplateMethod_example/TemplatePattern_challengeSolved
+		SccLocalPath6 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_challengeSolved
+		SccProjectUniqueName7 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_problem\\TemplatePattern_problem.csproj
+		SccProjectTopLevelParentUniqueName7 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName7 = DesignPatterns/BehaviourPatterns/TemplateMethodPattern/TemplateMethod_example/TemplatePattern_problem
+		SccLocalPath7 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethod_example\\TemplatePattern_problem
+		SccProjectUniqueName8 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethodPattern_concept\\TemplatePattern_concept.csproj
+		SccProjectTopLevelParentUniqueName8 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName8 = DesignPatterns/BehaviourPatterns/TemplateMethodPattern/TemplateMethodPattern_concept
+		SccLocalPath8 = DesignPatterns\\BehaviourPatterns\\TemplateMethodPattern\\TemplateMethodPattern_concept
+		SccProjectUniqueName9 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_concept\\AbstractFactoryPattern_concept.csproj
+		SccProjectTopLevelParentUniqueName9 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName9 = DesignPatterns/CreationalPatterns/AbstractFactoryPattern/AbstractFactoryPattern_concept
+		SccLocalPath9 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_concept
+		SccProjectUniqueName10 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_challenge\\AbstractFactory_challenge.csproj
+		SccProjectTopLevelParentUniqueName10 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName10 = DesignPatterns/CreationalPatterns/AbstractFactoryPattern/AbstractFactoryPattern_example/AbstractFactory_challenge
+		SccLocalPath10 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_challenge
+		SccProjectUniqueName11 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_challengeSolved\\AbstractFactory_challengeSolved.csproj
+		SccProjectTopLevelParentUniqueName11 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName11 = DesignPatterns/CreationalPatterns/AbstractFactoryPattern/AbstractFactoryPattern_example/AbstractFactory_challengeSolved
+		SccLocalPath11 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_challengeSolved
+		SccProjectUniqueName12 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_problem\\AbstractFactory_problem.csproj
+		SccProjectTopLevelParentUniqueName12 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName12 = DesignPatterns/CreationalPatterns/AbstractFactoryPattern/AbstractFactoryPattern_example/AbstractFactory_problem
+		SccLocalPath12 = DesignPatterns\\CreationalPatterns\\AbstractFactoryPattern\\AbstractFactoryPattern_example\\AbstractFactory_problem
+		SccProjectUniqueName13 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_concept\\AdapterPattern_concept.csproj
+		SccProjectTopLevelParentUniqueName13 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName13 = DesignPatterns/StructuralPatterns/AdapterPattern/AdapterPattern_concept
+		SccLocalPath13 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_concept
+		SccProjectUniqueName14 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_challenge\\AdapterPattern_challenge.csproj
+		SccProjectTopLevelParentUniqueName14 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName14 = DesignPatterns/StructuralPatterns/AdapterPattern/AdapterPattern_example/AdapterPattern_challenge
+		SccLocalPath14 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_challenge
+		SccProjectUniqueName15 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_challengeSolved\\AdapterPattern_challengeSolved.csproj
+		SccProjectTopLevelParentUniqueName15 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName15 = DesignPatterns/StructuralPatterns/AdapterPattern/AdapterPattern_example/AdapterPattern_challengeSolved
+		SccLocalPath15 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_challengeSolved
+		SccProjectUniqueName16 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_problem\\AdapterPattern_problem.csproj
+		SccProjectTopLevelParentUniqueName16 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName16 = DesignPatterns/StructuralPatterns/AdapterPattern/AdapterPattern_example/AdapterPattern_problem
+		SccLocalPath16 = DesignPatterns\\StructuralPatterns\\AdapterPattern\\AdapterPattern_example\\AdapterPattern_problem
+		SccProjectUniqueName17 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_concept\\DecoratorPattern_concept.csproj
+		SccProjectTopLevelParentUniqueName17 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName17 = DesignPatterns/StructuralPatterns/DecoratorPattern/DecoratorPattern_concept
+		SccLocalPath17 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_concept
+		SccProjectUniqueName18 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_challenge\\DecoratorPattern_challenge.csproj
+		SccProjectTopLevelParentUniqueName18 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName18 = DesignPatterns/StructuralPatterns/DecoratorPattern/DecoratorPattern_example/DecoratorPattern_challenge
+		SccLocalPath18 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_challenge
+		SccProjectUniqueName19 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_challengeSolved\\DecoratorPattern_challengeSolved.csproj
+		SccProjectTopLevelParentUniqueName19 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName19 = DesignPatterns/StructuralPatterns/DecoratorPattern/DecoratorPattern_example/DecoratorPattern_challengeSolved
+		SccLocalPath19 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_challengeSolved
+		SccProjectUniqueName20 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_problem\\DecoratorPattern_problem.csproj
+		SccProjectTopLevelParentUniqueName20 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName20 = DesignPatterns/StructuralPatterns/DecoratorPattern/DecoratorPattern_example/DecoratorPattern_problem
+		SccLocalPath20 = DesignPatterns\\StructuralPatterns\\DecoratorPattern\\DecoratorPattern_example\\DecoratorPattern_problem
+		SccProjectUniqueName21 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_concept\\FacadePattern_concept.csproj
+		SccProjectTopLevelParentUniqueName21 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName21 = DesignPatterns/StructuralPatterns/FacadePattern/FacadePattern_concept
+		SccLocalPath21 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_concept
+		SccProjectUniqueName22 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_challenge\\FacadePattern_challenge.csproj
+		SccProjectTopLevelParentUniqueName22 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName22 = DesignPatterns/StructuralPatterns/FacadePattern/FacadePattern_example/FacadePattern_challenge
+		SccLocalPath22 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_challenge
+		SccProjectUniqueName23 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_challengedSolved\\FacadePattern_challengedSolved.csproj
+		SccProjectTopLevelParentUniqueName23 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName23 = DesignPatterns/StructuralPatterns/FacadePattern/FacadePattern_example/FacadePattern_challengedSolved
+		SccLocalPath23 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_challengedSolved
+		SccProjectUniqueName24 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_problem\\FacadePattern_problem.csproj
+		SccProjectTopLevelParentUniqueName24 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName24 = DesignPatterns/StructuralPatterns/FacadePattern/FacadePattern_example/FacadePattern_problem
+		SccLocalPath24 = DesignPatterns\\StructuralPatterns\\FacadePattern\\FacadePattern_example\\FacadePattern_problem
+		SccProjectUniqueName25 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__BadDesign\\DependencyInversion__BadDesign.csproj
+		SccProjectTopLevelParentUniqueName25 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName25 = SOLIDprinciples/DependencyInversion/DependencyInversion__BadDesign
+		SccLocalPath25 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__BadDesign
+		SccProjectUniqueName26 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__BetterDesign\\DependencyInversion__BetterDesign.csproj
+		SccProjectTopLevelParentUniqueName26 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName26 = SOLIDprinciples/DependencyInversion/DependencyInversion__BetterDesign
+		SccLocalPath26 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__BetterDesign
+		SccProjectUniqueName27 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__GoodDesign\\DependencyInversion__GoodDesign.csproj
+		SccProjectTopLevelParentUniqueName27 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName27 = SOLIDprinciples/DependencyInversion/DependencyInversion__GoodDesign
+		SccLocalPath27 = SOLIDprinciples\\DependencyInversion\\DependencyInversion__GoodDesign
+		SccProjectUniqueName28 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_AbstractFactoryPattern\\DependencyInversion_AbstractFactoryPattern.csproj
+		SccProjectTopLevelParentUniqueName28 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName28 = SOLIDprinciples/DependencyInversion/DependencyInversion_AbstractFactoryPattern
+		SccLocalPath28 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_AbstractFactoryPattern
+		SccProjectUniqueName29 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_AspectOrientedProgramming\\DependencyInversion_AspectOrientedProgramming.csproj
+		SccProjectTopLevelParentUniqueName29 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName29 = SOLIDprinciples/DependencyInversion/DependencyInversion_AspectOrientedProgramming
+		SccLocalPath29 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_AspectOrientedProgramming
+		SccProjectUniqueName30 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_fluidInterfacePattern\\DependencyInversion_fluidInterfacePattern.csproj
+		SccProjectTopLevelParentUniqueName30 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName30 = SOLIDprinciples/DependencyInversion/DependencyInversion_fluidInterfacePattern
+		SccLocalPath30 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_fluidInterfacePattern
+		SccProjectUniqueName31 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_Lab1\\DependencyInversion_Lab1.csproj
+		SccProjectTopLevelParentUniqueName31 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName31 = SOLIDprinciples/DependencyInversion/DependencyInversion_Lab1
+		SccLocalPath31 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_Lab1
+		SccProjectUniqueName32 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_Ninject\\DependencyInversion_Ninject.csproj
+		SccProjectTopLevelParentUniqueName32 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName32 = SOLIDprinciples/DependencyInversion/DependencyInversion_Ninject
+		SccLocalPath32 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_Ninject
+		SccProjectUniqueName33 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_WindsorCastle\\DependencyInversion_WindsorCastle.csproj
+		SccProjectTopLevelParentUniqueName33 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName33 = SOLIDprinciples/DependencyInversion/DependencyInversion_WindsorCastle
+		SccLocalPath33 = SOLIDprinciples\\DependencyInversion\\DependencyInversion_WindsorCastle
+		SccProjectUniqueName34 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation__BadDesign\\InterfaceSegregation__BadDesign.csproj
+		SccProjectTopLevelParentUniqueName34 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName34 = SOLIDprinciples/InterfaceSegregation/InterfaceSegregation__BadDesign
+		SccLocalPath34 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation__BadDesign
+		SccProjectUniqueName35 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_AdapterPattern\\InterfaceSegregation_AdapterPattern.csproj
+		SccProjectTopLevelParentUniqueName35 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName35 = SOLIDprinciples/InterfaceSegregation/InterfaceSegregation_AdapterPattern
+		SccLocalPath35 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_AdapterPattern
+		SccProjectUniqueName36 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_BetterDesign\\InterfaceSegregation_BetterDesign.csproj
+		SccProjectTopLevelParentUniqueName36 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName36 = SOLIDprinciples/InterfaceSegregation/InterfaceSegregation_BetterDesign
+		SccLocalPath36 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_BetterDesign
+		SccProjectUniqueName37 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_GoodDesign\\InterfaceSegregation_GoodDesign.csproj
+		SccProjectTopLevelParentUniqueName37 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName37 = SOLIDprinciples/InterfaceSegregation/InterfaceSegregation_GoodDesign
+		SccLocalPath37 = SOLIDprinciples\\InterfaceSegregation\\InterfaceSegregation_GoodDesign
+		SccProjectUniqueName38 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__BadDesign\\LiskovSubstitution__BadDesign.csproj
+		SccProjectTopLevelParentUniqueName38 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName38 = SOLIDprinciples/LiskovSubstitution/LiskovSubstitution__BadDesign
+		SccLocalPath38 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__BadDesign
+		SccProjectUniqueName39 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__CodeContracts\\LiskovSubstitution__CodeContracts.csproj
+		SccProjectTopLevelParentUniqueName39 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName39 = SOLIDprinciples/LiskovSubstitution/LiskovSubstitution__CodeContracts
+		SccLocalPath39 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__CodeContracts
+		SccProjectUniqueName40 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__GoodDesign\\LiskovSubstitution__GoodDesign(wTemplatePattern).csproj
+		SccProjectTopLevelParentUniqueName40 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName40 = SOLIDprinciples/LiskovSubstitution/LiskovSubstitution__GoodDesign
+		SccLocalPath40 = SOLIDprinciples\\LiskovSubstitution\\LiskovSubstitution__GoodDesign
+		SccProjectUniqueName41 = SOLIDprinciples\\OpenClosed\\Labs\\OpenClosed_FacadeLab\\OpenClosed_FacadeLab.csproj
+		SccProjectTopLevelParentUniqueName41 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName41 = SOLIDprinciples/OpenClosed/Labs/OpenClosed_FacadeLab
+		SccLocalPath41 = SOLIDprinciples\\OpenClosed\\Labs\\OpenClosed_FacadeLab
+		SccProjectUniqueName42 = SOLIDprinciples\\OpenClosed\\Labs\\OpenClosed_StrategyLab\\OpenClosed_StrategyLab.csproj
+		SccProjectTopLevelParentUniqueName42 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName42 = SOLIDprinciples/OpenClosed/Labs/OpenClosed_StrategyLab
+		SccLocalPath42 = SOLIDprinciples\\OpenClosed\\Labs\\OpenClosed_StrategyLab
+		SccProjectUniqueName43 = SOLIDprinciples\\OpenClosed\\OpenClosed_BadDesign\\OpenClosed_BadDesign.csproj
+		SccProjectTopLevelParentUniqueName43 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName43 = SOLIDprinciples/OpenClosed/OpenClosed_BadDesign
+		SccLocalPath43 = SOLIDprinciples\\OpenClosed\\OpenClosed_BadDesign
+		SccProjectUniqueName44 = SOLIDprinciples\\OpenClosed\\OpenClosed_DecoratorPattern\\OpenClosed_DecoratorPattern.csproj
+		SccProjectTopLevelParentUniqueName44 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName44 = SOLIDprinciples/OpenClosed/OpenClosed_DecoratorPattern
+		SccLocalPath44 = SOLIDprinciples\\OpenClosed\\OpenClosed_DecoratorPattern
+		SccProjectUniqueName45 = SOLIDprinciples\\OpenClosed\\OpenClosed_GoodDesign\\OpenClosed_GoodDesign.csproj
+		SccProjectTopLevelParentUniqueName45 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName45 = SOLIDprinciples/OpenClosed/OpenClosed_GoodDesign
+		SccLocalPath45 = SOLIDprinciples\\OpenClosed\\OpenClosed_GoodDesign
+		SccProjectUniqueName46 = SOLIDprinciples\\OpenClosed\\OpenClosed_StrategyPattern\\OpenClosed_StrategyPattern.csproj
+		SccProjectTopLevelParentUniqueName46 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName46 = SOLIDprinciples/OpenClosed/OpenClosed_StrategyPattern
+		SccLocalPath46 = SOLIDprinciples\\OpenClosed\\OpenClosed_StrategyPattern
+		SccProjectUniqueName47 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility-BadDesign\\SingleResponsibility_BadDesign.csproj
+		SccProjectTopLevelParentUniqueName47 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName47 = SOLIDprinciples/SingleResponsibility/SingleResponsibility-BadDesign
+		SccLocalPath47 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility-BadDesign
+		SccProjectUniqueName48 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility_BetterDesign\\SingleResponsibility_GoodDesign.csproj
+		SccProjectTopLevelParentUniqueName48 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName48 = SOLIDprinciples/SingleResponsibility/SingleResponsibility_BetterDesign
+		SccLocalPath48 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility_BetterDesign
+		SccProjectUniqueName49 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility_FacadePattern\\SingleResponsibility_FacadePattern.csproj
+		SccProjectTopLevelParentUniqueName49 = IntroToSOLIDwDesignPatterns.sln
+		SccProjectName49 = SOLIDprinciples/SingleResponsibility/SingleResponsibility_FacadePattern
+		SccLocalPath49 = SOLIDprinciples\\SingleResponsibility\\SingleResponsibility_FacadePattern
+	EndGlobalSection
+EndGlobal
