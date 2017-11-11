@@ -15,9 +15,11 @@ namespace OpenClosed_GoodDesign
             var averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
             Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
 
-            // Given the introduction of the 'AbstractTankPressureSensor' abstraction, the class is now closed for modification but open for extension - in as much as introducing a new type of sensor requires it implementing the abstract base-class, thus the PressureSensorReader will still function as expected.
+            // Given the introduction of the 'AbstractTankPressureSensor' abstraction,
+            // the class is now closed for modification but open for extension - in as much as introducing a new type of sensor requires it implementing the abstract base-class, thus the PressureSensorReader will still function as expected.
 
-            // Though, it still new's up those sensors... Any guesses as to what we might do about that?
+            // Though, it still "new's up" those sensors... that's a hard coupling, we would preferably like to avoid.
+            // We can apply the Dependency Inversion-principle - and that's coming right up.
         }
     }
 }

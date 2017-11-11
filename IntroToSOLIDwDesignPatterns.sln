@@ -139,8 +139,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_Abstrac
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_fluidInterfacePattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_fluidInterfacePattern\DependencyInversion_fluidInterfacePattern.csproj", "{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_Ninject", "SOLIDprinciples\DependencyInversion\DependencyInversion_Ninject\DependencyInversion_Ninject.csproj", "{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_WindsorCastle", "SOLIDprinciples\DependencyInversion\DependencyInversion_WindsorCastle\DependencyInversion_WindsorCastle.csproj", "{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}"
 EndProject
 Global
@@ -329,10 +327,6 @@ Global
 		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -408,10 +402,9 @@ Global
 		{F3C7B8EE-1414-4E71-957A-8C74AA59E24E} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
 		{26ABBD81-34AA-44BB-9799-198753E32193} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
 		{0EFD3DE4-7262-4F33-A5D6-3CA2E2D00E42} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
-		{2F2E543E-413B-4BA3-BD42-70367DD7F2D2} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
 		{3FA3481B-0C05-4EC9-A45B-61BB16EF2B8D} = {47BEC897-3D6A-4F91-AD40-632532EFE32B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C7455F11-3ABC-42F2-B00B-95D67806777E}
+		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}
 	EndGlobalSection
 EndGlobal
