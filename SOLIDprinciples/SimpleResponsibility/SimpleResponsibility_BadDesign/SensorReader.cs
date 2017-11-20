@@ -14,7 +14,7 @@ namespace SingleResponsibility_BadDesign
     {
         public void WriteSensorValueToLog(string sensorValue)
         {
-            var tempFile = Path.GetTempFileName();
+            string tempFile = Path.GetTempFileName();
             File.WriteAllText(tempFile, sensorValue);
         }
 

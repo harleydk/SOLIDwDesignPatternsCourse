@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SingleResponsibility_BetterDesign
+namespace SingleResponsibility_GoodDesign
 {
     public sealed class SensorReader
     {
