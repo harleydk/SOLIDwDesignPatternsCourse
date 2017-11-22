@@ -1,4 +1,5 @@
-﻿namespace LiskovSubstitution_BadDesign
+﻿namespace LiskovSubstitution_GoodDesign
+
 {
     public sealed class NewVoltageAlarm : VoltageAlarmBase
     {
@@ -8,17 +9,17 @@
         {
         }
 
-        protected override int GetNumberOfAlarmRepetitions()
+        public override int GetNumberOfAlarmRepetitions()
         {
             return NUMBER_OF_ALARM_REPETITIONS;
         }
 
-        protected override double GetMaximumAllowableVoltageLevel()
+        public override double GetMaximumAllowableVoltageLevel()
         {
             return 5d; // 5v max
         }
 
-        protected override bool ShouldResetNumberOfAlarmsRaised()
+        public override bool ShouldResetNumberOfAlarmsRaised()
         {
             return true;
         }

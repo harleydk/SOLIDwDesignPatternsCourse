@@ -8,6 +8,8 @@ namespace LiskovSubstitution_BadDesign
         private IVoltageAlarm _voltageAlarm;
         private double _currentSensorVoltage;
 
+        public double CurrentSensorVoltage { get => _currentSensorVoltage; set => _currentSensorVoltage = value; }
+
         public VoltageSensor()
         {
         }
@@ -30,7 +32,7 @@ namespace LiskovSubstitution_BadDesign
 
             if (hasVoltageDroppedBelowAcceptableLevel)
             {
-                // glaring violation - hacks a specific path for a known implementation. Also violates OpenClosed-principle.
+                // glaring violation - hacks a specific path for a known implementation. Also violates OpenClosed-principle, we would have to update code with new alarm-implementations.
                 if (_voltageAlarm is NewVoltageAlarm)
                 {
                     _voltageAlarm.RaiseAlarm();

@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SolidPrinciples.Tests</RootNamespace>
     <AssemblyName>SolidPrinciples.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -19,6 +19,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -59,6 +60,34 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BadDesign\InterfaceSegregation_BadDesign.csproj">
+      <Project>{a9c9ed49-dd5a-4466-9f2a-79b5006ba940}</Project>
+      <Name>InterfaceSegregation_BadDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BetterDesign\InterfaceSegregation_BetterDesign.csproj">
+      <Project>{47ef2fad-6e1d-4726-bd06-9caa1eb2ec05}</Project>
+      <Name>InterfaceSegregation_BetterDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_GoodDesign\InterfaceSegregation_GoodDesign.csproj">
+      <Project>{fa9f239d-697b-4946-b35b-c86d269c7f62}</Project>
+      <Name>InterfaceSegregation_GoodDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_ BadDesign\LiskovSubstitution_ BadDesign.csproj">
+      <Project>{b1e038a8-f764-4ac2-b206-07942e1b4a04}</Project>
+      <Name>LiskovSubstitution_ BadDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_GoodDesignWithTemplatePattern\LiskovSubstitution_GoodDesignWithTemplatePattern.csproj">
+      <Project>{9f6fef1a-5ae2-4c26-a6ab-b28913b0c3ef}</Project>
+      <Name>LiskovSubstitution_GoodDesignWithTemplatePattern</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\OpenClosed\OpenClosed_BadDesign\OpenClosed_BadDesign.csproj">
+      <Project>{7af2ae3e-370b-4207-98c2-fb5c09ee4125}</Project>
+      <Name>OpenClosed_BadDesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDprinciples\OpenClosed\OpenClosed_GoodDesign\OpenClosed_GoodDesign.csproj">
+      <Project>{4f507ba2-6f06-47d5-8bc1-f82686e0f2ea}</Project>
+      <Name>OpenClosed_GoodDesign</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_BadDesign\SimpleResponsibility_BadDesign.csproj">
       <Project>{3eb2ca29-7db7-4471-b1e5-d4d268e3992e}</Project>
       <Name>SimpleResponsibility_BadDesign</Name>

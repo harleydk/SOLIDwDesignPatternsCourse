@@ -1,4 +1,4 @@
-﻿namespace OpenClosed_BadDesign
+﻿namespace OpenClosed_BadDesign.PressureSensorImplementations
 {
     public sealed class InternalTankPressureSensor
     {

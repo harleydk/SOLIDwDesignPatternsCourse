@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace LiskovSubstitution_BadDesign
+namespace LiskovSubstitution_GoodDesign
 {
     public sealed class VoltageSensor
     {

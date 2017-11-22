@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace LiskovSubstitution_BadDesign
+namespace LiskovSubstitution_GoodDesign
 {
     // To ensure compatibility among sub-classes, we can introduce an abstract base-class that allows for corresponding behaviour throughout our subclassings. I.e. this base-class compiles the combined functionality of the various IVoltageAlarm implementations we have (so far).
     //? Note the use of the template-pattern, to achieve compatability.
@@ -30,7 +30,7 @@ namespace LiskovSubstitution_BadDesign
             return hasVoltageDroppedBelowThreshold;
         }
 
-        protected virtual double GetMaximumAllowableVoltageLevel()
+        public virtual double GetMaximumAllowableVoltageLevel()
         {
             return DEFAULT_MAX_ALLOWED_VOLTAGE_LEVEL;
         }
@@ -50,17 +50,17 @@ namespace LiskovSubstitution_BadDesign
             }
         }
 
-        protected virtual bool ShouldResetNumberOfAlarmsRaised() // 'Hook' method
+        public virtual bool ShouldResetNumberOfAlarmsRaised() // 'Hook' method
         {
             return DEFAULT_SHOULD_RESET_NUMBER_OF_ALARMS;
         }
 
-        protected virtual int GetNumberOfAlarmRepetitions()
+        public virtual int GetNumberOfAlarmRepetitions()
         {
             return DEFAULT_NUMBER_OF_ALARM_ITERATIONS;
         }
 
-        private void ResetNumberOfAlarmsRaised()
+        public void ResetNumberOfAlarmsRaised()
         {
             NumberOfAlarmsRaised = 0;
         }
