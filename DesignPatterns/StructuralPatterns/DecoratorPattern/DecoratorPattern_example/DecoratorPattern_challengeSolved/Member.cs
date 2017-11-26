@@ -12,7 +12,7 @@
             return $"{Name}, {Points} points.";
         }
 
-        internal static Member CreateMember(string name, int points)
+        public static Member CreateMember(string name, int points)
         {
             Member newMember = new Member()
             {

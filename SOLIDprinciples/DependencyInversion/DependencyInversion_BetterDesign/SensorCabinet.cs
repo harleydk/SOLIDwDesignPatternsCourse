@@ -6,12 +6,12 @@ namespace DependencyInversion_BetterDesign
 {
     public sealed class SensorCabinet
     {
-        private IEnumerable<ISensor> _sensors;
+        public IEnumerable<ISensor> Sensors { get; private set; }
      
         public SensorCabinet(IEnumerable<ISensor> sensors)
         {
             Debug.Assert(sensors != null, "list of sensors should be initialized at this point");
-            _sensors = sensors;
+            Sensors = sensors;
         }
 
         /// <summary>
@@ -19,7 +19,7 @@ namespace DependencyInversion_BetterDesign
         /// </summary>
         public void WriteAllTemperatureSensorsDataToLog(DiagnosticsLogger diagnosticsLogger) // -- target for method injection - but how do we feel about that...?
         {
-            IEnumerable<TemperatureSensor> temperaturesSensors = _sensors.Where(sensor => sensor is TemperatureSensor).Cast<TemperatureSensor>();
+            IEnumerable<TemperatureSensor> temperaturesSensors = Sensors.Where(sensor => sensor is TemperatureSensor).Cast<TemperatureSensor>();
             temperaturesSensors.AsParallel().ForAll(temperatureSensor =>
             {
                 string logMessage = $"Sensor {temperatureSensor.Id} reported value {temperatureSensor.GetTemperature().ToString("N2")}";

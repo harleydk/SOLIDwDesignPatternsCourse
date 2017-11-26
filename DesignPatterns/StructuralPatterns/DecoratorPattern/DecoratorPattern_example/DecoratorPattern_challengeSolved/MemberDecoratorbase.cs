@@ -1,6 +1,7 @@
 ﻿namespace DecoratorPattern
 {
-    // Here's the pattern in action. We derive a class from the member-class, and hold an instance of the memberbase as a variable. We thus create a 'master decorator':
+    // Here's the pattern in action. We derive a class from the member-class, 
+    // and hold an instance of the memberbase as a variable. We thus create a 'master decorator'.
     public abstract class MemberDecoratorbase : IMember
     {
         protected IMember _member;

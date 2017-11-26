@@ -137,6 +137,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_fludInt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_WindsorCastle", "SOLIDprinciples\DependencyInversion\DependencyInversion_WindsorCastle\DependencyInversion_WindsorCastle.csproj", "{364883FC-8AE2-40A8-8180-5B734394B3F6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Tests", "DesignPatterns.Tests\DesignPatterns.Tests.csproj", "{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -319,6 +321,10 @@ Global
 		{364883FC-8AE2-40A8-8180-5B734394B3F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{364883FC-8AE2-40A8-8180-5B734394B3F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{364883FC-8AE2-40A8-8180-5B734394B3F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -388,6 +394,7 @@ Global
 		{A43EB3A3-192A-47F9-9F51-69D3215861C4} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{D8338193-0BB8-4900-BC00-5B538BFEE930} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{364883FC-8AE2-40A8-8180-5B734394B3F6} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
+		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5} = {F5CEF873-E025-49ED-B974-7BCAE4386875}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}

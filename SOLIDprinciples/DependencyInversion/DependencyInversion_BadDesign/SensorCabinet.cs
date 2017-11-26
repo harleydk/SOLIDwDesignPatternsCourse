@@ -3,14 +3,13 @@
     public sealed class SensorCabinet
     {
         // this breaks with what principle...?
-        private TemperatureSensor _temperatureSensor1;
+        public TemperatureSensor TemperatureSensor1 { get; private set; }
+        public TemperatureSensor TemperatureSensor2 { get; private set; }
+        public PressureSensor PressureSensor { get; private set; }
+        public DisplayAlarm DisplayAlarm { get; private set; }
+        public WarningBellAlarm WarningBellAlarm { get; private set; }
 
-        private TemperatureSensor _temperatureSensor2;
-        private PressureSensor _pressureSensor;
-        private DisplayAlarm _displayAlarm;
-        private WarningBellAlarm _warningBellAlarm;
-
-        private DiagnosticsLogger diagnosticsLogger;
+        public DiagnosticsLogger DiagnosticsLogger { get; private set; }
 
         public SensorCabinet()
         {
@@ -21,31 +20,31 @@
 
         private void AttachAlarmsToSensors()
         {
-            _temperatureSensor1.AttachAlarm(_displayAlarm);
+            TemperatureSensor1.AttachAlarm(DisplayAlarm);
 
-            _temperatureSensor2.AttachAlarm(_displayAlarm);
-            _temperatureSensor2.AttachAlarm(_warningBellAlarm);
+            TemperatureSensor2.AttachAlarm(DisplayAlarm);
+            TemperatureSensor2.AttachAlarm(WarningBellAlarm);
 
-            _pressureSensor.AttachAlarm(_displayAlarm);
-            _pressureSensor.AttachAlarm(_warningBellAlarm);
+            PressureSensor.AttachAlarm(DisplayAlarm);
+            PressureSensor.AttachAlarm(WarningBellAlarm);
         }
 
         private void InitializeSensors()
         {
-            _temperatureSensor1 = new TemperatureSensor("Temp1");
-            _temperatureSensor2 = new TemperatureSensor("Temp2");
-            _pressureSensor = new PressureSensor();
+            TemperatureSensor1 = new TemperatureSensor("Temp1");
+            TemperatureSensor2 = new TemperatureSensor("Temp2");
+            PressureSensor = new PressureSensor();
         }
 
         private void InitializaAlarms()
         {
-            _displayAlarm = new DisplayAlarm();
-            _warningBellAlarm = new WarningBellAlarm();
+            DisplayAlarm = new DisplayAlarm();
+            WarningBellAlarm = new WarningBellAlarm();
         }
 
         public void AttachLogger()
         {
-            diagnosticsLogger = new DiagnosticsLogger();
+            DiagnosticsLogger = new DiagnosticsLogger();
         }
 
         /// <summary>
@@ -53,10 +52,10 @@
         /// </summary>
         public void WriteAllTemperatureSensorsDataToLog()
         {
-            double temperatureSensorValue1 = _temperatureSensor1.GetTemperature();
-            diagnosticsLogger.WriteToLog($"Sensor {_temperatureSensor1.Id} reported value {temperatureSensorValue1.ToString("N2")}");
-            double temperatureSensorValue2 = _temperatureSensor2.GetTemperature();
-            diagnosticsLogger.WriteToLog($"Sensor {_temperatureSensor2.Id} reported value {temperatureSensorValue2.ToString("N2")}");
+            double temperatureSensorValue1 = TemperatureSensor1.GetTemperature();
+            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor1.Id} reported value {temperatureSensorValue1.ToString("N2")}");
+            double temperatureSensorValue2 = TemperatureSensor2.GetTemperature();
+            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor2.Id} reported value {temperatureSensorValue2.ToString("N2")}");
         }
     }
 }
