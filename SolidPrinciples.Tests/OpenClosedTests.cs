@@ -19,7 +19,7 @@ namespace SolidPrinciples.Tests
             double averagePressureSensor = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(averagePressureSensor, 1d);
+            Assert.IsTrue(averagePressureSensor>  3d);
         }
 
         [TestMethod]
@@ -33,7 +33,7 @@ namespace SolidPrinciples.Tests
             double pressure = internalTankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(pressure, 1d);
+            Assert.AreEqual(pressure, 4.5d);
         }
 
         [TestMethod]
@@ -47,7 +47,7 @@ namespace SolidPrinciples.Tests
             double pressure = externalTankPressureSensor.GetTankPressure(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(pressure, 1d);
+            Assert.AreEqual(pressure, 4.2d);
         }
 
         #endregion
@@ -65,7 +65,7 @@ namespace SolidPrinciples.Tests
             double averagePressureSensor = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(averagePressureSensor, 1d);
+            Assert.IsTrue(averagePressureSensor > 3d);
         }
 
         [TestMethod]
@@ -79,7 +79,7 @@ namespace SolidPrinciples.Tests
             double pressure = internalTankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(pressure, 1d);
+            Assert.AreEqual(pressure, 4.5d);
         }
 
         [TestMethod]
@@ -93,7 +93,7 @@ namespace SolidPrinciples.Tests
             double pressure = externalTankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             // assert
-            Assert.AreEqual(pressure, 1d);
+            Assert.AreEqual(pressure, 4.2d);
         }
 
         #endregion

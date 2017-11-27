@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using System.Linq;
+using DependencyInversion_GoodDesign;
 
 namespace SolidPrinciples.Tests
 {
@@ -33,27 +34,36 @@ namespace SolidPrinciples.Tests
             DependencyInversion_BetterDesign.SensorCabinet sensorCabinet = new DependencyInversion_BetterDesign.SensorCabinet(sensors);
 
             // act
-            int temperatureSensorCount = sensorCabinet.Sensors.Count(sensorImplementation => sensorImplementation.GetType() == typeof(DependencyInversion_BetterDesign.TemperatureSensor));
+            int temperatureSensorCount = sensorCabinet.Sensors.Count(sensorImplementation => sensorImplementation.GetType() == typeof(DependencyInversion_BetterDesign.PressureSensor));
 
             // assert
-            Assert.AreEqual(temperatureSensorCount, 2);
+            Assert.AreEqual(temperatureSensorCount, 1);
         }
 
         #endregion
 
         #region good design tests
 
+        private class MockSensor : DependencyInversion_GoodDesign.ISensor
+        {
+            public void AttachAlarm(IAlarm sensorAlarm)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
         [TestMethod]
         public void GoodDesign_TestHasNoLongerDependencyOnLogger()
         {
             // arrange
-            DependencyInversion_GoodDesign.SensorCabinet sensorCabinet = new DependencyInversion_GoodDesign.SensorCabinet(null);
+            MockSensor mockedSensor = new MockSensor();
+            DependencyInversion_GoodDesign.SensorCabinet sensorCabinet = new DependencyInversion_GoodDesign.SensorCabinet(new List<ISensor> { mockedSensor });
 
             // act
-            bool hasNoLongerALoggingMethod = sensorCabinet.GetType().GetMethods().Any(method => method.Name == "WriteAllTemperatureSensorsDataToLog");
+            bool hasLongerALoggingMethod = sensorCabinet.GetType().GetMethods().Any(method => method.Name == "WriteAllTemperatureSensorsDataToLog");
 
             // assert
-            Assert.IsTrue(hasNoLongerALoggingMethod);
+            Assert.IsFalse(hasLongerALoggingMethod);
         }
 
         #endregion
