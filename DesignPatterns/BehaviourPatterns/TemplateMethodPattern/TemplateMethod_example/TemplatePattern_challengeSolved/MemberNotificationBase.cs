@@ -20,7 +20,7 @@ namespace TemplatePattern
         public void NotifyMember()
         {
             SendNotificationEmail();
-            if (NotifyMemberBySMS())
+            if (ShouldNotifyMemberBySMS())
             {
                 SMSnotifyOfNotification();
             }
@@ -38,7 +38,7 @@ namespace TemplatePattern
         }
 
         // virtual allows us to override this. we don't _have_ to, as with abstract. This is called a 'hook'.
-        public virtual bool NotifyMemberBySMS() // 'Hook' function
+        public virtual bool ShouldNotifyMemberBySMS() // 'Hook' function
         {
             return false;
         }

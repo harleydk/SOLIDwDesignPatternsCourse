@@ -52,7 +52,9 @@
     <Compile Include="AdapterTests.cs" />
     <Compile Include="FacadeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DecoratorTests.cs" />
+    <Compile Include="StrategyTests.cs" />
+    <Compile Include="TemplateTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -6,7 +6,7 @@
         {
         }
 
-        public override bool NotifyMemberBySMS()
+        public override bool ShouldNotifyMemberBySMS()
         {
             return true;
         }

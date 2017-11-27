@@ -13,10 +13,10 @@ namespace StrategyPattern_challengeSolved
             {
                 NumberOfAnsweredQuestions = 3
             };
-            someUser.SetReputationCalculatorStrategy(new BasicUserReputationCalculator());
+            someUser.SetReputationCalculatorStrategy(new BasicUserReputationCalculateStrategy());
             System.Diagnostics.Debug.WriteLine(someUser.CalculateReputation());
 
-            someUser.SetReputationCalculatorStrategy(new SuperUserReputationCalculator());
+            someUser.SetReputationCalculatorStrategy(new SuperUserReputationCalculatorStrategy());
             System.Diagnostics.Debug.WriteLine(someUser.CalculateReputation());
 
             // What did we achieve? We factored out the strategies, factored out that which changed and

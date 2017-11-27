@@ -1,6 +1,6 @@
 ﻿namespace StrategyPattern
 {
-    public class SuperUserReputationCalculator : IDatingUserReputationStrategy
+    public class SuperUserReputationCalculatorStrategy : IDatingUserReputationStrategy
     {
         public int CalculateReputation(int numberOfAnsweredQuestions)
         {
