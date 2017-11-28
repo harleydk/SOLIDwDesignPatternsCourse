@@ -13,7 +13,7 @@ namespace StrategyPatern_problem
             DatingUser someUser = new DatingUser();
 
             someUser.NumberOfAnsweredQuestions = 3;
-            someUser.userReputation = UserReputation.BasicUserReputation;
+            someUser.userReputation = UserReputationEnum.BasicUserReputation;
 
             int calculatedReputation = someUser.CalculateReputation();
 

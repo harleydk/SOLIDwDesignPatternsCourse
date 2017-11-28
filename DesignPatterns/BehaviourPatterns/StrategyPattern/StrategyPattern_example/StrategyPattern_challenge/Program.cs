@@ -4,7 +4,8 @@
     {
         public static void Main()
         {
-            // Challenge: implement a solution in which the CalculateReputation() functions relegates to an implementation of a strategy-interface, as per the StrategyPattern_concept project.
+            // Challenge: implement a solution in which the CalculateReputation() functions relegates to
+            // an implementation of a strategy-interface, as per the StrategyPattern_concept project.
 
             //IUserReputationCalculator basicUserRC = new BasicUserReputationCalculator();
 

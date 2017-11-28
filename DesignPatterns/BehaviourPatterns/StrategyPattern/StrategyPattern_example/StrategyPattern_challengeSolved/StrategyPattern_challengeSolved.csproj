@@ -47,16 +47,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicUserReputationCalculatorStrategy.cs">
-      <DependentUpon>IUserReputationCalculatorStrategy.cs</DependentUpon>
+      <DependentUpon>IDatingUserReputationStrategy.cs</DependentUpon>
     </Compile>
     <Compile Include="DatingUser.cs" />
-    <Compile Include="IUserReputationCalculatorStrategy.cs" />
+    <Compile Include="IDatingUserReputationStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuperUserReputationCalculatorStrategy.cs">
-      <DependentUpon>IUserReputationCalculatorStrategy.cs</DependentUpon>
+      <DependentUpon>IDatingUserReputationStrategy.cs</DependentUpon>
     </Compile>
     <Compile Include="UserReputationEnum.cs" />
+    <Compile Include="UserReputationStratategySelector.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

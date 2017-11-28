@@ -1,6 +1,6 @@
 ﻿namespace StrategyPattern
 {
-    public enum UserReputation
+    public enum UserReputationEnum
     {
         BasicUserReputation,
         SuperUserReputation

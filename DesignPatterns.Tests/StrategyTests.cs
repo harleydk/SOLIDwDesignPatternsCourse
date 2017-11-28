@@ -11,15 +11,19 @@ namespace DesignPatterns.Tests
     [TestClass]
     public class StrategyTests
     { 
-
         [TestMethod]
         public void StrategyPattern_TestCanSelectStrategy()
         {
             // arrange
-            StrategyPattern.IDatingUserReputationStrategy
-            StrategyPattern.UserReputation userRep;
+            StrategyPattern.IDatingUserReputationStrategy datingUserReputationStrategy = new StrategyPattern.BasicUserReputationCalculateStrategy();
+            StrategyPattern.DatingUser datingUser = new StrategyPattern.DatingUser();
+            datingUser.SetReputationCalculatorStrategy(datingUserReputationStrategy) ;
+            datingUser.NumberOfAnsweredQuestions = 10;
+            datingUser.UserReputation = StrategyPattern.UserReputationEnum.BasicUserReputation;
+
 
             // act
+            datingUserReputationStrategy.CalculateReputation(10);
 
 
             // assert

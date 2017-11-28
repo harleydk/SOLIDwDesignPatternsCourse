@@ -7,7 +7,7 @@ namespace StrategyPattern
         // This is a placeholder for our selected strategy...
         private IDatingUserReputationStrategy _userReputationStrategy;
 
-        public UserReputation UserReputation { get; set; }
+        public UserReputationEnum UserReputation { get; set; }
 
         public int NumberOfAnsweredQuestions { get; set; }
 

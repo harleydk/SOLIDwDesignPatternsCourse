@@ -4,7 +4,7 @@ namespace StrategyPattern
 {
     public sealed class DatingUser
     {
-        public UserReputation userReputation { get; set; }
+        public UserReputationEnum userReputation { get; set; }
 
         public int NumberOfAnsweredQuestions { get; set; }
 
@@ -15,11 +15,11 @@ namespace StrategyPattern
             switch (userReputation)
             {
                 // this is the culprit - we're having to switch between user-reputations. Breaks with what principle...?
-                case UserReputation.BasicUserReputation:
+                case UserReputationEnum.BasicUserReputation:
                     calculatedReputation = NumberOfAnsweredQuestions * 2;
                     break;
 
-                case UserReputation.SuperUserReputation:
+                case UserReputationEnum.SuperUserReputation:
                     calculatedReputation = NumberOfAnsweredQuestions * 10;
                     break;
             }

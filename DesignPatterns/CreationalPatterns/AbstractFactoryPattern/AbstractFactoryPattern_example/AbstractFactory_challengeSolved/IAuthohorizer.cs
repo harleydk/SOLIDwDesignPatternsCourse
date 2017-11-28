@@ -1,4 +1,4 @@
-﻿namespace FactoryPattern
+﻿namespace AbstractFactoryPattern
 {
     public interface IAuthorizer
     {

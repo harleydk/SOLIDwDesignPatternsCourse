@@ -1,5 +1,4 @@
-﻿using FactoryPattern;
-using System;
+﻿using System;
 
 namespace AbstractFactoryPattern
 {

@@ -55,6 +55,7 @@
     <Compile Include="DecoratorTests.cs" />
     <Compile Include="StrategyTests.cs" />
     <Compile Include="TemplateTests.cs" />
+    <Compile Include="AbstractFactoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

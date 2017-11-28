@@ -1,6 +1,4 @@
-﻿using FactoryPattern;
-
-namespace AbstractFactoryPattern
+﻿namespace AbstractFactoryPattern
 {
     public sealed class UserSecurityManager
     {
