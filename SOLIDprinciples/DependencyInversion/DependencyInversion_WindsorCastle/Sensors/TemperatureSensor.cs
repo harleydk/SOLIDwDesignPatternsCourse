@@ -7,9 +7,15 @@ namespace DependencyInversion_WindsorCastle
         private IAlarm _sensorAlarm;
         public string Id { get; private set; }
 
-        public TemperatureSensor(string sensorId)
+        public IAlarm Alarm
+        {
+            get { return _sensorAlarm;  }
+        }
+    
+        public TemperatureSensor(string sensorId, IAlarm sensorAlarm)
         {
             Id = sensorId;
+            _sensorAlarm = sensorAlarm;
         }
 
         public void AttachAlarm(IAlarm alarm)

@@ -2,6 +2,7 @@
 {
     public interface ISensor
     {
-        void AttachAlarm(IAlarm sensorAlarm);
+        IAlarm Alarm { get; }
+
     }
 }

@@ -1,5 +1,8 @@
 ﻿using Castle.Windsor;
 using DependencyInversion_WindsorCastle.IOCsetup;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace DependencyInversion_WindsorCastle
 {
@@ -18,7 +21,10 @@ namespace DependencyInversion_WindsorCastle
             // ... note how this resolves the class, all of its dependencies (and, in turn, their dependencies, too).
             // Go ahead - put a breakpoing on the 'resolve' line and investigate the object, and note how it's all 
             // wired up for us.
-            
+
+            IEnumerable<IAlarm> sensorData = sensorCabinet.GetAllSensorAlarms();
+            Debug.Assert(sensorData.Count() == 2, "The IOC-container should have mounted two sensors into our sensor-cabinet at this point");
+
         }
     }
 }

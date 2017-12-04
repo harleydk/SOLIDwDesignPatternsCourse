@@ -14,29 +14,17 @@ namespace DependencyInversion_WindsorCastle
             _sensors = sensors;
         }
 
-        public IEnumerable<(string SensorId, double Temperature)> GetAllTemperatureSensorsData()
+        public IEnumerable<IAlarm> GetAllSensorAlarms()
         {
-            IList<(string SensorId, double Temperature)> temperatureSensorDataList = new List<(string SensorId, double Temperature)>();
+            IList<IAlarm> sensorsAlarms = new List<IAlarm>();
 
-            IEnumerable<TemperatureSensor> temperaturesSensors = _sensors.Where(sensor => sensor is TemperatureSensor).Cast<TemperatureSensor>();
-            temperaturesSensors.AsParallel().ForAll(temperatureSensor =>
+            foreach (ISensor sensor in _sensors)
             {
-                var temperatureSensorData = GetTemperatureSensorData(temperatureSensor);
-                temperatureSensorDataList.Add(temperatureSensorData);
-            });
-
-            return temperatureSensorDataList.AsEnumerable();
+                sensorsAlarms.Add(sensor.Alarm);
+            }
+        
+            return sensorsAlarms.AsEnumerable();
         }
-
-        private (string SensorId, double Temperature) GetTemperatureSensorData(TemperatureSensor temperatureSensor)
-        {
-            string SensorId = temperatureSensor.Id;
-            double Temperature = temperatureSensor.GetTemperature();
-
-            Debug.Assert(!string.IsNullOrWhiteSpace(SensorId), "sensor-id should not be null or blank");
-            Debug.Assert(Temperature >= 0, "temperature shouldbe >= 0");
-
-            return (SensorId, Temperature);
-        }
+        
     }
 }
