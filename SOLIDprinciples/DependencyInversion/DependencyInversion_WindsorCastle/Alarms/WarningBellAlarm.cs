@@ -1,4 +1,4 @@
-﻿namespace DependencyInversion_GoodDesign
+﻿namespace DependencyInversion_WindsorCastle
 {
     public sealed class WarningBellAlarm : IAlarm
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DependencyInversion_GoodDesign
+namespace DependencyInversion_WindsorCastle
 {
     public sealed class TemperatureSensor : ISensor
     {

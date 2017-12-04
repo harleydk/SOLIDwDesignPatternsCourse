@@ -1,7 +1,7 @@
 ﻿using Castle.Windsor;
 using DependencyInversion_WindsorCastle.IOCsetup;
 
-namespace DependencyInversion_GoodDesign
+namespace DependencyInversion_WindsorCastle
 {
     public static partial class Program
     {
@@ -13,14 +13,12 @@ namespace DependencyInversion_GoodDesign
             _iocContainer = new Castle.Windsor.WindsorContainer();
             _iocContainer.Install(new CastleWindsorInstaller());
 
+            // Resolve the sensor-cabinet...
             SensorCabinet sensorCabinet = _iocContainer.Resolve<SensorCabinet>();
-            // now do some monitoring...
-
-            // At some point, we wish to write temperature sensor values to a log.
-            // By removing the logger from the sensor-cabinet, we forego problems with the single-responsibility principle.
-            TemperatureSensorLogger temperatureSensorLogger = _iocContainer.Resolve<TemperatureSensorLogger>();
-            var temperatureSensorData = sensorCabinet.GetAllTemperatureSensorsData();
-            temperatureSensorLogger.WriteAllTemperatureSensorsDataToLog(temperatureSensorData);
+            // ... note how this resolves the class, all of its dependencies (and, in turn, their dependencies, too).
+            // Go ahead - put a breakpoing on the 'resolve' line and investigate the object, and note how it's all 
+            // wired up for us.
+            
         }
     }
 }

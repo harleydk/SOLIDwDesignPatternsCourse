@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DependencyInversion_GoodDesign
+namespace DependencyInversion_WindsorCastle
 {
     public sealed class TemperatureSensorLogger
     {

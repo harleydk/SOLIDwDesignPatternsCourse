@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Linq;
 
-namespace DependencyInversion_GoodDesign
+namespace DependencyInversion_WindsorCastle
 {
     public sealed class SensorCabinet
     {
