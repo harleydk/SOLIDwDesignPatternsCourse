@@ -139,6 +139,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_Windsor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Tests", "DesignPatterns.Tests\DesignPatterns.Tests.csproj", "{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompositePattern", "CompositePattern", "{6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern_concept", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_concept\CompositePattern_concept.csproj", "{13248987-BEB8-4C72-833E-2AF56B711087}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompositePattern_example", "CompositePattern_example", "{CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -325,6 +331,10 @@ Global
 		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13248987-BEB8-4C72-833E-2AF56B711087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13248987-BEB8-4C72-833E-2AF56B711087}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13248987-BEB8-4C72-833E-2AF56B711087}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13248987-BEB8-4C72-833E-2AF56B711087}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -395,6 +405,9 @@ Global
 		{D8338193-0BB8-4900-BC00-5B538BFEE930} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{364883FC-8AE2-40A8-8180-5B734394B3F6} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5} = {F5CEF873-E025-49ED-B974-7BCAE4386875}
+		{6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9} = {66F2519A-8343-4F99-9AAD-4D590CA61C1D}
+		{13248987-BEB8-4C72-833E-2AF56B711087} = {6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9}
+		{CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5} = {6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}
