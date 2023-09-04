@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>AbstractFactory_problem</RootNamespace>
     <AssemblyName>AbstractFactory_problem</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <SccProjectName>SAK</SccProjectName>

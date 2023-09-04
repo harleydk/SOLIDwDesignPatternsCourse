@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FacadePattern_challenge</RootNamespace>
     <AssemblyName>FacadePattern_challenge</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <SccProjectName>SAK</SccProjectName>
@@ -54,6 +54,9 @@
     <Compile Include="Services\GovernmentAddressService.cs" />
     <Compile Include="Services\UserAddressService.cs" />
     <Compile Include="Services\UserValidationService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
