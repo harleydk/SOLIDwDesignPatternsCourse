@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
@@ -23,7 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecoratorPattern", "Decorat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacadePattern", "FacadePattern", "{BB77C8D5-D7DE-4BCD-B83F-E3599FA8DFA7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_concept", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_concept\StrategyPattern_concept.csproj", "{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern_concept", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_concept\StrategyPattern_concept.csproj", "{51173E98-D2DB-461A-BF4E-3F0F0EC3CFF0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StrategyPattern_example", "StrategyPattern_example", "{829DCAFB-ADFC-49F6-97DC-29021E917539}"
 EndProject
@@ -37,55 +37,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DecoratorPattern_example", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FacadePattern_example", "FacadePattern_example", "{A3FE4252-D71B-48F0-947D-C2B40CE454F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPatern_problem", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPatern_problem\StrategyPatern_problem.csproj", "{ADF6D80D-1E01-40ED-9830-E23E66893FAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPatern_problem", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPatern_problem\StrategyPatern_problem.csproj", "{ADF6D80D-1E01-40ED-9830-E23E66893FAE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_challenge", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challenge\StrategyPattern_challenge.csproj", "{0474524B-3B99-4CF8-814D-09B44362631B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern_challenge", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challenge\StrategyPattern_challenge.csproj", "{0474524B-3B99-4CF8-814D-09B44362631B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern_challengeSolved", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challengeSolved\StrategyPattern_challengeSolved.csproj", "{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StrategyPattern_challengeSolved", "DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challengeSolved\StrategyPattern_challengeSolved.csproj", "{18EEA3A3-02D1-44DC-9B02-D517A286DDD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_concept", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethodPattern_concept\TemplatePattern_concept.csproj", "{291B9907-31AC-488C-A086-DB6B9A203170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplatePattern_concept", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethodPattern_concept\TemplatePattern_concept.csproj", "{291B9907-31AC-488C-A086-DB6B9A203170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_problem", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_problem\TemplatePattern_problem.csproj", "{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplatePattern_problem", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_problem\TemplatePattern_problem.csproj", "{3AAC94AE-1D9C-46A5-B5D6-C37584FD9CB4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_challenge", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challenge\TemplatePattern_challenge.csproj", "{FF196B19-FC02-4934-BEF2-9193049697FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplatePattern_challenge", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challenge\TemplatePattern_challenge.csproj", "{FF196B19-FC02-4934-BEF2-9193049697FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePattern_challengeSolved", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challengeSolved\TemplatePattern_challengeSolved.csproj", "{843CC056-EFDB-4399-ADAB-1A9278452894}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemplatePattern_challengeSolved", "DesignPatterns\BehaviourPatterns\TemplateMethodPattern\TemplateMethod_example\TemplatePattern_challengeSolved\TemplatePattern_challengeSolved.csproj", "{843CC056-EFDB-4399-ADAB-1A9278452894}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactoryPattern_concept", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_concept\AbstractFactoryPattern_concept.csproj", "{B47D8B2E-C9CB-4727-9EFC-5B97F90B9BF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_problem", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_problem\AbstractFactory_problem.csproj", "{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory_problem", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_problem\AbstractFactory_problem.csproj", "{9938B4C5-BC05-4D76-A63F-B7FC1B1C9A0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_challenge", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challenge\AbstractFactory_challenge.csproj", "{1BC0FFA3-5E96-4D08-9965-4874C016EC62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory_challenge", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challenge\AbstractFactory_challenge.csproj", "{1BC0FFA3-5E96-4D08-9965-4874C016EC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_challengeSolved", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challengeSolved\AbstractFactory_challengeSolved.csproj", "{7043727A-407A-46E8-ABB8-E838071751D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory_challengeSolved", "DesignPatterns\CreationalPatterns\AbstractFactoryPattern\AbstractFactoryPattern_example\AbstractFactory_challengeSolved\AbstractFactory_challengeSolved.csproj", "{7043727A-407A-46E8-ABB8-E838071751D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_concept", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_concept\AdapterPattern_concept.csproj", "{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern_concept", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_concept\AdapterPattern_concept.csproj", "{5DF4F8A9-F078-42A8-8F68-9F7640F3880C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_problem", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_problem\AdapterPattern_problem.csproj", "{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern_problem", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_problem\AdapterPattern_problem.csproj", "{F6F811B6-2B5B-497C-B311-69C3DCFE9F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_challenge", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challenge\AdapterPattern_challenge.csproj", "{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern_challenge", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challenge\AdapterPattern_challenge.csproj", "{80D81C2A-1F0C-4C56-A4D5-9DE7A15DEAD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdapterPattern_challengeSolved", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challengeSolved\AdapterPattern_challengeSolved.csproj", "{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdapterPattern_challengeSolved", "DesignPatterns\StructuralPatterns\AdapterPattern\AdapterPattern_example\AdapterPattern_challengeSolved\AdapterPattern_challengeSolved.csproj", "{F1ACE5AD-3304-4B8E-8DE0-2DC723AC8308}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_concept", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_concept\DecoratorPattern_concept.csproj", "{C3C0A0F0-39A9-4271-B257-ACA013022961}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern_concept", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_concept\DecoratorPattern_concept.csproj", "{C3C0A0F0-39A9-4271-B257-ACA013022961}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_problem", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_problem\DecoratorPattern_problem.csproj", "{183809F6-1B69-4E63-A326-41F0A1975866}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern_problem", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_problem\DecoratorPattern_problem.csproj", "{183809F6-1B69-4E63-A326-41F0A1975866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_challenge", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challenge\DecoratorPattern_challenge.csproj", "{211D6D60-381F-4930-A43B-6F67F0902DFF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern_challenge", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challenge\DecoratorPattern_challenge.csproj", "{211D6D60-381F-4930-A43B-6F67F0902DFF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecoratorPattern_challengeSolved", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challengeSolved\DecoratorPattern_challengeSolved.csproj", "{0BB25D22-7975-4B7B-A284-C3F5A2D49854}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorPattern_challengeSolved", "DesignPatterns\StructuralPatterns\DecoratorPattern\DecoratorPattern_example\DecoratorPattern_challengeSolved\DecoratorPattern_challengeSolved.csproj", "{0BB25D22-7975-4B7B-A284-C3F5A2D49854}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_concept", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_concept\FacadePattern_concept.csproj", "{922307D7-EFC0-4D77-9B0B-4B66381320F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern_concept", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_concept\FacadePattern_concept.csproj", "{922307D7-EFC0-4D77-9B0B-4B66381320F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_problem", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_problem\FacadePattern_problem.csproj", "{55C9F033-A3EC-4A6C-B45A-096F3D850675}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern_problem", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_problem\FacadePattern_problem.csproj", "{55C9F033-A3EC-4A6C-B45A-096F3D850675}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_challenge", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challenge\FacadePattern_challenge.csproj", "{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern_challenge", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challenge\FacadePattern_challenge.csproj", "{C9D6B043-0497-4BE1-AA2E-D0F348C5821A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern_challengedSolved", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challengedSolved\FacadePattern_challengedSolved.csproj", "{155264B4-51BF-43C1-B47D-FC0060B44F2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FacadePattern_challengedSolved", "DesignPatterns\StructuralPatterns\FacadePattern\FacadePattern_example\FacadePattern_challengedSolved\FacadePattern_challengedSolved.csproj", "{155264B4-51BF-43C1-B47D-FC0060B44F2D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F5CEF873-E025-49ED-B974-7BCAE4386875}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolidPrinciples.Tests", "SolidPrinciples.Tests\SolidPrinciples.Tests.csproj", "{1464DF75-3D86-4292-9FC1-0B4C69D82A70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidPrinciples.Tests", "SolidPrinciples.Tests\SolidPrinciples.Tests.csproj", "{1464DF75-3D86-4292-9FC1-0B4C69D82A70}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SOLIDprinciples", "SOLIDprinciples", "{7F1351EE-3D08-40C5-9766-AFC31881C658}"
 EndProject
@@ -99,53 +99,53 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "InterfaceSegregation", "Int
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DependencyInversion", "DependencyInversion", "{D21C7BEF-C20B-451A-9833-83192C420BD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleResponsibility_BadDesign", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_BadDesign\SimpleResponsibility_BadDesign.csproj", "{3EB2CA29-7DB7-4471-B1E5-D4D268E3992E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleResponsibility_BadDesign", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_BadDesign\SimpleResponsibility_BadDesign.csproj", "{3EB2CA29-7DB7-4471-B1E5-D4D268E3992E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleResponsibility_GoodDesign", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_GoodDesign\SimpleResponsibility_GoodDesign.csproj", "{1789B598-E625-454C-8AF3-FE7413B278A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleResponsibility_GoodDesign", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_GoodDesign\SimpleResponsibility_GoodDesign.csproj", "{1789B598-E625-454C-8AF3-FE7413B278A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleResponsibility_FacadePattern", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_FacadePattern\SimpleResponsibility_FacadePattern.csproj", "{2DEB74CB-CA5B-4BEB-8D36-87981C740782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleResponsibility_FacadePattern", "SOLIDprinciples\SimpleResponsibility\SimpleResponsibility_FacadePattern\SimpleResponsibility_FacadePattern.csproj", "{2DEB74CB-CA5B-4BEB-8D36-87981C740782}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed_BadDesign", "SOLIDprinciples\OpenClosed\OpenClosed_BadDesign\OpenClosed_BadDesign.csproj", "{7AF2AE3E-370B-4207-98C2-FB5C09EE4125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_BadDesign", "SOLIDprinciples\OpenClosed\OpenClosed_BadDesign\OpenClosed_BadDesign.csproj", "{7AF2AE3E-370B-4207-98C2-FB5C09EE4125}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed_GoodDesign", "SOLIDprinciples\OpenClosed\OpenClosed_GoodDesign\OpenClosed_GoodDesign.csproj", "{4F507BA2-6F06-47D5-8BC1-F82686E0F2EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_GoodDesign", "SOLIDprinciples\OpenClosed\OpenClosed_GoodDesign\OpenClosed_GoodDesign.csproj", "{4F507BA2-6F06-47D5-8BC1-F82686E0F2EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed_DecoratorPattern", "SOLIDprinciples\OpenClosed\OpenClosed_DecoratorPattern\OpenClosed_DecoratorPattern.csproj", "{DC9C47AA-BE6D-4663-80D5-65CB019D3A28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_DecoratorPattern", "SOLIDprinciples\OpenClosed\OpenClosed_DecoratorPattern\OpenClosed_DecoratorPattern.csproj", "{DC9C47AA-BE6D-4663-80D5-65CB019D3A28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosed_StrategyPattern", "SOLIDprinciples\OpenClosed\OpenClosed_StrategyPattern\OpenClosed_StrategyPattern.csproj", "{5CE811D9-59F7-47DF-B619-743696DA3796}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosed_StrategyPattern", "SOLIDprinciples\OpenClosed\OpenClosed_StrategyPattern\OpenClosed_StrategyPattern.csproj", "{5CE811D9-59F7-47DF-B619-743696DA3796}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution_ BadDesign", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_ BadDesign\LiskovSubstitution_ BadDesign.csproj", "{B1E038A8-F764-4AC2-B206-07942E1B4A04}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitution_ BadDesign", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_ BadDesign\LiskovSubstitution_ BadDesign.csproj", "{B1E038A8-F764-4AC2-B206-07942E1B4A04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution_GoodDesignWithTemplatePattern", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_GoodDesignWithTemplatePattern\LiskovSubstitution_GoodDesignWithTemplatePattern.csproj", "{9F6FEF1A-5AE2-4C26-A6AB-B28913B0C3EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitution_GoodDesignWithTemplatePattern", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_GoodDesignWithTemplatePattern\LiskovSubstitution_GoodDesignWithTemplatePattern.csproj", "{9F6FEF1A-5AE2-4C26-A6AB-B28913B0C3EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation_BadDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BadDesign\InterfaceSegregation_BadDesign.csproj", "{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_BadDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BadDesign\InterfaceSegregation_BadDesign.csproj", "{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation_BetterDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BetterDesign\InterfaceSegregation_BetterDesign.csproj", "{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_BetterDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BetterDesign\InterfaceSegregation_BetterDesign.csproj", "{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation_GoodDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_GoodDesign\InterfaceSegregation_GoodDesign.csproj", "{FA9F239D-697B-4946-B35B-C86D269C7F62}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_GoodDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_GoodDesign\InterfaceSegregation_GoodDesign.csproj", "{FA9F239D-697B-4946-B35B-C86D269C7F62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegregation_AdapterPattern", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_AdapterPattern\InterfaceSegregation_AdapterPattern.csproj", "{D37A3C78-422F-4F06-B64C-04EB1B6342B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_AdapterPattern", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_AdapterPattern\InterfaceSegregation_AdapterPattern.csproj", "{D37A3C78-422F-4F06-B64C-04EB1B6342B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_BadDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BadDesign\DependencyInversion_BadDesign.csproj", "{EB43956C-653E-45AB-AFF8-1776596EB3D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_BadDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BadDesign\DependencyInversion_BadDesign.csproj", "{EB43956C-653E-45AB-AFF8-1776596EB3D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_BetterDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BetterDesign\DependencyInversion_BetterDesign.csproj", "{6A2F09CB-FC1B-41D3-8988-F6C387814F47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_BetterDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BetterDesign\DependencyInversion_BetterDesign.csproj", "{6A2F09CB-FC1B-41D3-8988-F6C387814F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_GoodDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_GoodDesign\DependencyInversion_GoodDesign.csproj", "{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_GoodDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_GoodDesign\DependencyInversion_GoodDesign.csproj", "{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_AbstractFactoryPattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_AbstractFactoryPattern\DependencyInversion_AbstractFactoryPattern.csproj", "{A43EB3A3-192A-47F9-9F51-69D3215861C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_AbstractFactoryPattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_AbstractFactoryPattern\DependencyInversion_AbstractFactoryPattern.csproj", "{A43EB3A3-192A-47F9-9F51-69D3215861C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyInversion_fludInterfacePattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_fludInterfacePattern\DependencyInversion_fludInterfacePattern.csproj", "{D8338193-0BB8-4900-BC00-5B538BFEE930}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_fludInterfacePattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_fludInterfacePattern\DependencyInversion_fludInterfacePattern.csproj", "{D8338193-0BB8-4900-BC00-5B538BFEE930}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns.Tests", "DesignPatterns.Tests\DesignPatterns.Tests.csproj", "{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns.Tests", "DesignPatterns.Tests\DesignPatterns.Tests.csproj", "{1B25DBA8-68B0-496B-99F7-7900A4FB7FA5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompositePattern", "CompositePattern", "{6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern_concept", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_concept\CompositePattern_concept.csproj", "{13248987-BEB8-4C72-833E-2AF56B711087}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePattern_concept", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_concept\CompositePattern_concept.csproj", "{13248987-BEB8-4C72-833E-2AF56B711087}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CompositePattern_example", "CompositePattern_example", "{CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePatern_challenge", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_example\CompositePatern_challenge\CompositePatern_challenge.csproj", "{1C01276E-D810-443E-9766-3AB8758B9ED6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePatern_challenge", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_example\CompositePatern_challenge\CompositePatern_challenge.csproj", "{1C01276E-D810-443E-9766-3AB8758B9ED6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitution_MFeathersExample", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_MFeathersExample\LiskovSubstitution_MFeathersExample.csproj", "{E8269DC1-511A-44FA-9F80-EEF258C2D9D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitution_MFeathersExample", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_MFeathersExample\LiskovSubstitution_MFeathersExample.csproj", "{E8269DC1-511A-44FA-9F80-EEF258C2D9D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,7 +10,7 @@ namespace StrategyPatern_problem
         /// </summary>
         private static void Main()
         {
-            DatingUser someUser = new DatingUser();
+            DatingUser someUser = new();
 
             someUser.NumberOfAnsweredQuestions = 3;
             someUser.userReputation = UserReputationEnum.BasicUserReputation;
