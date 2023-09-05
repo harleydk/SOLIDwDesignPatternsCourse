@@ -23,11 +23,6 @@ namespace OpenClosed_DecoratorPattern
             _tankPressureSensors = new AbstractTankPressureSensor[] { shockAbsorbableInternalTankPressureSensorWithTemperature };
         }
 
-        private void fdafdsf()
-        {
-            string fdsfa;
-        }
-
         public double GetAveragePressureAcrossSensors(int waterIntakeVelocity)
         {
             double totalPressureFromAllSensors = 0;

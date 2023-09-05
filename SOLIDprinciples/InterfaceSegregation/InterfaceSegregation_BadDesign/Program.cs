@@ -19,6 +19,10 @@ namespace InterfaceSegregation_BadDesign
 
             sensorCabinetWithoutAlarm.SensorEvent += SensorCabinetWithoutAlarm_SensorEvent1;
             string cabinetLastOpenedBy = sensorCabinetWithoutAlarm.GetCabinetLastOpenedByUserId(); // fails - and should not be possible. But who would ever call it, when they know it's a sensorcabinet sans alarms...
+
+            traditionalSensorCabinet.CabinetOpenedEvent -= SensorCabinet_CabinetOpenedEvent;
+            traditionalSensorCabinet.SensorEvent -= TraditionalSensorCabinet_SensorEvent;
+            sensorCabinetWithoutAlarm.SensorEvent -= SensorCabinetWithoutAlarm_SensorEvent1;
         }
 
         private static void SensorCabinetWithoutAlarm_SensorEvent1(object sender, SensorEventArgs sensorEventArgs)
