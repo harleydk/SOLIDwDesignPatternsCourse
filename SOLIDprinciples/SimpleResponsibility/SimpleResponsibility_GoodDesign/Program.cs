@@ -8,10 +8,10 @@
         private static void Main()
         {
             // Separating the concerns is better:
-            SensorReader sensorReader = new SensorReader();
+            SensorReader sensorReader = new();
             string sensorValue = sensorReader.ReadSensorValue();
 
-            FileLogger filelOgger = new FileLogger();
+            FileLogger filelOgger = new();
             filelOgger.WriteToLog(sensorValue);
         }
     }

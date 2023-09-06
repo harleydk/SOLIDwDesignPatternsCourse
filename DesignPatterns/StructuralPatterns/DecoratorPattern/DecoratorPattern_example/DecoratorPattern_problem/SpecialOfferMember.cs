@@ -2,7 +2,7 @@
 {
     public sealed class SpecialOfferMember : IMember
     {
-        private int _extraPoints;
+        private readonly int _extraPoints;
         private int _points;
         private string _name;
 

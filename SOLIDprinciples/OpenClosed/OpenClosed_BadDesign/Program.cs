@@ -9,7 +9,7 @@ namespace OpenClosed_BadDesign
         /// </summary>
         public static void Main()
         {
-            PressureSensorReader pressureSensorReader = new PressureSensorReader();
+            PressureSensorReader pressureSensorReader = new();
 
             int waterIntakeVelocity = 16;
             var averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);

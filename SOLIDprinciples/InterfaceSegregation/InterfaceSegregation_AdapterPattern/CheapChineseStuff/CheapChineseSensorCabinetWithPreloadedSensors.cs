@@ -8,7 +8,7 @@ namespace InterfaceSegregation_AdapterPattern
     // Third-party code, can't be modified. Sadly adheres to the old ISensorCabinet industry-standard interface. We need an adapter for this.
     public sealed class CheapChineseSensorCabinetWithPreloadedSensors : ISensorCabinet
     {
-        private IEnumerable<ISensor> _preloadedSensors;
+        private readonly IEnumerable<ISensor> _preloadedSensors;
 
         public IList<ISensor> Sensors => throw new NotImplementedException();
 

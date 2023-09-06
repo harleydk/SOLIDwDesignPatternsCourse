@@ -12,7 +12,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanGetAveragePressureAcrossSensors()
         {
             // arrange
-            OpenClosed_BadDesign.PressureSensorReader pressureSensorReader = new OpenClosed_BadDesign.PressureSensorReader();
+            OpenClosed_BadDesign.PressureSensorReader pressureSensorReader = new();
             int waterIntakeVelocity = 1;
             
             // act
@@ -26,7 +26,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanGetInternalSensorPressure()
         {
             // arrange
-            OpenClosed_BadDesign.PressureSensorImplementations.InternalTankPressureSensor internalTankPressureSensor = new OpenClosed_BadDesign.PressureSensorImplementations.InternalTankPressureSensor();
+            OpenClosed_BadDesign.PressureSensorImplementations.InternalTankPressureSensor internalTankPressureSensor = new();
             int waterIntakeVelocity = 1;
 
             // act
@@ -40,7 +40,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanGetExternalSensorPressure()
         {
             // arrange
-            OpenClosed_BadDesign.PressureSensorImplementations.ExternalTankPressureSensor externalTankPressureSensor = new OpenClosed_BadDesign.PressureSensorImplementations.ExternalTankPressureSensor();
+            OpenClosed_BadDesign.PressureSensorImplementations.ExternalTankPressureSensor externalTankPressureSensor = new();
             int waterIntakeVelocity = 1;
 
             // act
@@ -58,7 +58,7 @@ namespace SolidPrinciples.Tests
         public void GoodDesign_TestCanGetAveragePressureAcrossSensors()
         {
             // arrange
-            OpenClosed_GoodDesign.PressureSensorReader pressureSensorReader = new OpenClosed_GoodDesign.PressureSensorReader();
+            OpenClosed_GoodDesign.PressureSensorReader pressureSensorReader = new();
             int waterIntakeVelocity = 1;
 
             // act

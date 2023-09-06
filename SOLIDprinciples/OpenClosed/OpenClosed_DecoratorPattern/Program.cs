@@ -7,7 +7,7 @@
         /// </summary>
         public static void Main()
         {
-            PressureSensorReader pressureSensorReader = new PressureSensorReader();
+            PressureSensorReader pressureSensorReader = new();
             pressureSensorReader.GetAveragePressureAcrossSensors(10);
         }
     }

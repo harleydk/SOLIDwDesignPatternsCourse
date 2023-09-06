@@ -16,9 +16,9 @@ namespace DecoratorPattern
         private static void Main()
         {
             // Create ConcreteComponent and two Decorators
-            ConcreteComponent c = new ConcreteComponent();
-            ConcreteDecoratorA d1 = new ConcreteDecoratorA(c);
-            ConcreteDecoratorB d2 = new ConcreteDecoratorB(d1);
+            ConcreteComponent c = new();
+            ConcreteDecoratorA d1 = new(c);
+            ConcreteDecoratorB d2 = new(d1);
 
             d2.Operation();
 

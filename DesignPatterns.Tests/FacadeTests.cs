@@ -11,7 +11,7 @@ namespace DesignPatterns.Tests
         {
             // arrange
             string testUserName = "Clint";
-            FacadePattern.UserRelocationProcessingFacade userRelocationProcessingFacade = new FacadePattern.UserRelocationProcessingFacade(testUserName);
+            FacadePattern.UserRelocationProcessingFacade userRelocationProcessingFacade = new(testUserName);
 
             // act
             bool canGetAndValidateAddress = userRelocationProcessingFacade.CanGetAndValidateUserAddress();

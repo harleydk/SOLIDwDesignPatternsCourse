@@ -5,7 +5,7 @@ namespace InterfaceSegregation_AdapterPattern
 {
     public sealed class CheapChineseSensorCabinetAdapter : ICabinetSensorEventing
     {
-        private CheapChineseSensorCabinetWithPreloadedSensors _cheapChineseSensorCabinet;
+        private readonly CheapChineseSensorCabinetWithPreloadedSensors _cheapChineseSensorCabinet;
 
         public event EventHandler<SensorEventArgs> SensorEvent;
 

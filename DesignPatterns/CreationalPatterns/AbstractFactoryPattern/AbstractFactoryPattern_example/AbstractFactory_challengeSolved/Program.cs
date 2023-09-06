@@ -5,13 +5,14 @@ namespace AbstractFactoryPattern
     public sealed class Program
     {
         /// <summary>
-        /// By introducing an abstract factory that creates the appropairate authenticator and authorizer objects as per the designated user-type, we have factored out that which changes into a component in its own right, and can the more easily maintain it - for example by introducing a new user-type.
+        /// By introducing an abstract factory that creates the appropriate authenticator and authorizer objects as per the designated user-type, we have factored out that which changes into a component in its own right, 
+        /// and can the more easily maintain it - for example by introducing a new user-type.
         /// </summary>
         public static void Main()
         {
             var basicUser = User.CreateUser("Arnold Schwarzenegger", "IllBeBack", UserTypeEnum.BasicUser);
             ISecurityProviderFactory securityProviderFactory = GetSecurityProviderFactory(basicUser.UserType);
-            UserSecurityManager userSecurityManager = new UserSecurityManager(securityProviderFactory);
+            UserSecurityManager userSecurityManager = new(securityProviderFactory);
             userSecurityManager.PerformUserSecurityOperations(basicUser);
 
             var superUser = User.CreateUser("Clint Eastwood", "MakeMyDayPunk", UserTypeEnum.SuperUser);

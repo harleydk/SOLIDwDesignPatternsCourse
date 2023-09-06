@@ -15,22 +15,22 @@ namespace DecoratorPattern_challengeSolved
 
             // Using the decorator pattern, we can now 'wrap' the original object in new clothes.
             // This is why the pattern is sometimes also called the 'wrapper pattern'.
-            WithSpecialOfferDecorator specialDealForClint = new WithSpecialOfferDecorator(clint, 100);
+            WithSpecialOfferDecorator specialDealForClint = new(clint, 100);
             Debug.WriteLine(specialDealForClint.GetMemberStatus());
 
-            WithAnniversaryDecorator anniversaryDealForClint = new WithAnniversaryDecorator(clint);
+            WithAnniversaryDecorator anniversaryDealForClint = new(clint);
             Debug.WriteLine(anniversaryDealForClint.GetMemberStatus());
 
             // we can apply different decorators - wrappers - to the same member.
-            WithAnniversaryDecorator anniversaryDealForSpecialOfferClint = new WithAnniversaryDecorator(specialDealForClint);
+            WithAnniversaryDecorator anniversaryDealForSpecialOfferClint = new(specialDealForClint);
             Debug.WriteLine(anniversaryDealForSpecialOfferClint.GetMemberStatus());
 
             // We can easily use the same wrapper twice - twice the special deal!
             // This wasn't so easy before we applied the pattern.
             Member multipleDealsArnold = Member.CreateMember("Arnold Schwarzenegger", 300);
-            WithSpecialOfferDecorator firstSpecialDealForArnold = new WithSpecialOfferDecorator(multipleDealsArnold, 500);
-            WithSpecialOfferDecorator secondSpecialDealForArnold = new WithSpecialOfferDecorator(firstSpecialDealForArnold, 500);
-            WithSpecialOfferDecorator thirdSpecialDealForArnold = new WithSpecialOfferDecorator(secondSpecialDealForArnold, 500);
+            WithSpecialOfferDecorator firstSpecialDealForArnold = new(multipleDealsArnold, 500);
+            WithSpecialOfferDecorator secondSpecialDealForArnold = new(firstSpecialDealForArnold, 500);
+            WithSpecialOfferDecorator thirdSpecialDealForArnold = new(secondSpecialDealForArnold, 500);
             Debug.WriteLine(thirdSpecialDealForArnold.GetMemberStatus());
         }
     }

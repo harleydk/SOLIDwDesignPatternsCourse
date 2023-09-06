@@ -13,7 +13,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanReadSensorvalue()
         {
             // arrange
-            SingleResponsibility_BadDesign.SensorReader sensorReader = new SingleResponsibility_BadDesign.SensorReader();
+            SingleResponsibility_BadDesign.SensorReader sensorReader = new();
 
             // act
             string sensorValue = sensorReader.ReadSensorValue();
@@ -27,7 +27,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanWriteToLogFile()
         {
             // arrange
-            SingleResponsibility_BadDesign.SensorReader sensorReader = new SingleResponsibility_BadDesign.SensorReader();
+            SingleResponsibility_BadDesign.SensorReader sensorReader = new();
             string tempPathDir = Path.GetTempPath();
 
             // act
@@ -47,7 +47,7 @@ namespace SolidPrinciples.Tests
         public void GoodDesign_TestCanReadSensorvalue()
         {
             // arrange
-            SingleResponsibility_GoodDesign.SensorReader sensorReader = new SingleResponsibility_GoodDesign.SensorReader();
+            SingleResponsibility_GoodDesign.SensorReader sensorReader = new();
 
             // act
             string sensorValue = sensorReader.ReadSensorValue();
@@ -61,7 +61,7 @@ namespace SolidPrinciples.Tests
         public void GoodDesign_TestCanWriteToLogFile()
         {
             // arrange
-            SingleResponsibility_GoodDesign.FileLogger fileLogger = new SingleResponsibility_GoodDesign.FileLogger();
+            SingleResponsibility_GoodDesign.FileLogger fileLogger = new();
             string tempPathDir = Path.GetTempPath();
 
             // act

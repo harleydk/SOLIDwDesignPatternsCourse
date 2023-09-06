@@ -6,7 +6,7 @@ namespace StrategyPattern_challengeSolved
 {
     public class UserReputationStratategySelector
     {
-        private List<IDatingUserReputationStrategy> _userReputationStrategies;
+        private readonly List<IDatingUserReputationStrategy> _userReputationStrategies;
 
         public UserReputationStratategySelector()
         {

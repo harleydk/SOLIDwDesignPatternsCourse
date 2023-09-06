@@ -6,7 +6,7 @@ namespace DependencyInversion_fluidInterfacePattern
 {
     public class PressureSensorLogger
     {
-        private DiagnosticsLogger _diagnosticsLogger;
+        private readonly DiagnosticsLogger _diagnosticsLogger;
 
         public PressureSensorLogger(DiagnosticsLogger diagnosticsLogger)
         {

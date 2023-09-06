@@ -25,7 +25,7 @@ namespace FacadePattern
         /// </example>
         public static void Main()
         {
-            Facade facade = new Facade();
+            Facade facade = new();
 
             facade.MethodA();
             facade.MethodB();

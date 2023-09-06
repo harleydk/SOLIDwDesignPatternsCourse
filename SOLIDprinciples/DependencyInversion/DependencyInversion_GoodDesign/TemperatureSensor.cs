@@ -20,7 +20,7 @@ namespace DependencyInversion_GoodDesign
         public double GetTemperature()
         {
             // Let's pretend we're physically hooked up to a sensor, and that this method will return its current temperature.
-            Random rnd = new Random();
+            Random rnd = new();
             return rnd.NextDouble();
         }
     }

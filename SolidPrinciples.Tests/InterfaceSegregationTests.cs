@@ -19,7 +19,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanAddSensor()
         {
             // arrange
-            InterfaceSegregation_BadDesign.TraditionalSensorCabinet sensorCabinet = new InterfaceSegregation_BadDesign.TraditionalSensorCabinet("TestAdminUserName");
+            InterfaceSegregation_BadDesign.TraditionalSensorCabinet sensorCabinet = new("TestAdminUserName");
 
             // act
             sensorCabinet.AddSensor(new TestSensor());
@@ -33,7 +33,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             string cabinetUserId = "FoobarUser";
-            InterfaceSegregation_BadDesign.TraditionalSensorCabinet sensorCabinet = new InterfaceSegregation_BadDesign.TraditionalSensorCabinet(cabinetUserId);
+            InterfaceSegregation_BadDesign.TraditionalSensorCabinet sensorCabinet = new(cabinetUserId);
 
             // act
             string cabinetLastOpenedByUserId = sensorCabinet.GetCabinetLastOpenedByUserId();
@@ -48,7 +48,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             string cabinetUserId = "FoobarUser";
-            InterfaceSegregation_BadDesign.SensorCabinetWithoutAlarm sensorCabinet = new InterfaceSegregation_BadDesign.SensorCabinetWithoutAlarm(cabinetUserId);
+            InterfaceSegregation_BadDesign.SensorCabinetWithoutAlarm sensorCabinet = new(cabinetUserId);
 
             // act/assert
             sensorCabinet.ResetCabinetOpenAlarm();
@@ -62,7 +62,7 @@ namespace SolidPrinciples.Tests
         public void BetterDesign_ImplementsRightInterface()
         {
             // arrange
-            InterfaceSegregation_BetterDesign.SensorCabinetWithoutAlarm sensorCabinetWithoutAlarm = new InterfaceSegregation_BetterDesign.SensorCabinetWithoutAlarm("foobarAdmin");
+            InterfaceSegregation_BetterDesign.SensorCabinetWithoutAlarm sensorCabinetWithoutAlarm = new("foobarAdmin");
 
             // act
             Type[] interfacesImplementedByClass = sensorCabinetWithoutAlarm.GetType().GetInterfaces();
@@ -81,7 +81,7 @@ namespace SolidPrinciples.Tests
         public void GoodDesign_ImplementsRightInterface()
         {
             // arrange
-            InterfaceSegregation_GoodDesign.SensorCabinetWithoutAlarm sensorCabinetWithoutAlarm = new InterfaceSegregation_GoodDesign.SensorCabinetWithoutAlarm("foobarAdmin");
+            InterfaceSegregation_GoodDesign.SensorCabinetWithoutAlarm sensorCabinetWithoutAlarm = new("foobarAdmin");
 
             // act
             Type[] interfacesImplementedByClass = sensorCabinetWithoutAlarm.GetType().GetInterfaces();

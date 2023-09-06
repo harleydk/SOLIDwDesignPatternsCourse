@@ -5,8 +5,8 @@
     // way of maintaining them onwards.
     public sealed class SensorAndLoggerFacade
     {
-        private FileLogger logger = new FileLogger();
-        private SensorReader sensorReader = new SensorReader();
+        private readonly FileLogger logger = new();
+        private readonly SensorReader sensorReader = new();
 
         public void WriteToLog(string message)
         {

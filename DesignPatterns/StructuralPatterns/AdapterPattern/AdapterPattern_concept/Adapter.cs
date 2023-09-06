@@ -5,7 +5,7 @@
     /// </summary>
     internal class Adapter : ITarget
     {
-        private ISubjectForAdaption _adaptee = new SubjectForAdaption();
+        private readonly ISubjectForAdaption _adaptee = new SubjectForAdaption();
 
         public void Request()
         {

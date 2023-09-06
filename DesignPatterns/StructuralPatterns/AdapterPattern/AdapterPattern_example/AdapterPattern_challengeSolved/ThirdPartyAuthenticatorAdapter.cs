@@ -5,7 +5,7 @@
     /// </summary>
     public sealed class ThirdPartyAuthenticatorAdapter : IUserAuthenticator
     {
-        private IThirdPartyAuthenticator _thirdpartyAuthenticator;
+        private readonly IThirdPartyAuthenticator _thirdpartyAuthenticator;
 
         public ThirdPartyAuthenticatorAdapter()
         {

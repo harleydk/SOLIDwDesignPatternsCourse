@@ -7,9 +7,9 @@ namespace InterfaceSegregation_BetterDesign
 {
     public class TraditionalSensorCabinet : ICabinetSensoring, ICabinetOpenAlarm
     {
-        private CabinetAlarm _cabinetAlarm;
-        private string _cabinetLastOpenedByUserName;
-        private string _cabinetAdministratorUserName;
+        private readonly CabinetAlarm _cabinetAlarm;
+        private readonly string _cabinetLastOpenedByUserName;
+        private readonly string _cabinetAdministratorUserName;
 
         public event EventHandler<SensorEventArgs> SensorEvent;
 

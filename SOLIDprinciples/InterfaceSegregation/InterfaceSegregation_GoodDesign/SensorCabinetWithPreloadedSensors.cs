@@ -7,7 +7,7 @@ namespace InterfaceSegregation_GoodDesign
 {
     public sealed class SensorCabinetWithPreloadedSensors : ICabinetSensorEventing
     {
-        private IEnumerable<ISensor> _preloadedSensors;
+        private readonly IEnumerable<ISensor> _preloadedSensors;
 
         public event EventHandler<SensorEventArgs> SensorEvent;
 

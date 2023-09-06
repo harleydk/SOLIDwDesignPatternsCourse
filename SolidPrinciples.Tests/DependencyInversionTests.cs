@@ -14,7 +14,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_TestCanInitializeDependencies()
         {
             // arrange
-            DependencyInversion_BadDesign.SensorCabinet sensorCabinet = new DependencyInversion_BadDesign.SensorCabinet();
+            DependencyInversion_BadDesign.SensorCabinet sensorCabinet = new();
 
             // act/assert
             Assert.IsTrue(sensorCabinet.TemperatureSensor1 != null);
@@ -31,7 +31,7 @@ namespace SolidPrinciples.Tests
             // arrange
             DependencyInversion_BetterDesign.ISensor sensor = new DependencyInversion_BetterDesign.PressureSensor();
             IEnumerable<DependencyInversion_BetterDesign.ISensor> sensors = new List<DependencyInversion_BetterDesign.ISensor>() { sensor };
-            DependencyInversion_BetterDesign.SensorCabinet sensorCabinet = new DependencyInversion_BetterDesign.SensorCabinet(sensors);
+            DependencyInversion_BetterDesign.SensorCabinet sensorCabinet = new(sensors);
 
             // act
             int temperatureSensorCount = sensorCabinet.Sensors.Count(sensorImplementation => sensorImplementation.GetType() == typeof(DependencyInversion_BetterDesign.PressureSensor));
@@ -56,8 +56,8 @@ namespace SolidPrinciples.Tests
         public void GoodDesign_TestHasNoLongerDependencyOnLogger()
         {
             // arrange
-            MockSensor mockedSensor = new MockSensor();
-            DependencyInversion_GoodDesign.SensorCabinet sensorCabinet = new DependencyInversion_GoodDesign.SensorCabinet(new List<ISensor> { mockedSensor });
+            MockSensor mockedSensor = new();
+            DependencyInversion_GoodDesign.SensorCabinet sensorCabinet = new(new List<ISensor> { mockedSensor });
 
             // act
             bool hasLongerALoggingMethod = sensorCabinet.GetType().GetMethods().Any(method => method.Name == "WriteAllTemperatureSensorsDataToLog");

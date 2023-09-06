@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace TemplatePattern
 {
@@ -30,7 +31,7 @@ namespace TemplatePattern
 
         private void SendNotificationEmail()
         {
-            System.Diagnostics.Debug.WriteLine("Sending a regular notification e-mail");
+            Debug.WriteLine("Sending a regular notification e-mail");
         }
     }
 }

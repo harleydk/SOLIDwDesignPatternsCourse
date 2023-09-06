@@ -14,9 +14,9 @@ namespace DesignPatterns.Tests
             Member multipleDealsArnold = Member.CreateMember("Arnold Schwarzenegger", 300);
 
             // act
-            WithSpecialOfferDecorator firstSpecialDealForArnold = new WithSpecialOfferDecorator(multipleDealsArnold, 500);
-            WithSpecialOfferDecorator secondSpecialDealForArnold = new WithSpecialOfferDecorator(firstSpecialDealForArnold, 500);
-            WithSpecialOfferDecorator thirdSpecialDealForArnold = new WithSpecialOfferDecorator(secondSpecialDealForArnold, 500);
+            WithSpecialOfferDecorator firstSpecialDealForArnold = new(multipleDealsArnold, 500);
+            WithSpecialOfferDecorator secondSpecialDealForArnold = new(firstSpecialDealForArnold, 500);
+            WithSpecialOfferDecorator thirdSpecialDealForArnold = new(secondSpecialDealForArnold, 500);
             var points = thirdSpecialDealForArnold.Points;
 
             // assert

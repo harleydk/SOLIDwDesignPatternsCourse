@@ -18,7 +18,7 @@ namespace DecoratorPattern_problem
             Debug.WriteLine(clint.GetMemberStatus());
 
             // Now we need an enhanced member, so we override the Member into a SpecialOfferMember class.
-            SpecialOfferMember specialDealForClint = new SpecialOfferMember(extraPoints: 100)
+            SpecialOfferMember specialDealForClint = new(extraPoints: 100)
             {
                 Name = "Clint Eastwood",
                 Points = 300,
@@ -26,7 +26,7 @@ namespace DecoratorPattern_problem
             Debug.WriteLine(specialDealForClint.GetMemberStatus());
 
             // Now we need an anniversary member, so we override the Member class into an
-            AnniversaryMember clintWithAnniversary = new AnniversaryMember()
+            AnniversaryMember clintWithAnniversary = new()
             {
                 Name = "Clint Eastwood",
                 Points = 300
@@ -36,7 +36,7 @@ namespace DecoratorPattern_problem
             // Quickly leads to class explosion.
             // What if we want Clint to be _both_ special-deal recipient _and_ administrator? (code below)
             SpecialOfferAnniversaryMember clintTheAdminAndSpecialDealRecipient =
-                new SpecialOfferAnniversaryMember(100)
+                new(100)
                 {
                     Name = "Clint Eastwood",
                     Points = 300

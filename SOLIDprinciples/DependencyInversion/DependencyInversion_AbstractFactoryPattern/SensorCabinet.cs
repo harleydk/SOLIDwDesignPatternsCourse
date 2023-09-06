@@ -5,7 +5,7 @@ namespace DependencyInversion_AbstractFactoryPattern
 {
     public sealed class SensorCabinet
     {
-        private IEnumerable<ISensor> _sensors;
+        private readonly IEnumerable<ISensor> _sensors;
 
         public SensorCabinet(IEnumerable<ISensor> sensors)
         {
