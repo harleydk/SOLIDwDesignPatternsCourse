@@ -15,7 +15,7 @@ namespace DesignPatterns.Tests
             ThirdPartyAuthenticatorAdapter thirdPartyAuthenticatorAdapter = new();
 
             // act
-            var methods = thirdPartyAuthenticatorAdapter.GetType().GetMethods();
+            System.Reflection.MethodInfo[] methods = thirdPartyAuthenticatorAdapter.GetType().GetMethods();
             bool hasStillOldMethod = methods.Any(method => method.Name == "TryToAuthenciate");
 
             // assert

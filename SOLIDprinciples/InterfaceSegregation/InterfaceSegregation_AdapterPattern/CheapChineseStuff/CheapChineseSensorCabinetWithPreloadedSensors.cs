@@ -5,7 +5,10 @@ using System.Linq;
 
 namespace InterfaceSegregation_AdapterPattern
 {
-    // Third-party code, can't be modified. Sadly adheres to the old ISensorCabinet industry-standard interface. We need an adapter for this.
+    /// <summary>
+    /// Third-party code, can't be modified. Sadly adheres to the old ISensorCabinet industry-standard interface:
+    /// We need an adapter for this.
+    /// </summary>
     public sealed class CheapChineseSensorCabinetWithPreloadedSensors : ISensorCabinet
     {
         private readonly IEnumerable<ISensor> _preloadedSensors;

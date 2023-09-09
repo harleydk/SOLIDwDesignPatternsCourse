@@ -10,12 +10,12 @@ namespace AbstractFactoryPattern
         /// </summary>
         public static void Main()
         {
-            var basicUser = User.CreateUser("Arnold Schwarzenegger", "IllBeBack", UserTypeEnum.BasicUser);
+            User basicUser = User.CreateUser("Arnold Schwarzenegger", "IllBeBack", UserTypeEnum.BasicUser);
             ISecurityProviderFactory securityProviderFactory = GetSecurityProviderFactory(basicUser.UserType);
             UserSecurityManager userSecurityManager = new(securityProviderFactory);
             userSecurityManager.PerformUserSecurityOperations(basicUser);
 
-            var superUser = User.CreateUser("Clint Eastwood", "MakeMyDayPunk", UserTypeEnum.SuperUser);
+            User superUser = User.CreateUser("Clint Eastwood", "MakeMyDayPunk", UserTypeEnum.SuperUser);
             securityProviderFactory = GetSecurityProviderFactory(superUser.UserType);
             userSecurityManager = new UserSecurityManager(securityProviderFactory);
             userSecurityManager.PerformUserSecurityOperations(basicUser);

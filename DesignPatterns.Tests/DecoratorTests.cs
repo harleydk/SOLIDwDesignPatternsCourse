@@ -17,7 +17,7 @@ namespace DesignPatterns.Tests
             WithSpecialOfferDecorator firstSpecialDealForArnold = new(multipleDealsArnold, 500);
             WithSpecialOfferDecorator secondSpecialDealForArnold = new(firstSpecialDealForArnold, 500);
             WithSpecialOfferDecorator thirdSpecialDealForArnold = new(secondSpecialDealForArnold, 500);
-            var points = thirdSpecialDealForArnold.Points;
+            int points = thirdSpecialDealForArnold.Points;
 
             // assert
             Assert.AreEqual(points, 1800);

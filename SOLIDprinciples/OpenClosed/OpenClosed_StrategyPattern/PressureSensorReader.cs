@@ -24,7 +24,7 @@ namespace OpenClosed_StrategyPattern
         {
             double totalPressureFromAllSensors = 0;
 
-            foreach (var tankPressureSensor in _tankPressureSensors)
+            foreach (AbstractTankPressureSensor tankPressureSensor in _tankPressureSensors)
                 totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             int numberOfPressureSensores = _tankPressureSensors.Length;

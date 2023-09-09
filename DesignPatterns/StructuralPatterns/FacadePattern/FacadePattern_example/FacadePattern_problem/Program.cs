@@ -16,7 +16,7 @@
                 return;
 
             UserAddressService userAddressService = new();
-            var userAddress = userAddressService.GetAddress(user.Name);
+            (string Address, string City) userAddress = userAddressService.GetAddress(user.Name);
 
             // confirm user's address
             GovernmentAddressService governmentAddressService = new();

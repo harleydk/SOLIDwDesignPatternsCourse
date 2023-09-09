@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>affcc124-8729-416a-a32b-e25d15a88869</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>DependencyInversion_Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Alarms\EnhancedDisplayAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Alarms\PersistentBeepAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DiagnosticsLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Alarms\DisplayAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Alarms\IAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sensors\ISensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sensors\PressureSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sensors\Sensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sensors\TemperatureSensor.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Sensors\TemperatureSensorData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Alarms\WarningBellAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TemperatureSensorLogger.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Sensors\" />
+  </ItemGroup>
+</Project>

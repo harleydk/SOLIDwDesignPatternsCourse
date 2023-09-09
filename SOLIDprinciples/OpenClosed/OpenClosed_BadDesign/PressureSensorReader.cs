@@ -34,7 +34,7 @@ namespace OpenClosed_BadDesign
 
             double totalPressureFromAllSensors = 0;
 
-            foreach (var tankPressureSensor in _tankPressureSensors)
+            foreach (object tankPressureSensor in _tankPressureSensors)
             {
                 // We need to cast to a specific type, or we won't know which method to call.
                 if (tankPressureSensor is InternalTankPressureSensor)

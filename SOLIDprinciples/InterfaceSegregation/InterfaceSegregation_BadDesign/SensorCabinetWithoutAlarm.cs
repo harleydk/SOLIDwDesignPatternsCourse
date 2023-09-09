@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace InterfaceSegregation_BadDesign
 {
-    public sealed class SensorCabinetWithoutAlarm : ISensorCabinet // implements the full set of isensorCabinet functionality!
+    public sealed class SensorCabinetWithoutAlarm : ISensorCabinet // implements the full set of ISensorCabinet functionality!
     {
         private readonly string _cabinetAdministratorUserName;
 

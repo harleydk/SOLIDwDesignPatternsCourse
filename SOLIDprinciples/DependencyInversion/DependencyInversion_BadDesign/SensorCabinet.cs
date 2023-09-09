@@ -1,24 +1,38 @@
-﻿namespace DependencyInversion_BadDesign
+﻿using DependencyInversion;
+using System.Collections.Generic;
+
+namespace DependencyInversion_BadDesign
 {
+    /// <summary>
+    /// A sensor cabinet, that holds a number of sensors.
+    /// </summary>
+    /// <remarks>
+    /// This class does not honor the dependency inversion principle - lots of hard-wired dependencies.
+    /// </remarks>
     public sealed class SensorCabinet
     {
-        // this breaks with what principle...?
         public TemperatureSensor TemperatureSensor1 { get; private set; }
         public TemperatureSensor TemperatureSensor2 { get; private set; }
         public PressureSensor PressureSensor { get; private set; }
         public DisplayAlarm DisplayAlarm { get; private set; }
         public WarningBellAlarm WarningBellAlarm { get; private set; }
 
-        public DiagnosticsLogger DiagnosticsLogger { get; private set; }
+        public TemperatureSensorLogger TemperatureSensorLogger { get; private set; }
 
-        public SensorCabinet()
+        public void InitializeSensors()
         {
-            InitializaAlarms();
-            InitializeSensors();
-            AttachAlarmsToSensors();
+            TemperatureSensor1 = new TemperatureSensor(sensorId: "Temp1");
+            TemperatureSensor2 = new TemperatureSensor(sensorId: "Temp2");
+            PressureSensor = new PressureSensor();
         }
 
-        private void AttachAlarmsToSensors()
+        public void InitializeAlarms()
+        {
+            DisplayAlarm = new DisplayAlarm();
+            WarningBellAlarm = new WarningBellAlarm();
+        }
+
+        public void AttachAlarmsToSensors()
         {
             TemperatureSensor1.AttachAlarm(DisplayAlarm);
 
@@ -29,33 +43,19 @@
             PressureSensor.AttachAlarm(WarningBellAlarm);
         }
 
-        private void InitializeSensors()
-        {
-            TemperatureSensor1 = new TemperatureSensor("Temp1");
-            TemperatureSensor2 = new TemperatureSensor("Temp2");
-            PressureSensor = new PressureSensor();
-        }
-
-        private void InitializaAlarms()
-        {
-            DisplayAlarm = new DisplayAlarm();
-            WarningBellAlarm = new WarningBellAlarm();
-        }
-
         public void AttachLogger()
         {
-            DiagnosticsLogger = new DiagnosticsLogger();
+            TemperatureSensorLogger = new TemperatureSensorLogger(new DiagnosticsLogger());
         }
 
         /// <summary>
-        /// Write sensordata for all temperature-sensors to the diagnostics-logger.
+        /// Write sensor data for all temperature-sensors to the diagnostics-logger.
         /// </summary>
         public void WriteAllTemperatureSensorsDataToLog()
         {
-            double temperatureSensorValue1 = TemperatureSensor1.GetTemperature();
-            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor1.Id} reported value {temperatureSensorValue1.ToString("N2")}");
-            double temperatureSensorValue2 = TemperatureSensor2.GetTemperature();
-            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor2.Id} reported value {temperatureSensorValue2.ToString("N2")}");
+            TemperatureSensorData sensorData1 = new(SensorId: TemperatureSensor1.Id, TemperatureSensor1.GetTemperature());
+            TemperatureSensorData sensorData2 = new(SensorId: TemperatureSensor2.Id, TemperatureSensor2.GetTemperature());
+            TemperatureSensorLogger.WriteAllTemperatureSensorsDataToLog(new List<TemperatureSensorData> { sensorData1, sensorData2 });
         }
     }
 }

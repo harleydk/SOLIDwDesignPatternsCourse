@@ -90,7 +90,7 @@ namespace SolidPrinciples.Tests
             LiskovSubstitution_GoodDesign.VoltageAlarmBase newVoltageAlarm = new LiskovSubstitution_GoodDesign.NewVoltageAlarm(5d);
 
             // act
-            var shouldResetNumberOfAlarmsRaised = newVoltageAlarm.ShouldResetNumberOfAlarmsRaised();
+            bool shouldResetNumberOfAlarmsRaised = newVoltageAlarm.ShouldResetNumberOfAlarmsRaised();
 
             // assert
             Assert.IsTrue(shouldResetNumberOfAlarmsRaised);

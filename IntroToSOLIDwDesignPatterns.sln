@@ -1,4 +1,3 @@
-
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
@@ -127,8 +126,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_Adapte
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_BadDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BadDesign\DependencyInversion_BadDesign.csproj", "{EB43956C-653E-45AB-AFF8-1776596EB3D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_BetterDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BetterDesign\DependencyInversion_BetterDesign.csproj", "{6A2F09CB-FC1B-41D3-8988-F6C387814F47}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_GoodDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_GoodDesign\DependencyInversion_GoodDesign.csproj", "{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_AbstractFactoryPattern", "SOLIDprinciples\DependencyInversion\DependencyInversion_AbstractFactoryPattern\DependencyInversion_AbstractFactoryPattern.csproj", "{A43EB3A3-192A-47F9-9F51-69D3215861C4}"
@@ -146,6 +143,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePatern_challenge", "DesignPatterns\StructuralPatterns\CompositePattern\CompositePattern_example\CompositePatern_challenge\CompositePatern_challenge.csproj", "{1C01276E-D810-443E-9766-3AB8758B9ED6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitution_MFeathersExample", "SOLIDprinciples\LiskovSubstitution\LiskovSubstitution_MFeathersExample\LiskovSubstitution_MFeathersExample.csproj", "{E8269DC1-511A-44FA-9F80-EEF258C2D9D8}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DependencyInversion_Shared", "DependencyInversion_Shared\DependencyInversion_Shared.shproj", "{AFFCC124-8729-416A-A32B-E25D15A88869}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C86DFED1-2D31-4B7C-B291-CC0C819DFD11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -309,10 +310,6 @@ Global
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A2F09CB-FC1B-41D3-8988-F6C387814F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A2F09CB-FC1B-41D3-8988-F6C387814F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A2F09CB-FC1B-41D3-8988-F6C387814F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A2F09CB-FC1B-41D3-8988-F6C387814F47}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC71D90B-7A28-4B2B-A2D0-E4BC32598153}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -405,7 +402,6 @@ Global
 		{FA9F239D-697B-4946-B35B-C86D269C7F62} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
 		{D37A3C78-422F-4F06-B64C-04EB1B6342B9} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
-		{6A2F09CB-FC1B-41D3-8988-F6C387814F47} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{EC71D90B-7A28-4B2B-A2D0-E4BC32598153} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{A43EB3A3-192A-47F9-9F51-69D3215861C4} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{D8338193-0BB8-4900-BC00-5B538BFEE930} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
@@ -415,8 +411,16 @@ Global
 		{CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5} = {6E37CB56-0591-4FB3-BBAF-7EC1C88C3BE9}
 		{1C01276E-D810-443E-9766-3AB8758B9ED6} = {CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5}
 		{E8269DC1-511A-44FA-9F80-EEF258C2D9D8} = {915FB00E-7812-4A14-A9E7-21F7267CB264}
+		{AFFCC124-8729-416A-A32B-E25D15A88869} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{a43eb3a3-192a-47f9-9f51-69d3215861c4}*SharedItemsImports = 5
+		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{affcc124-8729-416a-a32b-e25d15a88869}*SharedItemsImports = 13
+		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{d8338193-0bb8-4900-bc00-5b538bfee930}*SharedItemsImports = 5
+		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{eb43956c-653e-45ab-aff8-1776596eb3d0}*SharedItemsImports = 5
+		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{ec71d90b-7a28-4b2b-a2d0-e4bc32598153}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

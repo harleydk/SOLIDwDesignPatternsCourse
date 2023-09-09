@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using DependencyInversion;
 
 namespace DependencyInversion_GoodDesign
 {
@@ -14,29 +15,25 @@ namespace DependencyInversion_GoodDesign
             _sensors = sensors;
         }
 
-        public IEnumerable<(string SensorId, double Temperature)> GetAllTemperatureSensorsData()
+        public IEnumerable<TemperatureSensorData> GetAllTemperatureSensorsData()
         {
-            IList<(string SensorId, double Temperature)> temperatureSensorDataList = new List<(string SensorId, double Temperature)>();
-
-            IEnumerable<TemperatureSensor> temperaturesSensors = _sensors.Where(sensor => sensor is TemperatureSensor).Cast<TemperatureSensor>();
-            temperaturesSensors.AsParallel().ForAll(temperatureSensor =>
+            IEnumerable<TemperatureSensor> temperatureSensors = _sensors.Where(sensor => sensor is TemperatureSensor).Cast<TemperatureSensor>();
+            foreach (TemperatureSensor temperatureSensor in temperatureSensors)
             {
-                var temperatureSensorData = GetTemperatureSensorData(temperatureSensor);
-                temperatureSensorDataList.Add(temperatureSensorData);
-            });
-
-            return temperatureSensorDataList.AsEnumerable();
+                TemperatureSensorData temperatureSensorData = GetTemperatureSensorData(temperatureSensor);
+                yield return temperatureSensorData;
+            };
         }
 
-        private (string SensorId, double Temperature) GetTemperatureSensorData(TemperatureSensor temperatureSensor)
+        private TemperatureSensorData GetTemperatureSensorData(TemperatureSensor temperatureSensor)
         {
-            string SensorId = temperatureSensor.Id;
-            double Temperature = temperatureSensor.GetTemperature();
+            string sensorId = temperatureSensor.Id;
+            double temperature = temperatureSensor.GetTemperature();
 
-            Debug.Assert(!string.IsNullOrWhiteSpace(SensorId), "sensor-id should not be null or blank");
-            Debug.Assert(Temperature >= 0, "temperature shouldbe >= 0");
+            Debug.Assert(!string.IsNullOrWhiteSpace(sensorId), "sensor-id should not be null or blank");
+            Debug.Assert(temperature >= 0, "temperature should be >= 0");
 
-            return (SensorId, Temperature);
+            return new TemperatureSensorData(sensorId, temperature);
         }
     }
 }

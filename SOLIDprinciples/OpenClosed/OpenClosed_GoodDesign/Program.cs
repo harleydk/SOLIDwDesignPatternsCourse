@@ -12,7 +12,7 @@ namespace OpenClosed_GoodDesign
             PressureSensorReader pressureSensorReader = new();
 
             int waterIntakeVelocity = 16;
-            var averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
+            double averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
             Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
 
             // Given the introduction of the 'AbstractTankPressureSensor' abstraction,

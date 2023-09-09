@@ -14,7 +14,7 @@ namespace DesignPatterns.Tests
             AbstractFactoryPattern.ISecurityProviderFactory basicSecurityProviderFactory= new AbstractFactoryPattern.BasicUserSecurityProviderFactory();
 
             // act
-            var authenticator = basicSecurityProviderFactory.CreateAuthenticator();
+            IAuthenticator authenticator = basicSecurityProviderFactory.CreateAuthenticator();
 
             // assert
             Assert.IsInstanceOfType(authenticator, typeof(BasicUserAuthenticator));

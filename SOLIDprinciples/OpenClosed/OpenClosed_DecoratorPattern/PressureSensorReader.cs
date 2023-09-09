@@ -27,7 +27,7 @@ namespace OpenClosed_DecoratorPattern
         {
             double totalPressureFromAllSensors = 0;
 
-            foreach (var tankPressureSensor in _tankPressureSensors)
+            foreach (AbstractTankPressureSensor tankPressureSensor in _tankPressureSensors)
                 totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             int numberOfPressureSensores = _tankPressureSensors.Length;
