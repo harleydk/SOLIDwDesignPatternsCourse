@@ -2,7 +2,6 @@
 {
     public sealed class SensorCabinet
     {
-        // this breaks with what principle...?
         public TemperatureSensor TemperatureSensor1 { get; private set; }
         public TemperatureSensor TemperatureSensor2 { get; private set; }
         public PressureSensor PressureSensor { get; private set; }
@@ -13,7 +12,8 @@
 
         public SensorCabinet()
         {
-            InitializaAlarms();
+            // Lots of initializations within these methods.
+            InitializeAlarms();
             InitializeSensors();
             AttachAlarmsToSensors();
         }
@@ -31,12 +31,12 @@
 
         private void InitializeSensors()
         {
-            TemperatureSensor1 = new TemperatureSensor("Temp1");
-            TemperatureSensor2 = new TemperatureSensor("Temp2");
+            TemperatureSensor1 = new TemperatureSensor(sensorId: "Temp1");
+            TemperatureSensor2 = new TemperatureSensor(sensorId: "Temp2");
             PressureSensor = new PressureSensor();
         }
 
-        private void InitializaAlarms()
+        private void InitializeAlarms()
         {
             DisplayAlarm = new DisplayAlarm();
             WarningBellAlarm = new WarningBellAlarm();
@@ -48,14 +48,14 @@
         }
 
         /// <summary>
-        /// Write sensordata for all temperature-sensors to the diagnostics-logger.
+        /// Write sensor data for all temperature-sensors to the diagnostics-logger.
         /// </summary>
         public void WriteAllTemperatureSensorsDataToLog()
         {
             double temperatureSensorValue1 = TemperatureSensor1.GetTemperature();
-            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor1.Id} reported value {temperatureSensorValue1.ToString("N2")}");
+            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor1.Id} reported value {temperatureSensorValue1:N2}");
             double temperatureSensorValue2 = TemperatureSensor2.GetTemperature();
-            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor2.Id} reported value {temperatureSensorValue2.ToString("N2")}");
+            DiagnosticsLogger.WriteToLog($"Sensor {TemperatureSensor2.Id} reported value {temperatureSensorValue2:N2}");
         }
     }
 }
