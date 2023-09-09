@@ -5,8 +5,8 @@ namespace InterfaceSegregation_BetterDesign
     public sealed class Program
     {
         private const string CABINET_ADMIN_USER_NAME = "F. Oobar";
-        private static TraditionalSensorCabinet traditionalSensorCabinet = new TraditionalSensorCabinet(CABINET_ADMIN_USER_NAME);
-        private static ICabinetSensoring sensorCabinetWithoutAlarm = new SensorCabinetWithoutAlarm(CABINET_ADMIN_USER_NAME);
+        private static readonly TraditionalSensorCabinet traditionalSensorCabinet = new(CABINET_ADMIN_USER_NAME);
+        private static readonly ICabinetSensoring sensorCabinetWithoutAlarm = new SensorCabinetWithoutAlarm(CABINET_ADMIN_USER_NAME);
 
         /// <summary>
         /// The better design is to split the general ISensorCabinet interface out into seperate interfaces, and thus allow the SensorCabinetWithoutAlarm to only implement those interfaces it should implement.

@@ -25,7 +25,7 @@ namespace DependencyInversion_fluidInterfacePattern
             AttachAlarmsToSensors();
             InitializeSensorLoggers();
 
-            List<ISensor> sensorCollection = new List<ISensor>() {
+            List<ISensor> sensorCollection = new() {
                 _temperatureSensor1,
                 _temperatureSensor2,
                 _pressureSensor };
@@ -68,7 +68,7 @@ namespace DependencyInversion_fluidInterfacePattern
 
         private static void InitializeSensorLoggers()
         {
-            DiagnosticsLogger diagnosticsLogger = new DiagnosticsLogger();
+            DiagnosticsLogger diagnosticsLogger = new();
             temperatureSensorLogger = new TemperatureSensorLogger(diagnosticsLogger);
         }
     }

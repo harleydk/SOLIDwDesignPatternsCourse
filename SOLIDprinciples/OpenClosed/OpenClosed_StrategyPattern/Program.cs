@@ -11,7 +11,7 @@ namespace OpenClosed_StrategyPattern
     {
         public static void Main()
         {
-            PressureSensorReader pressureSensorReader = new PressureSensorReader();
+            PressureSensorReader pressureSensorReader = new();
 
             int waterIntakeVelocity = 16;
             var averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);

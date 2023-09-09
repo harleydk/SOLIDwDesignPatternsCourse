@@ -25,11 +25,11 @@ namespace DependencyInversion_BetterDesign
                 _temperatureSensor1,
                 _temperatureSensor2,
                 _pressureSensor };
-            SensorCabinet sensorCabinet = new SensorCabinet(sensorCollection);
+            SensorCabinet sensorCabinet = new(sensorCollection);
             // now do some monitoring...
 
             // At some point, we wish to write temperature sensor values to a log.
-            DiagnosticsLogger diagnosticsLogger = new DiagnosticsLogger();
+            DiagnosticsLogger diagnosticsLogger = new();
             sensorCabinet.WriteAllTemperatureSensorsDataToLog(diagnosticsLogger); // 'method injection'
 
             // Assuming we can't yank the logging-responsibility out of the sensor-cabinet class, method injection will have to do.

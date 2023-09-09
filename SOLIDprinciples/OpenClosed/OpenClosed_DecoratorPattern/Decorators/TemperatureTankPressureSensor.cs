@@ -42,7 +42,7 @@ namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
         private int getCurrentOperatingTemperature()
         {
             // simulate a reading off a temperature sensor
-            Random rnd = new Random();
+            Random rnd = new();
             int currentOperatingTemperature = rnd.Next(10, 30);
             return currentOperatingTemperature;
         }

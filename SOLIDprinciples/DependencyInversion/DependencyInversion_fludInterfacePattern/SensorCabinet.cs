@@ -6,7 +6,7 @@ namespace DependencyInversion_fluidInterfacePattern
 {
     public sealed class SensorCabinet
     {
-        private IList<ISensor> _sensors;
+        private readonly IList<ISensor> _sensors;
         private TemperatureSensorLogger _temperatureSensorLogger;
         private PressureSensorLogger _pressureSensorLogger;
 

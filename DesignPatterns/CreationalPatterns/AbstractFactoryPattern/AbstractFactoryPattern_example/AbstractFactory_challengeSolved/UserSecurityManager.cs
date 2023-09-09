@@ -2,8 +2,8 @@
 {
     public sealed class UserSecurityManager
     {
-        private IAuthorizer _authorizer;
-        private IAuthenticator _authenticator;
+        private readonly IAuthorizer _authorizer;
+        private readonly IAuthenticator _authenticator;
 
         public UserSecurityManager(ISecurityProviderFactory securityProviderFactory)
         {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace CompositePattern_concept
 {
@@ -17,17 +18,17 @@ namespace CompositePattern_concept
 
         public void Add(IComponent c)
         {
-            System.Diagnostics.Debug.WriteLine("Cannot add to a leaf");
+            Debug.WriteLine("Cannot add to a leaf");
         }
 
         public void Remove(IComponent c)
         {
-            System.Diagnostics.Debug.WriteLine("Cannot remove from a leaf");
+            Debug.WriteLine("Cannot remove from a leaf");
         }
 
         public void Display(int depth)
         {
-            System.Diagnostics.Debug.WriteLine(new String('-', depth) + _name);
+            Debug.WriteLine(new String('-', depth) + _name);
         }
     }
 }

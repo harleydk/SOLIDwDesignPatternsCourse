@@ -9,7 +9,7 @@
         {
             var user = new { Name = "Clint" };
 
-            UserRelocationProcessingFacade userRelocationProcessingFacade = new UserRelocationProcessingFacade(user.Name);
+            UserRelocationProcessingFacade userRelocationProcessingFacade = new(user.Name);
 
             bool canGetAndValidateUserAddress = userRelocationProcessingFacade.CanGetAndValidateUserAddress();
 

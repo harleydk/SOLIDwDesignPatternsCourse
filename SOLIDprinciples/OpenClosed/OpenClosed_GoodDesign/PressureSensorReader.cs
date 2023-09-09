@@ -4,7 +4,7 @@ namespace OpenClosed_GoodDesign
 {
     public sealed class PressureSensorReader
     {
-        private TankPressureSensorBase[] _tankPressureSensors;
+        private readonly TankPressureSensorBase[] _tankPressureSensors;
 
         public PressureSensorReader()
         {

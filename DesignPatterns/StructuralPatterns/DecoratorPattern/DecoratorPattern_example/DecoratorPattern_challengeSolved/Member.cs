@@ -14,7 +14,7 @@
 
         public static Member CreateMember(string name, int points)
         {
-            Member newMember = new Member()
+            Member newMember = new()
             {
                 Name = name,
                 Points = points

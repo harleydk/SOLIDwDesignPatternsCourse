@@ -17,7 +17,7 @@
 
         public static User CreateUser(string userName, string password, UserTypeEnum userType)
         {
-            User newUser = new User(userName, password, userType);
+            User newUser = new(userName, password, userType);
             return newUser;
         }
     }

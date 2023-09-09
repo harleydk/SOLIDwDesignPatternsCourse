@@ -5,7 +5,7 @@ namespace OpenClosed_StrategyPattern
 {
     public sealed class PressureSensorReader
     {
-        private AbstractTankPressureSensor[] _tankPressureSensors;
+        private readonly AbstractTankPressureSensor[] _tankPressureSensors;
 
         public PressureSensorReader()
         {

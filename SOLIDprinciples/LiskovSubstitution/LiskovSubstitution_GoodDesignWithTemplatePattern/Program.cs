@@ -12,7 +12,7 @@
         // single point of maintainability.
         public static void Main()
         {
-            VoltageSensor voltageSensor = new VoltageSensor();
+            VoltageSensor voltageSensor = new();
             voltageSensor.ReadCurrentSensorVoltage();
             voltageSensor.RaiseAlarmIfVoltageBelowThreshold();
         }

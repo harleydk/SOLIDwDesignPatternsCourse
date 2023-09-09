@@ -18,7 +18,7 @@ namespace AdapterPattern_problem
             else
             {
                 // Go through the motions of the third-party authenticator, somewhat different to our in-house one.
-                ThirdPartyAuthenticator thirdpartyAuthenticator = new ThirdPartyAuthenticator();
+                ThirdPartyAuthenticator thirdpartyAuthenticator = new();
                 thirdpartyAuthenticator.StoreCredentials(clint.Name, clint.Password);
 
                 // ... and try to authenticate using them both

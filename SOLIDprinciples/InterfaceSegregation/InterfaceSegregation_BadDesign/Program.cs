@@ -5,8 +5,8 @@ namespace InterfaceSegregation_BadDesign
     public sealed class Program
     {
         private const string CABINET_ADMIN_USER_NAME = "F. Oobar";
-        private static ISensorCabinet traditionalSensorCabinet = new TraditionalSensorCabinet(CABINET_ADMIN_USER_NAME);
-        private static ISensorCabinet sensorCabinetWithoutAlarm = new SensorCabinetWithoutAlarm(CABINET_ADMIN_USER_NAME);
+        private static readonly ISensorCabinet traditionalSensorCabinet = new TraditionalSensorCabinet(CABINET_ADMIN_USER_NAME);
+        private static readonly ISensorCabinet sensorCabinetWithoutAlarm = new SensorCabinetWithoutAlarm(CABINET_ADMIN_USER_NAME);
 
         /// <summary>
         /// The interface segregation principle states that no class should be forced to implement interface-methods it has not need for. Below, a SensorCabinetWithoutAlarm() shouldn't have to implement ISensorCabinet-methods regarding alarms.
@@ -19,6 +19,10 @@ namespace InterfaceSegregation_BadDesign
 
             sensorCabinetWithoutAlarm.SensorEvent += SensorCabinetWithoutAlarm_SensorEvent1;
             string cabinetLastOpenedBy = sensorCabinetWithoutAlarm.GetCabinetLastOpenedByUserId(); // fails - and should not be possible. But who would ever call it, when they know it's a sensorcabinet sans alarms...
+
+            traditionalSensorCabinet.CabinetOpenedEvent -= SensorCabinet_CabinetOpenedEvent;
+            traditionalSensorCabinet.SensorEvent -= TraditionalSensorCabinet_SensorEvent;
+            sensorCabinetWithoutAlarm.SensorEvent -= SensorCabinetWithoutAlarm_SensorEvent1;
         }
 
         private static void SensorCabinetWithoutAlarm_SensorEvent1(object sender, SensorEventArgs sensorEventArgs)

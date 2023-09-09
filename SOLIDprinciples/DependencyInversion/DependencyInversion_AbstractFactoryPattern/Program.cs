@@ -24,7 +24,7 @@ namespace DependencyInversion_AbstractFactoryPattern
             // standard alarms
             AlarmFactory standardAlarmFactory = new StandardAlarmFactory();
             AttachAlarmsToSensors(standardAlarmFactory, sensorCollection); // executes the factory methods
-            SensorCabinet sensorCabinet = new SensorCabinet(sensorCollection);
+            SensorCabinet sensorCabinet = new(sensorCollection);
             sensorCabinet.TestAlarms();
 
             // enhanced alarms

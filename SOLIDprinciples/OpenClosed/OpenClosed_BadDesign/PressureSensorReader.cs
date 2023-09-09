@@ -5,7 +5,7 @@ namespace OpenClosed_BadDesign
 {
     public sealed class PressureSensorReader
     {
-        private object[] _tankPressureSensors;
+        private readonly object[] _tankPressureSensors;
 
         /// <summary>
         /// In the class' constructor, a number of tank-pressure sensors are new'ed up.

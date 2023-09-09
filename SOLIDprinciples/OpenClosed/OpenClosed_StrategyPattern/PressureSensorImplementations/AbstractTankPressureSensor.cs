@@ -7,7 +7,7 @@ namespace OpenClosed_StrategyPattern.PressureSensorImplementations
         private readonly int _tankCapacity = 10;
         private readonly int _tankDiameter = 3;
 
-        private ITankOutletSizeCalculateStrategy _tankOutletSizeCalculateStrategy;
+        private readonly ITankOutletSizeCalculateStrategy _tankOutletSizeCalculateStrategy;
 
         public AbstractTankPressureSensor(int tankCapacity = 3, int tankDiameter = 10, ITankOutletSizeCalculateStrategy tankOutletSizeCalculateStrategy = null)
         {

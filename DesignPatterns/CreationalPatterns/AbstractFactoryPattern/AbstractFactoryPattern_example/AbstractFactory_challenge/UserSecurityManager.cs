@@ -5,20 +5,20 @@ namespace AbstractFactoryPattern
 {
     public sealed class UserSecurityManager
     {
-        private IAuthorizer _authorizer;
-        private IAuthenticator _authenticator;
+        private readonly IAuthorizer _authorizer;
+        private readonly IAuthenticator _authenticator;
 
         public UserSecurityManager(UserTypeEnum userType)
         {
             if (userType == UserTypeEnum.BasicUser)
             {
-                IAuthenticator authenticator = new BasicUserAuthenticator();
-                IAuthorizer authorizer = new BasicUserAuthorizer();
+                _authenticator = new BasicUserAuthenticator();
+                _authorizer = new BasicUserAuthorizer();
             }
             else if (userType == UserTypeEnum.SuperUser)
             {
-                IAuthenticator authenticator = new SuperUserAuthenticator();
-                IAuthorizer authorizer = new SuperUserAuthorizer();
+                _authenticator = new SuperUserAuthenticator();
+                _authorizer = new SuperUserAuthorizer();
             }
             else
                 throw new ArgumentException("No such user-type");

@@ -25,7 +25,7 @@ namespace DependencyInversion_GoodDesign
                 _temperatureSensor1,
                 _temperatureSensor2,
                 _pressureSensor };
-            SensorCabinet sensorCabinet = new SensorCabinet(sensorCollection);
+            SensorCabinet sensorCabinet = new(sensorCollection);
             // now do some monitoring...
 
             // At some point, we wish to write temperature sensor values to a log.
@@ -64,7 +64,7 @@ namespace DependencyInversion_GoodDesign
 
         private static void InitializeTemperatureSensorLogger()
         {
-            DiagnosticsLogger diagnosticsLogger = new DiagnosticsLogger();
+            DiagnosticsLogger diagnosticsLogger = new();
             temperatureSensorLogger = new TemperatureSensorLogger(diagnosticsLogger);
         }
     }

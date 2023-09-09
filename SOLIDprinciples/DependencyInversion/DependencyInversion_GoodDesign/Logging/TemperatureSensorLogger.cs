@@ -5,7 +5,7 @@ namespace DependencyInversion_GoodDesign
 {
     public sealed class TemperatureSensorLogger
     {
-        private DiagnosticsLogger _diagnosticsLogger;
+        private readonly DiagnosticsLogger _diagnosticsLogger;
 
         public TemperatureSensorLogger(DiagnosticsLogger diagnosticsLogger)
         {

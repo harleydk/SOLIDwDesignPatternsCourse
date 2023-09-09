@@ -7,7 +7,7 @@ namespace InterfaceSegregation_GoodDesign
 {
     public sealed class SensorCabinetWithoutAlarm : ICabinetSensorEventing, ICabinetSensorAttaching
     {
-        private string _cabinetAdministratorUserName;
+        private readonly string _cabinetAdministratorUserName;
 
         public event EventHandler<SensorEventArgs> SensorEvent;
 

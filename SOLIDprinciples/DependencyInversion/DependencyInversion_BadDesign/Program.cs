@@ -11,8 +11,11 @@
         /// </summary>
         public static void Main()
         {
+
             // Initialization. Lots of hidden dependencies within.
-            SensorCabinet sensorCabinet = new SensorCabinet();
+            SensorCabinet sensorCabinet = new();
+          
+            // now do some monitoring...
 
             // At some point, we wish to write temperature sensor values to a log.
             sensorCabinet.AttachLogger();

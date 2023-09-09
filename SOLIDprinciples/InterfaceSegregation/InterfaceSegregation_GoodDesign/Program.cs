@@ -6,10 +6,10 @@ namespace InterfaceSegregation_GoodDesign
     public sealed class Program
     {
         // By segregation the ICabinetSensorEventing interface in the 'BetterDesign' solution even further, we can more easily make up a class without any unnecessary dependencies. As we should try to do, because the concerns of adding sensors and reacting to events from them are different concerns.
-        private static IEnumerable<ISensor> listOfSensors = new List<ISensor>();
+        private static readonly IEnumerable<ISensor> listOfSensors = new List<ISensor>();
         
         // This new kind of SensorCabinet only needs implement the ICabinetSensorEventing interface - as it comes with pre-loaded sensors, and thus doesn't require the stuff in the ICabinetSensorAttaching interface.
-        private static ICabinetSensorEventing sensorCabinetWithPreloadedSensors = new SensorCabinetWithPreloadedSensors(listOfSensors);
+        private static readonly ICabinetSensorEventing sensorCabinetWithPreloadedSensors = new SensorCabinetWithPreloadedSensors(listOfSensors);
 
         public static void Main()
         {

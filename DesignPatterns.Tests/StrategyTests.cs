@@ -16,7 +16,7 @@ namespace DesignPatterns.Tests
         {
             // arrange
             StrategyPattern.IDatingUserReputationStrategy datingUserReputationStrategy = new StrategyPattern.BasicUserReputationCalculateStrategy();
-            StrategyPattern.DatingUser datingUser = new StrategyPattern.DatingUser();
+            StrategyPattern.DatingUser datingUser = new();
             datingUser.SetReputationCalculatorStrategy(datingUserReputationStrategy) ;
             datingUser.NumberOfAnsweredQuestions = 10;
             datingUser.UserReputation = StrategyPattern.UserReputationEnum.BasicUserReputation;

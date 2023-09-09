@@ -12,7 +12,7 @@ namespace DesignPatterns.Tests
         public void AdapterPattern_TestCanNotAccessOldmethod()
         {
             // arrange
-            ThirdPartyAuthenticatorAdapter thirdPartyAuthenticatorAdapter = new ThirdPartyAuthenticatorAdapter();
+            ThirdPartyAuthenticatorAdapter thirdPartyAuthenticatorAdapter = new();
 
             // act
             var methods = thirdPartyAuthenticatorAdapter.GetType().GetMethods();
