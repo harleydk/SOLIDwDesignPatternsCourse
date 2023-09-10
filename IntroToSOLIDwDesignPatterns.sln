@@ -118,11 +118,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitution_GoodDesi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_BadDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BadDesign\InterfaceSegregation_BadDesign.csproj", "{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_BetterDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_BetterDesign\InterfaceSegregation_BetterDesign.csproj", "{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_GoodDesign", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_GoodDesign\InterfaceSegregation_GoodDesign.csproj", "{FA9F239D-697B-4946-B35B-C86D269C7F62}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InterfaceSegregation_AdapterPattern", "SOLIDprinciples\InterfaceSegregation\InterfaceSegregation_AdapterPattern\InterfaceSegregation_AdapterPattern.csproj", "{D37A3C78-422F-4F06-B64C-04EB1B6342B9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DependencyInversion_BadDesign", "SOLIDprinciples\DependencyInversion\DependencyInversion_BadDesign\DependencyInversion_BadDesign.csproj", "{EB43956C-653E-45AB-AFF8-1776596EB3D0}"
 EndProject
@@ -147,6 +143,8 @@ EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DependencyInversion_Shared", "DependencyInversion_Shared\DependencyInversion_Shared.shproj", "{AFFCC124-8729-416A-A32B-E25D15A88869}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C86DFED1-2D31-4B7C-B291-CC0C819DFD11}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "InterfaceSegregation_Shared", "InterfaceSegregation_Shared\InterfaceSegregation_Shared.shproj", "{05CC6E4F-B96B-4E7A-8F08-52F1980B16D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -294,18 +292,10 @@ Global
 		{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9C9ED49-DD5A-4466-9F2A-79B5006BA940}.Release|Any CPU.Build.0 = Release|Any CPU
-		{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA9F239D-697B-4946-B35B-C86D269C7F62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA9F239D-697B-4946-B35B-C86D269C7F62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA9F239D-697B-4946-B35B-C86D269C7F62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA9F239D-697B-4946-B35B-C86D269C7F62}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D37A3C78-422F-4F06-B64C-04EB1B6342B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D37A3C78-422F-4F06-B64C-04EB1B6342B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D37A3C78-422F-4F06-B64C-04EB1B6342B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D37A3C78-422F-4F06-B64C-04EB1B6342B9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -398,9 +388,7 @@ Global
 		{B1E038A8-F764-4AC2-B206-07942E1B4A04} = {915FB00E-7812-4A14-A9E7-21F7267CB264}
 		{9F6FEF1A-5AE2-4C26-A6AB-B28913B0C3EF} = {915FB00E-7812-4A14-A9E7-21F7267CB264}
 		{A9C9ED49-DD5A-4466-9F2A-79B5006BA940} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
-		{47EF2FAD-6E1D-4726-BD06-9CAA1EB2EC05} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
 		{FA9F239D-697B-4946-B35B-C86D269C7F62} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
-		{D37A3C78-422F-4F06-B64C-04EB1B6342B9} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
 		{EB43956C-653E-45AB-AFF8-1776596EB3D0} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{EC71D90B-7A28-4B2B-A2D0-E4BC32598153} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
 		{A43EB3A3-192A-47F9-9F51-69D3215861C4} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
@@ -412,15 +400,19 @@ Global
 		{1C01276E-D810-443E-9766-3AB8758B9ED6} = {CE3FE3DC-F11D-4CF7-9FA6-081E376DD6C5}
 		{E8269DC1-511A-44FA-9F80-EEF258C2D9D8} = {915FB00E-7812-4A14-A9E7-21F7267CB264}
 		{AFFCC124-8729-416A-A32B-E25D15A88869} = {D21C7BEF-C20B-451A-9833-83192C420BD3}
+		{05CC6E4F-B96B-4E7A-8F08-52F1980B16D8} = {0884B5EB-4B6E-42E4-9721-9A768C51D884}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		InterfaceSegregation_Shared\InterfaceSegregation_Shared.projitems*{05cc6e4f-b96b-4e7a-8f08-52f1980b16d8}*SharedItemsImports = 13
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{a43eb3a3-192a-47f9-9f51-69d3215861c4}*SharedItemsImports = 5
+		InterfaceSegregation_Shared\InterfaceSegregation_Shared.projitems*{a9c9ed49-dd5a-4466-9f2a-79b5006ba940}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{affcc124-8729-416a-a32b-e25d15a88869}*SharedItemsImports = 13
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{d8338193-0bb8-4900-bc00-5b538bfee930}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{eb43956c-653e-45ab-aff8-1776596eb3d0}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{ec71d90b-7a28-4b2b-a2d0-e4bc32598153}*SharedItemsImports = 5
+		InterfaceSegregation_Shared\InterfaceSegregation_Shared.projitems*{fa9f239d-697b-4946-b35b-c86d269c7f62}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

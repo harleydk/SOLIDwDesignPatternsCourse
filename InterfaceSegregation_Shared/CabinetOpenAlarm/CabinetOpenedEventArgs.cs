@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace InterfaceSegregation_BadDesign
+namespace InterfaceSegregation
 {
     public sealed class CabinetOpenedEventArgs : EventArgs
     {
-        public string CabinetOpenedByUserName;
+        public DateTime CabinetOpenTime;
     }
 }
