@@ -15,7 +15,6 @@ namespace OpenClosed_GoodDesign.PressureSensorImplementations
             return (double)TANK_ISOLATION_THICKNESS / TANK_ISOLATION_IMPEDANCE;
         }
 
-        // Note - GetTankPressure() had its name changed to CalculatePressure(), to honor the base-class. 
         public override double CalculatePressure(int waterIntakeVelocity)
         {
             double tankOutletSize = CalculateTankOutletSize();
