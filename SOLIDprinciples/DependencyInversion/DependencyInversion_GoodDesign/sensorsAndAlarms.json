@@ -1,0 +1,36 @@
+{
+  "Sensors": [
+    {
+      "SensorType": "TemperatureSensor",
+      "SensorId": "Temp1",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        }
+      ]
+    },
+    {
+      "SensorType": "TemperatureSensor",
+      "SensorId": "Temp2",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        },
+        {
+          "AlarmType": "WarningBellAlarm"
+        }
+      ]
+    },
+    {
+      "SensorType": "PressureSensor",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        },
+        {
+          "AlarmType": "WarningBellAlarm"
+        }
+      ]
+    }
+  ]
+}

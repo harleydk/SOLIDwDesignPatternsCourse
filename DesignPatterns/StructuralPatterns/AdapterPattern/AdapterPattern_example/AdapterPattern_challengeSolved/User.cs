@@ -14,7 +14,7 @@
 
         public static User CreateUser(string name, string password)
         {
-            User newUser = new User(name, password);
+            User newUser = new(name, password);
             return newUser;
         }
     }

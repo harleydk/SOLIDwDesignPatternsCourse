@@ -10,26 +10,26 @@
             var user = new { Name = "Clint" };
 
             // validate user:
-            UserValidationService validationService = new UserValidationService();
+            UserValidationService validationService = new();
             bool isUserValid = validationService.IsUserValid(user.Name);
             if (!isUserValid)
                 return;
 
-            UserAddressService userAddressService = new UserAddressService();
-            var userAddress = userAddressService.GetAddress(user.Name);
+            UserAddressService userAddressService = new();
+            (string Address, string City) userAddress = userAddressService.GetAddress(user.Name);
 
             // confirm user's address
-            GovernmentAddressService governmentAddressService = new GovernmentAddressService();
+            GovernmentAddressService governmentAddressService = new();
             bool addressCanBeConfirmed = governmentAddressService.CanConfirmAddress(user.Name, userAddress);
             if (!addressCanBeConfirmed)
                 return;
 
             // mark user as moved in primary database
-            DataBaseService dataBaseService = new DataBaseService();
+            DataBaseService dataBaseService = new();
             dataBaseService.UpdateUsersAddress(user.Name, userAddress);
 
             // indicate user's move in our data-warehouse
-            DataWarehouseService dataWarehouseService = new DataWarehouseService();
+            DataWarehouseService dataWarehouseService = new();
             dataWarehouseService.RegisterUserRelocation(user.Name);
 
             // Lab - introduce a facade-class, that introduces a simpler interface in regards to the above service-calls.

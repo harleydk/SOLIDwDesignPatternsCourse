@@ -6,7 +6,7 @@ namespace SingleResponsibility_FacadePattern
     {
         public void WriteToLog(string logMessage)
         {
-            var tempFile = Path.GetTempFileName();
+            string tempFile = Path.GetTempFileName();
             File.WriteAllText(tempFile, logMessage);
         }
     }

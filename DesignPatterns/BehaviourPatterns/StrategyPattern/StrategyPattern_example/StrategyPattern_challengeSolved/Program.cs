@@ -1,34 +1,35 @@
 ﻿using StrategyPattern;
+using System.Diagnostics;
 
 namespace StrategyPattern_challengeSolved
 {
     public static class Program
     {
         /// <summary>
-        /// We cook up a function, SetReputationCalculatorStrategy(), that allows us to insert an appropriate strategy-implementation at runtime.
+        /// We cook up a function, SetReputationCalculatorStrategy(), that allows us to add an appropriate strategy-implementation at runtime.
         /// </summary>
         public static void Main()
         {
-            DatingUser someUser = new DatingUser()
+            DatingUser someUser = new()
             {
                 NumberOfAnsweredQuestions = 3,
                 UserReputation = UserReputationEnum.BasicUserReputation
             };
 
-            UserReputationStratategySelector userReputationStratategySelector = new UserReputationStratategySelector();
-            IDatingUserReputationStrategy datingUserReputationStrategy = userReputationStratategySelector.GetUserReputationStrategy(someUser.UserReputation);
+            UserReputationStratategySelector userReputationStrategySelector = new();
+            IDatingUserReputationStrategy datingUserReputationStrategy = userReputationStrategySelector.GetUserReputationStrategy(someUser.UserReputation);
             someUser.SetReputationCalculatorStrategy(datingUserReputationStrategy);
-            System.Diagnostics.Debug.WriteLine(someUser.CalculateReputation());
+            Debug.WriteLine(someUser.CalculateReputation());
 
-            DatingUser someSuperUser = new DatingUser()
+            DatingUser someSuperUser = new()
             {
                 NumberOfAnsweredQuestions = 3,
                 UserReputation = UserReputationEnum.SuperUserReputation
             };
 
-            datingUserReputationStrategy = userReputationStratategySelector.GetUserReputationStrategy(someSuperUser.UserReputation);
+            datingUserReputationStrategy = userReputationStrategySelector.GetUserReputationStrategy(someSuperUser.UserReputation);
             someSuperUser.SetReputationCalculatorStrategy(datingUserReputationStrategy);
-            System.Diagnostics.Debug.WriteLine(someSuperUser.CalculateReputation());
+            Debug.WriteLine(someSuperUser.CalculateReputation());
 
             // What did we achieve? We factored out the strategies, factored out that which changed and
             // thus made our code more maintainable and flexible. We are now easily able to implement further strategies.

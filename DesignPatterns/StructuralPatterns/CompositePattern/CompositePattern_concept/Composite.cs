@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace CompositePattern_concept
 {
@@ -8,7 +9,7 @@ namespace CompositePattern_concept
     /// </summary>
     internal class Composite : IComponent
     {
-        private List<IComponent> _children = new List<IComponent>();
+        private readonly List<IComponent> _children = new();
 
         // Constructor
         public Composite()
@@ -27,7 +28,7 @@ namespace CompositePattern_concept
 
         public void Display(int depth)
         {
-            System.Diagnostics.Debug.WriteLine(new String('-', depth));
+            Debug.WriteLine(new String('-', depth));
 
             // Recursively display child nodes
             foreach (IComponent component in _children)

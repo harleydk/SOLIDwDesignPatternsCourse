@@ -4,7 +4,7 @@ namespace OpenClosed_GoodDesign
 {
     public sealed class PressureSensorReader
     {
-        private TankPressureSensorBase[] _tankPressureSensors;
+        private readonly TankPressureSensorBase[] _tankPressureSensors;
 
         public PressureSensorReader()
         {
@@ -26,7 +26,7 @@ namespace OpenClosed_GoodDesign
         {
             double totalPressureFromAllSensors = 0;
 
-            foreach (var tankPressureSensor in _tankPressureSensors)
+            foreach (TankPressureSensorBase tankPressureSensor in _tankPressureSensors)
                 totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             int numberOfPressureSensores = _tankPressureSensors.Length;

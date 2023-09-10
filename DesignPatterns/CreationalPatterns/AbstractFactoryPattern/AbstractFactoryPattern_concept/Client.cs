@@ -5,8 +5,8 @@
     /// </summary>
     internal class Client
     {
-        private AbstractProductA _abstractProductA;
-        private AbstractProductB _abstractProductB;
+        private readonly AbstractProductA _abstractProductA;
+        private readonly AbstractProductB _abstractProductB;
 
         // Constructor
         public Client(AbstractFactory factory)

@@ -4,7 +4,7 @@
     {
         private const int ANNIVERSARY_MEMBER_POINTS = 1000;
 
-        private int _extraPoints;
+        private readonly int _extraPoints;
         private int _points;
         private string _name;
 

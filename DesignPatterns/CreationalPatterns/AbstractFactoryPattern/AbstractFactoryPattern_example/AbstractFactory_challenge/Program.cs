@@ -8,11 +8,11 @@
     {
         public static void Main()
         {
-            var basicUser = User.CreateUser("Arnold Schwarzenegger", "IllBeBack", UserTypeEnum.BasicUser);
-            UserSecurityManager userSecurityManager = new UserSecurityManager(basicUser.UserType);
+            User basicUser = User.CreateUser("Arnold Schwarzenegger", "IllBeBack", UserTypeEnum.BasicUser);
+            UserSecurityManager userSecurityManager = new(basicUser.UserType);
             userSecurityManager.PerformUserSecurityOperations(basicUser);
 
-            var superUser = User.CreateUser("Clint Eastwood", "MakeMyDayPunk", UserTypeEnum.SuperUser);
+            User superUser = User.CreateUser("Clint Eastwood", "MakeMyDayPunk", UserTypeEnum.SuperUser);
             userSecurityManager = new UserSecurityManager(superUser.UserType);
             userSecurityManager.PerformUserSecurityOperations(superUser);
 

@@ -10,11 +10,11 @@ namespace TemplatePattern_challengeSolved
         private static void Main()
         {
             Member bruceFreeMember = Member.CreateMember("Bruce Willis", "1-800-diehard", MemberType.FreeUser);
-            FreeMemberNotification freeMemberNotificator = new FreeMemberNotification(bruceFreeMember);
+            FreeMemberNotification freeMemberNotificator = new(bruceFreeMember);
             freeMemberNotificator.NotifyMember();
 
             Member clintPayingUser = Member.CreateMember("Clint Eastwood", "1-800-mkemydy", MemberType.PayingUser);
-            PayingMemberNotification payingMemberNotificator = new PayingMemberNotification(clintPayingUser);
+            PayingMemberNotification payingMemberNotificator = new(clintPayingUser);
             payingMemberNotificator.NotifyMember();
 
             // What did we achieve? We re-factored our code and made a case for maximum code re-use and flexibility - and later maintenance-benefits.

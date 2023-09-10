@@ -5,7 +5,8 @@ namespace DesignPatterns.Adapter.Structural
     public sealed class Program
     {
         /// <summary>
-        /// The Adapter Pattern is for when we need to force a class to adhere to a specific interface. This we do by creating an adapter-class which wraps the adaptee-subject, and returns relegation to the adaptee's methods while implementing the target interface.
+        /// The Adapter Pattern is for when we need to force a class to adhere to a specific interface. This we do by creating an adapter-class which wraps the adoptee-subject, and returns relegation to the adapters methods 
+        /// while implementing the target interface.
         /// </summary>
         /// <example>
         /// Real life uses includes

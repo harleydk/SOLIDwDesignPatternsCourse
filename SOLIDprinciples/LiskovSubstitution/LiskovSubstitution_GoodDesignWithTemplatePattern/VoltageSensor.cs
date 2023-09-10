@@ -4,7 +4,7 @@ namespace LiskovSubstitution_GoodDesign
 {
     public sealed class VoltageSensor
     {
-        private IVoltageAlarm _voltageAlarm;
+        private readonly IVoltageAlarm _voltageAlarm;
         private double _currentSensorVoltage;
 
         public VoltageSensor()
@@ -14,7 +14,7 @@ namespace LiskovSubstitution_GoodDesign
 
         public void ReadCurrentSensorVoltage()
         {
-            Random rnd = new Random();
+            Random rnd = new();
             _currentSensorVoltage = 3 + rnd.NextDouble();
         }
 

@@ -1,57 +1,28 @@
-﻿using System;
+﻿using InterfaceSegregation;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
 namespace InterfaceSegregation_BadDesign
 {
-    public sealed class SensorCabinetWithoutAlarm : ISensorCabinet // implements the full set of isensorCabinet functionality!
+    /// <summary>
+    /// This class honors the full ISensorCabinet-contract - but it doesn't need to, and thus breaks
+    /// with the interface-segregation principle - i.e. that we should not be having to implement a contract
+    /// we don't fully need.
+    /// </summary>
+    public sealed class SensorCabinetWithoutAlarm : ISecurityCabinet
     {
-        private string _cabinetAdministratorUserName;
-
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
-
-        public event EventHandler<SensorEventArgs> SensorEvent;
-
-        public IList<ISensor> Sensors { get; private set; }
-
-        public SensorCabinetWithoutAlarm(string cabinetAdministratorUserName)
+    
+        public void FireCabinetOpenedEvent()
         {
-            Debug.Assert(!string.IsNullOrEmpty(cabinetAdministratorUserName), "cabinet-admin user name should never be null");
-            _cabinetAdministratorUserName = cabinetAdministratorUserName;
-        }
-
-        public void AddSensor(ISensor sensor)
-        {
-            if (Sensors == null)
-                Sensors = new List<ISensor>();
-
-            Sensors.Add(sensor);
-        }
-
-        public void FireSensorEvent(object sender, SensorEventArgs e)
-        {
-            SensorEvent?.Invoke(this, e);
-        }
-
-        public string GetCabinetLastOpenedByUserId()
-        {
-            return _cabinetAdministratorUserName; //! Lisskov substitution violation
+            CabinetOpenedEvent?.Invoke(this, new CabinetOpenedEventArgs { CabinetOpenTime = DateTime.UtcNow });
         }
 
         public void RaiseCabinetOpenAlarm()
         {
-            throw new NotImplementedException(); // Interface segregation violation
-        }
-
-        public void ResetCabinetOpenAlarm()
-        {
-            throw new NotImplementedException(); // Interface segregation violation
-        }
-
-        public void FireCabinetOpenedEvent(object sender, CabinetOpenedEventArgs e)
-        {
-            throw new NotImplementedException(); // Interface segregation violation
+            throw new NotImplementedException("Interface segregation violation");
         }
     }
 }

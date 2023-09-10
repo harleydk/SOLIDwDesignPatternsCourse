@@ -23,7 +23,7 @@ namespace TemplatePattern
 
         public static Member CreateMember(string name, string mobilePhoneNumber, MemberType memberType)
         {
-            Member newMember = new Member(name, mobilePhoneNumber, memberType);
+            Member newMember = new(name, mobilePhoneNumber, memberType);
             return newMember;
         }
 

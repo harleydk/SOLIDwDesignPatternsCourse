@@ -5,7 +5,7 @@ namespace DecoratorPattern
     // Note how we only override that which we actually need to override. 
     public sealed class WithSpecialOfferDecorator : MemberDecoratorbase
     {
-        private int _extraPoints;
+        private readonly int _extraPoints;
 
         public override int Points
         {

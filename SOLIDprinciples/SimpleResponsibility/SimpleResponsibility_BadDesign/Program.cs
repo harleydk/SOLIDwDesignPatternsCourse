@@ -7,7 +7,7 @@
         /// </summary>
         private static void Main()
         {
-            SensorReader sensorReader = new SensorReader();
+            SensorReader sensorReader = new();
             string sensorValue = sensorReader.ReadSensorValue();
             sensorReader.WriteSensorValueToLog(sensorValue);
         }

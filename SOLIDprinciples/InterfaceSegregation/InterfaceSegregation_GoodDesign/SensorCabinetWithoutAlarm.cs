@@ -1,34 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using InterfaceSegregation;
+using InterfaceSegregation_GoodDesign;
+using System;
 
 namespace InterfaceSegregation_GoodDesign
 {
-    public sealed class SensorCabinetWithoutAlarm : ICabinetSensorEventing, ICabinetSensorAttaching
+    public sealed class SensorCabinetWithoutAlarm : ICabinetOpening
     {
-        private string _cabinetAdministratorUserName;
+        public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
 
-        public event EventHandler<SensorEventArgs> SensorEvent;
-
-        public IList<ISensor> Sensors { get; private set; }
-
-        public SensorCabinetWithoutAlarm(string cabinetAdministratorUserName)
+        public void FireCabinetOpenedEvent()
         {
-            _cabinetAdministratorUserName = cabinetAdministratorUserName;
-        }
-
-        public void AddSensor(ISensor sensor)
-        {
-            if (Sensors == null)
-                Sensors = new List<ISensor>();
-
-            Sensors.Add(sensor);
-        }
-
-        public void FireSensorEvent(object sender, SensorEventArgs e)
-        {
-            SensorEvent?.Invoke(this, e);
+            CabinetOpenedEventArgs cabinetOpenedEventArgs = new CabinetOpenedEventArgs { CabinetOpenTime = DateTime.UtcNow };
+            CabinetOpenedEvent.Invoke(this, cabinetOpenedEventArgs);
         }
     }
 }

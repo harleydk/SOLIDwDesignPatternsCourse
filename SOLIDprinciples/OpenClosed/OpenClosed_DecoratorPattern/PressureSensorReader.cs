@@ -4,7 +4,7 @@ namespace OpenClosed_DecoratorPattern
 {
     public sealed class PressureSensorReader
     {
-        private AbstractTankPressureSensor[] _tankPressureSensors;
+        private readonly AbstractTankPressureSensor[] _tankPressureSensors;
 
         public PressureSensorReader()
         {
@@ -23,16 +23,11 @@ namespace OpenClosed_DecoratorPattern
             _tankPressureSensors = new AbstractTankPressureSensor[] { shockAbsorbableInternalTankPressureSensorWithTemperature };
         }
 
-        private void fdafdsf()
-        {
-            string fdsfa;
-        }
-
         public double GetAveragePressureAcrossSensors(int waterIntakeVelocity)
         {
             double totalPressureFromAllSensors = 0;
 
-            foreach (var tankPressureSensor in _tankPressureSensors)
+            foreach (AbstractTankPressureSensor tankPressureSensor in _tankPressureSensors)
                 totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
             int numberOfPressureSensores = _tankPressureSensors.Length;

@@ -11,11 +11,11 @@ namespace TemplatePattern_challenge
         public static void Main()
         {
             Member bruceFreeMember = Member.CreateMember("Bruce Willis", "1-800-diehard", MemberType.FreeUser);
-            FreeMemberNotification freeMemberNotificator = new FreeMemberNotification(bruceFreeMember);
+            FreeMemberNotification freeMemberNotificator = new(bruceFreeMember);
             freeMemberNotificator.NotifyMember();
 
             Member clintPayingUser = Member.CreateMember("Clint Eastwood", "1-800-mkemydy", MemberType.PayingUser);
-            PayingMemberNotification payingMemberNotificator = new PayingMemberNotification(clintPayingUser);
+            PayingMemberNotification payingMemberNotificator = new(clintPayingUser);
             payingMemberNotificator.NotifyMember();
 
             // This works, but... Feels much like we should be able to re-use some code.

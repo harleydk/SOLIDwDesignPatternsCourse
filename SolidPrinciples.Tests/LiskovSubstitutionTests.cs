@@ -14,7 +14,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             double standardAlarmThresholdValue = -1d;
-            StandardVoltageAlarm standardVoltageAlarm = new StandardVoltageAlarm(standardAlarmThresholdValue);
+            StandardVoltageAlarm standardVoltageAlarm = new(standardAlarmThresholdValue);
 
             // act
             standardVoltageAlarm.RaiseAlarm();
@@ -28,7 +28,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             double standardAlarmThresholdValue = 1d;
-            StandardVoltageAlarm standardVoltageAlarm = new StandardVoltageAlarm(standardAlarmThresholdValue);
+            StandardVoltageAlarm standardVoltageAlarm = new(standardAlarmThresholdValue);
 
             // act
             bool hasVoltageDroppedBelowThreshold = standardVoltageAlarm.HasVoltageDroppedBelowThreshold(0);
@@ -42,7 +42,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             double newVoltageAlarmThreshold = -1d; // make it so that no matter what, an alarm will be raised.
-            NewVoltageAlarm newVoltageAlarm = new NewVoltageAlarm(newVoltageAlarmThreshold);
+            NewVoltageAlarm newVoltageAlarm = new(newVoltageAlarmThreshold);
 
             // act
             newVoltageAlarm.RaiseAlarm(); // repeats alarm 3 times
@@ -56,7 +56,7 @@ namespace SolidPrinciples.Tests
         {
             // arrange
             double newVoltageAlarmThreshold = -1d; // make it so that no matter what, an alarm will be raised.
-            NewVoltageAlarm newVoltageAlarm = new NewVoltageAlarm(newVoltageAlarmThreshold);
+            NewVoltageAlarm newVoltageAlarm = new(newVoltageAlarmThreshold);
 
             // act
             newVoltageAlarm.RaiseAlarm();
@@ -70,7 +70,7 @@ namespace SolidPrinciples.Tests
         public void BadDesign_VolageSensorCanReadSensorValue()
         {
             // arrange
-            LiskovSubstitution_BadDesign.VoltageSensor voltageSensor = new LiskovSubstitution_BadDesign.VoltageSensor();
+            LiskovSubstitution_BadDesign.VoltageSensor voltageSensor = new();
 
             // act
             voltageSensor.ReadCurrentSensorVoltage();
@@ -90,7 +90,7 @@ namespace SolidPrinciples.Tests
             LiskovSubstitution_GoodDesign.VoltageAlarmBase newVoltageAlarm = new LiskovSubstitution_GoodDesign.NewVoltageAlarm(5d);
 
             // act
-            var shouldResetNumberOfAlarmsRaised = newVoltageAlarm.ShouldResetNumberOfAlarmsRaised();
+            bool shouldResetNumberOfAlarmsRaised = newVoltageAlarm.ShouldResetNumberOfAlarmsRaised();
 
             // assert
             Assert.IsTrue(shouldResetNumberOfAlarmsRaised);

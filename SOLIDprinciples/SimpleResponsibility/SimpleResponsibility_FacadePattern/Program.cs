@@ -7,7 +7,7 @@
         /// </summary>
         private static void Main()
         {
-            SensorAndLoggerFacade sensorAndLoggerFacade = new SensorAndLoggerFacade();
+            SensorAndLoggerFacade sensorAndLoggerFacade = new();
             string sensorValue = sensorAndLoggerFacade.ReadSensorValue();
             sensorAndLoggerFacade.WriteToLog(sensorValue);
         }

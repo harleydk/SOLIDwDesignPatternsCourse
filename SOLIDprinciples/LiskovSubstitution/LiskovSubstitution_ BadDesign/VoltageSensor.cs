@@ -21,7 +21,7 @@ namespace LiskovSubstitution_BadDesign
 
         public void ReadCurrentSensorVoltage()
         {
-            Random someRandomFakeSensorVoltage = new Random();
+            Random someRandomFakeSensorVoltage = new();
             _currentSensorVoltage = 3 + someRandomFakeSensorVoltage.NextDouble();
         }
 

@@ -1,71 +1,84 @@
-﻿using System.Collections.Generic;
+﻿using DependencyInversion_GoodDesign.Configuration;
+using DependencyInversion;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace DependencyInversion_GoodDesign
 {
     public static partial class Program
     {
-        private static TemperatureSensor _temperatureSensor1;
-        private static TemperatureSensor _temperatureSensor2;
-        private static PressureSensor _pressureSensor;
-        private static DisplayAlarm _displayAlarm;
-        private static WarningBellAlarm _warningBellAlarm;
-        private static TemperatureSensorLogger temperatureSensorLogger;
-
         /// <summary>
-        /// The good design stipulates that we remove the logging-consideration from the SensorCabinet-class altogether. Breaks with the single responsibility principles, anyway.
+        /// The good design stipulates that ...
+        /// ... primarily, we do our creation logic in the composition root, preferably from configuration - if possible.
+        /// ... secondary, we also remove the logging-consideration from the SensorCabinet-class altogether. Besides breaking the 
+        /// dependency inversion principle, we can easily identify this as a tendency to break with the single responsibility principles.
         /// </summary>
-        public static void Main()
+        /// <remarks>
+        /// Here, the 'main' method is our so-called 'composition root', i.e. the entry-point into the application and 
+        /// thus the suitable place for all the dependencies to be created. 
+        /// </remarks>
+        public static void Main(string[] args)
         {
-            // "Composition root"
-            InitializaAlarms();
-            InitializeSensors();
-            AttachAlarmsToSensors();
+            // Let's get the sensors from configuration. We could new them up, of course, if they don't lend themselves easily to configuration.
+            IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile(@"sensorsAndAlarms.json").Build();
+            List<SensorConfiguration> sensorsConfiguration = new();
+            config.Bind("Sensors", sensorsConfiguration);
+            Debug.Assert(sensorsConfiguration.Any(), "No sensors initialized from config");
 
-            IEnumerable<ISensor> sensorCollection = new List<ISensor>() {
-                _temperatureSensor1,
-                _temperatureSensor2,
-                _pressureSensor };
-            SensorCabinet sensorCabinet = new SensorCabinet(sensorCollection);
-            // now do some monitoring...
+            // Initialize the sensors based on their configuration data, and add them to the sensor-cabinet.
+            IEnumerable<ISensor> sensorCollection = InitializeSensors(sensorsConfiguration);
+            SensorCabinet sensorCabinet = new(sensorCollection);
 
             // At some point, we wish to write temperature sensor values to a log.
             // By removing the logger from the sensor-cabinet, we forego problems with the single-responsibility principle.
-            InitializeTemperatureSensorLogger();
-            var temperatureSensorData = sensorCabinet.GetAllTemperatureSensorsData();
+            IEnumerable<TemperatureSensorData> temperatureSensorData = sensorCabinet.GetAllTemperatureSensorsData();
+
+            TemperatureSensorLogger temperatureSensorLogger = InitializeTemperatureSensorLogger();
             temperatureSensorLogger.WriteAllTemperatureSensorsDataToLog(temperatureSensorData);
-
-            //
         }
 
-        private static void AttachAlarmsToSensors()
+        private static IEnumerable<ISensor> InitializeSensors(List<SensorConfiguration> sensorConfigurations)
         {
-            _temperatureSensor1.AttachAlarm(_displayAlarm);
+            foreach (SensorConfiguration sensorConfig in sensorConfigurations)
+            {
+                // Initialize sensor
+                ISensor sensor = sensorConfig.SensorType switch
+                {
+                    SensorType.TemperatureSensor => new TemperatureSensor(sensorConfig.SensorId),
+                    SensorType.PressureSensor => new PressureSensor(),
+                    _ => throw new ArgumentException($"Invalid {nameof(SensorType)} {sensorConfig.SensorType}")
+                };
 
-            _temperatureSensor2.AttachAlarm(_displayAlarm);
-            _temperatureSensor2.AttachAlarm(_warningBellAlarm);
+                // attach alarms
+                foreach (AlarmConfiguration alarmConfig in sensorConfig.Alarms)
+                {
+                    IAlarm alarm = InitializeAlarm(alarmConfig);
+                    sensor.AttachAlarm(alarm);
+                }
 
-            _pressureSensor.AttachAlarm(_displayAlarm);
-            _pressureSensor.AttachAlarm(_warningBellAlarm);
+                yield return sensor;
+            }
         }
 
-        private static void InitializeSensors()
+        private static IAlarm InitializeAlarm(AlarmConfiguration alarmConfig)
         {
-            _temperatureSensor1 = new TemperatureSensor("Temp1");
-
-            _temperatureSensor2 = new TemperatureSensor("Temp2");
-            _pressureSensor = new PressureSensor();
+            IAlarm alarm = alarmConfig.AlarmType switch
+            {
+                AlarmType.DisplayAlarm => new DisplayAlarm(),
+                AlarmType.WarningBellAlarm => new WarningBellAlarm(),
+                _ => throw new ArgumentException($"No {nameof(AlarmType)} '{alarmConfig.AlarmType}'")
+            };
+            return alarm;
         }
 
-        private static void InitializaAlarms()
+        private static TemperatureSensorLogger InitializeTemperatureSensorLogger()
         {
-            _displayAlarm = new DisplayAlarm();
-            _warningBellAlarm = new WarningBellAlarm();
-        }
-
-        private static void InitializeTemperatureSensorLogger()
-        {
-            DiagnosticsLogger diagnosticsLogger = new DiagnosticsLogger();
-            temperatureSensorLogger = new TemperatureSensorLogger(diagnosticsLogger);
+            DiagnosticsLogger diagnosticsLogger = new();
+            TemperatureSensorLogger temperatureSensorLogger = new(diagnosticsLogger);
+            return temperatureSensorLogger;
         }
     }
 }

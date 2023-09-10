@@ -9,7 +9,7 @@ namespace FactoryPattern
             Debug.Assert(!string.IsNullOrWhiteSpace(userName), "user-name should not be null or whitespace");
             Debug.Assert(!string.IsNullOrWhiteSpace(password), "password should not be null or whitespace");
 
-            bool isBasicUser = (userName != "Clint Eastwood" ? true : false);
+            bool isBasicUser = (userName != "Clint Eastwood");
             Debug.WriteLine($"{this.GetType().Name}: {userName} is basic user? {isBasicUser}");
         }
     }
