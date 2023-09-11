@@ -4,7 +4,7 @@ using System.Text;
 
 namespace OpenClosed_StrategyPattern.PressureSensorImplementations.TankOutletSizeStrategies
 {
-    public interface ITankOutletSizeCalculateStrategy
+    public interface ITankSizeStrategy
     {
         double CalculateTankOutletSize(int tankCapacity, int tankDiameter);
     }

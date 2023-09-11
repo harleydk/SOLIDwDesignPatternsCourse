@@ -1,6 +1,6 @@
 ﻿namespace OpenClosed_StrategyPattern.PressureSensorImplementations.TankOutletSizeStrategies
 {
-    public sealed class USTankOutletSizeCalculateStrategy : ITankOutletSizeCalculateStrategy
+    public sealed class UnitedStatesTankSizeStrategy : ITankSizeStrategy
     {
         private const double US_TANK_OUTLET_SIZE_MODIFIER = 1.1d;
 

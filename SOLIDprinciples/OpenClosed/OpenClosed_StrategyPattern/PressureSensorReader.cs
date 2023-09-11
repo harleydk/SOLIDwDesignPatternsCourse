@@ -3,36 +3,31 @@ using OpenClosed_StrategyPattern.PressureSensorImplementations.TankOutletSizeStr
 
 namespace OpenClosed_StrategyPattern
 {
+    /// <summary>
+    /// The <see cref="PressureSensorReader"/> remains the same as in the 'good' example; everything
+    /// in regards to the different <see cref="ITankSizeStrategy"/> concerns happens in the creation
+    /// of the <see cref="TankPressureSensorBase"/> implementations, i.e. we inject a suitable strategy 
+    /// via their constructors.
+    /// </summary>
     public sealed class PressureSensorReader
     {
-        private readonly AbstractTankPressureSensor[] _tankPressureSensors;
+        private readonly TankPressureSensorBase[] _tankPressureSensors;
 
-        public PressureSensorReader()
+        public PressureSensorReader(TankPressureSensorBase[] tankPressureSensors)
         {
-            // we explicitely determine a strategy for further calculation:
-            ITankOutletSizeCalculateStrategy UStankOutletCalculatorStrategy = new USTankOutletSizeCalculateStrategy();
-
-            _tankPressureSensors = new AbstractTankPressureSensor[]
-            {
-                new InternalTankPressureSensor(tankCapacity: 4),
-                new InternalTankPressureSensor(tankDiameter: 15, tankOutletSizeCalculateStrategy: UStankOutletCalculatorStrategy),
-                new ExternalTankPressureSensor(1,100)
-             };
+            _tankPressureSensors = tankPressureSensors;
         }
 
         public double GetAveragePressureAcrossSensors(int waterIntakeVelocity)
         {
             double totalPressureFromAllSensors = 0;
 
-            foreach (AbstractTankPressureSensor tankPressureSensor in _tankPressureSensors)
+            foreach (TankPressureSensorBase tankPressureSensor in _tankPressureSensors)
                 totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
 
-            int numberOfPressureSensores = _tankPressureSensors.Length;
-            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensores;
+            int numberOfPressureSensors = _tankPressureSensors.Length;
+            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensors;
             return averagePressureAcrossSensors;
         }
-
-        // Advantage? Our tank-implementations the same, we've merely added to their constructors. We only took that which changed, and abstracted away.
-        // Disadvantages? Readability suffers slightly.
     }
 }

@@ -2,12 +2,14 @@
 
 namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
 {
-    public sealed class ShockAbsorbableTankPressureSensor : DecoratableTankPressureSensor
+    public sealed class ShockAbsorbableTankPressureSensor : TankPressureSensorDecorator
     {
-        private readonly double _maXAllowableGForceLoad = 5d;
         private const double PRESSURE_INCREASE_FACTOR_IF_SHOCKABSORBABLE = 1.1;
 
-        public ShockAbsorbableTankPressureSensor(AbstractTankPressureSensor abstractTankPressureSensor, double? maXAllowableGForceLoad = null) : base(abstractTankPressureSensor)
+        private readonly double _maXAllowableGForceLoad = 5d;
+
+        public ShockAbsorbableTankPressureSensor(TankPressureSensorBase abstractTankPressureSensor, double? maXAllowableGForceLoad = null) : 
+            base(abstractTankPressureSensor)
         {
             if (maXAllowableGForceLoad != null)
                 _maXAllowableGForceLoad = maXAllowableGForceLoad.Value;
@@ -17,17 +19,17 @@ namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
         {
             Debug.WriteLine($"Called CalculatePressure() on {this.GetType().Name}");
 
-            bool isShockAbsorbant = Is5GShockAbsorbant();
-            if (isShockAbsorbant)
+            bool isShockAbsorbent = Is5GShockAbsorbent();
+            if (isShockAbsorbent)
                 return base.CalculatePressure(waterIntakeVelocity) * PRESSURE_INCREASE_FACTOR_IF_SHOCKABSORBABLE;
             else
                 return base.CalculatePressure(waterIntakeVelocity);
         }
 
-        private bool Is5GShockAbsorbant()
+        private bool Is5GShockAbsorbent()
         {
-            bool isShorkAbsorbantUpTo5G = _maXAllowableGForceLoad < 5d;
-            return isShorkAbsorbantUpTo5G;
+            bool isShockAbsorbentUpTo5G = _maXAllowableGForceLoad < 5d;
+            return isShockAbsorbentUpTo5G;
         }
     }
 }

@@ -20,11 +20,9 @@ namespace OpenClosed_GoodDesign
             };
             PressureSensorReader pressureSensorReader = new(tankPressureSensors);
 
-            int waterIntakeVelocity = 16;
+            int waterIntakeVelocity = 16; 
             double averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
             Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
-
-          
         }
     }
 }

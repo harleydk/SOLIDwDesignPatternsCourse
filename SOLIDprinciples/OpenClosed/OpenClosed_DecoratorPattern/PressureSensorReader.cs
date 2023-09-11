@@ -1,37 +1,28 @@
 ﻿using OpenClosed_DecoratorPattern.PressureSensorImplementations;
+using System.Linq;
 
 namespace OpenClosed_DecoratorPattern
 {
     public sealed class PressureSensorReader
     {
-        private readonly AbstractTankPressureSensor[] _tankPressureSensors;
+        private readonly TankPressureSensorBase[] _tankPressureSensors;
 
-        public PressureSensorReader()
+        public PressureSensorReader(TankPressureSensorBase[] tankPressureSensors)
         {
-            /*#
-            //_tankPressureSensors = new AbstractTankPressureSensor[]
-            //{
-            //    new InternalTankPressureSensor(tankCapacity: 4),
-            //    new InternalTankPressureSensor(tankDiameter: 15),
-            //    new ExternalTankPressureSensor(1,100)
-            // };
-            */
-
-            AbstractTankPressureSensor internalTankPressureSensor = new InternalTankPressureSensor(tankCapacity: 4);
-            AbstractTankPressureSensor shockAbsorbableInternalTankPressureSensor = new ShockAbsorbableTankPressureSensor(internalTankPressureSensor, 10);
-            AbstractTankPressureSensor shockAbsorbableInternalTankPressureSensorWithTemperature = new TemperatureTankPressureSensor(shockAbsorbableInternalTankPressureSensor, 10, 12);
-            _tankPressureSensors = new AbstractTankPressureSensor[] { shockAbsorbableInternalTankPressureSensorWithTemperature };
+            _tankPressureSensors = tankPressureSensors;
+            
         }
 
         public double GetAveragePressureAcrossSensors(int waterIntakeVelocity)
         {
             double totalPressureFromAllSensors = 0;
+            _tankPressureSensors.ToList().ForEach(sensor =>
+            {
+                totalPressureFromAllSensors += sensor.CalculatePressure(waterIntakeVelocity);
+            });
 
-            foreach (AbstractTankPressureSensor tankPressureSensor in _tankPressureSensors)
-                totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
-
-            int numberOfPressureSensores = _tankPressureSensors.Length;
-            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensores;
+            int numberOfPressureSensors = _tankPressureSensors.Length;
+            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensors;
 
             return averagePressureAcrossSensors;
         }
