@@ -10,11 +10,11 @@ namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
     public sealed class TemperatureTankPressureSensor : TankPressureSensorDecorator
     {
         private const double PRESSURE_INCREASE_FACTOR_IF_WITHIN_TEMPERATURE_OPERATING_WINDOW = 1.5;
-        
+
         private readonly int _minimumDegreesCelsius;
         private readonly int _maxDegreesCelsius;
 
-        public TemperatureTankPressureSensor(TankPressureSensorBase abstractTankPressureSensor, int minimumDegreesCelsius, int maxDegreesCelsius) : 
+        public TemperatureTankPressureSensor(int minimumDegreesCelsius, int maxDegreesCelsius, TankPressureSensorBase abstractTankPressureSensor) :
             base(abstractTankPressureSensor)
         {
             _minimumDegreesCelsius = minimumDegreesCelsius;

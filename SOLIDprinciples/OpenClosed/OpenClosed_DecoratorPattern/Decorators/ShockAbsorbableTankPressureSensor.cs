@@ -8,11 +8,10 @@ namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
 
         private readonly double _maXAllowableGForceLoad = 5d;
 
-        public ShockAbsorbableTankPressureSensor(TankPressureSensorBase abstractTankPressureSensor, double? maXAllowableGForceLoad = null) : 
+        public ShockAbsorbableTankPressureSensor(double? maXAllowableGForceLoad, TankPressureSensorBase abstractTankPressureSensor) :
             base(abstractTankPressureSensor)
         {
-            if (maXAllowableGForceLoad != null)
-                _maXAllowableGForceLoad = maXAllowableGForceLoad.Value;
+            _maXAllowableGForceLoad = maXAllowableGForceLoad.Value;
         }
 
         public override double CalculatePressure(int waterIntakeVelocity)

@@ -19,10 +19,10 @@ namespace OpenClosed_DecoratorPattern
             TankPressureSensorBase internalTankPressureSensor = new InternalTankPressureSensor(tankCapacity: 4);
 
             TankPressureSensorBase shockAbsorbableInternalTankPressureSensor =
-                new ShockAbsorbableTankPressureSensor(internalTankPressureSensor, 10);
+                new ShockAbsorbableTankPressureSensor( maXAllowableGForceLoad: 10, internalTankPressureSensor);
 
             TankPressureSensorBase shockAbsorbableInternalTankPressureSensorWithTemperature =
-                new TemperatureTankPressureSensor(shockAbsorbableInternalTankPressureSensor, 10, 12);
+                new TemperatureTankPressureSensor(minimumDegreesCelsius: 10, maxDegreesCelsius: 12, shockAbsorbableInternalTankPressureSensor);
 
             TankPressureSensorBase[] tankPressureSensors = { shockAbsorbableInternalTankPressureSensorWithTemperature /* Just one sensor, for the case of this example. */ };
 
