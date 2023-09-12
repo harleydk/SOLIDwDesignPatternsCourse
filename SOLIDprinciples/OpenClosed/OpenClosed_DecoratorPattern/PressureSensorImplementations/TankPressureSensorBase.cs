@@ -1,7 +1,4 @@
-﻿
-using System;
-
-namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
+﻿namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
 {
 
     public abstract class TankPressureSensorBase 

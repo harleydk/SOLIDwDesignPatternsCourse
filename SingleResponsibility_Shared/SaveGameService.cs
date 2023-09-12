@@ -1,5 +1,4 @@
-﻿using SingleResponsibility;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SingleResponsibility
 {

@@ -1,6 +1,5 @@
 ﻿using InterfaceSegregation;
 using System;
-using System.Diagnostics;
 
 namespace InterfaceSegregation_GoodDesign
 {

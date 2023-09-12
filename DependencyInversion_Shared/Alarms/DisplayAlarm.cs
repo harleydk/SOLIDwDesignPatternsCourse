@@ -1,5 +1,4 @@
-﻿using DependencyInversion;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 
 namespace DependencyInversion
 {

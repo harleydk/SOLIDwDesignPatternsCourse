@@ -1,5 +1,4 @@
 ﻿using InterfaceSegregation;
-using System.Diagnostics;
 
 namespace InterfaceSegregation_BadDesign
 {

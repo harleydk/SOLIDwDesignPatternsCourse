@@ -1,6 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using TemplatePattern;
+﻿using TemplatePattern;
 
 namespace TemplatePattern_challenge
 {

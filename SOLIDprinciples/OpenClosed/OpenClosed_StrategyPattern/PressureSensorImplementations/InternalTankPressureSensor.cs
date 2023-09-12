@@ -1,5 +1,4 @@
 ﻿using OpenClosed_StrategyPattern.PressureSensorImplementations.TankOutletSizeStrategies;
-using System;
 
 namespace OpenClosed_StrategyPattern.PressureSensorImplementations
 {

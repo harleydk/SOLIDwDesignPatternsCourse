@@ -1,6 +1,4 @@
 ﻿using OpenClosed_BadDesign.PressureSensorImplementations;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 
 namespace OpenClosed_BadDesign
 {

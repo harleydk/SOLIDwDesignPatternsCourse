@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using DependencyInversion;
+﻿using DependencyInversion;
 
 namespace DependencyInversion_fluidInterfacePattern
 {

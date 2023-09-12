@@ -18,10 +18,6 @@
         {
             return 5d; // 5v max
         }
-
-        public override bool ShouldResetNumberOfAlarmsRaised()
-        {
-            return true;
-        }
+           
     }
 }

@@ -1,7 +1,6 @@
 ﻿using DependencyInversion;
 using DependencyInversion_AbstractFactoryPattern.AlarmFactories;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace DependencyInversion_AbstractFactoryPattern
 {

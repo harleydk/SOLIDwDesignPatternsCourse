@@ -8,7 +8,6 @@ namespace LiskovSubstitution_GoodDesign
     {
         private const int DEFAULT_NUMBER_OF_ALARM_ITERATIONS = 1;
         private const double DEFAULT_MAX_ALLOWED_VOLTAGE_LEVEL = double.MaxValue;
-        private const bool DEFAULT_SHOULD_RESET_NUMBER_OF_ALARMS = false;
 
         public int NumberOfAlarmsRaised { get; private set; }
 
@@ -22,7 +21,7 @@ namespace LiskovSubstitution_GoodDesign
 
         public bool HasVoltageDroppedBelowThreshold(double currentVoltageLevel) // 'Template method'
         {
-            // The NewVoltageAlarm requires a max voltage of 5, but our StandardVoltageAlarm doesn't have this requirement. We can again use the template pattern to accomodate, defaulting to double.maxvalue.
+            // The NewVoltageAlarm requires a max voltage of 5, but our StandardVoltageAlarm doesn't have this requirement. We can again use the template pattern to accommodate, defaulting to double.MaxValue.
             double maximumAllowableVoltageLevel = GetMaximumAllowableVoltageLevel();
             Debug.Assert(currentVoltageLevel < maximumAllowableVoltageLevel);
 
@@ -35,7 +34,7 @@ namespace LiskovSubstitution_GoodDesign
             return DEFAULT_MAX_ALLOWED_VOLTAGE_LEVEL;
         }
 
-        public void RaiseAlarm() // 'Template method'. Note we adopted the NewVoltageAlarm's repetition-scheme here, but defaults it to '1' to accomodate the StandardVoltageAlarm.
+        public void RaiseAlarm() // 'Template method'. Note we adopted the NewVoltageAlarm's repetition-scheme here, but defaults it to '1' to accommodate the StandardVoltageAlarm.
         {
             int numberOfAlarmRepetitions = GetNumberOfAlarmRepetitions();
             for (int i = 0; i < numberOfAlarmRepetitions; i++)
@@ -43,26 +42,13 @@ namespace LiskovSubstitution_GoodDesign
                 NumberOfAlarmsRaised += 1;
                 Debug.WriteLine($"Alarm raised {NumberOfAlarmsRaised} times.");
             }
-
-            if (ShouldResetNumberOfAlarmsRaised())
-            {
-                ResetNumberOfAlarmsRaised();
-            }
         }
 
-        public virtual bool ShouldResetNumberOfAlarmsRaised() // 'Hook' method
-        {
-            return DEFAULT_SHOULD_RESET_NUMBER_OF_ALARMS;
-        }
 
         public virtual int GetNumberOfAlarmRepetitions()
         {
             return DEFAULT_NUMBER_OF_ALARM_ITERATIONS;
         }
-
-        public void ResetNumberOfAlarmsRaised()
-        {
-            NumberOfAlarmsRaised = 0;
-        }
+     
     }
 }

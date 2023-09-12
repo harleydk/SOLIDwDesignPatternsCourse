@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-namespace AbstractFactoryPattern
+﻿namespace AbstractFactoryPattern
 {
     public sealed class SuperUserAuthorizer : IAuthorizer
     {

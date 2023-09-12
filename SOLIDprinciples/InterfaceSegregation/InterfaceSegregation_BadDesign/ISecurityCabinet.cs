@@ -1,6 +1,5 @@
 ﻿using InterfaceSegregation;
 using System;
-using System.Collections.Generic;
 
 namespace InterfaceSegregation_BadDesign
 {

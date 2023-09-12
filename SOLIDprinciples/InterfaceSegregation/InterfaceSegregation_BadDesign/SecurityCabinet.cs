@@ -1,8 +1,6 @@
 ﻿using InterfaceSegregation;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 
 namespace InterfaceSegregation_BadDesign
 {
