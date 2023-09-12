@@ -3,9 +3,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AssemblyTitle>SimpleResponsibility_BadDesign</AssemblyTitle>
-    <Product>SimpleResponsibility_BadDesign</Product>
-    <Copyright>Copyright ©  2017</Copyright>
+    <AssemblyTitle>SimpleResponsibility_GoodDesign</AssemblyTitle>
+    <Product>SingleResponsibility_GoodDesign</Product>
+    <Copyright>None</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>

@@ -5,7 +5,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AssemblyTitle>DependencyInversion_BadDesign</AssemblyTitle>
     <Product>DependencyInversion_BadDesign</Product>
-    <Copyright>Copyright ©  2017</Copyright>
+    <Copyright>None</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
