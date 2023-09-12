@@ -3,8 +3,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <OutputType>Exe</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AssemblyTitle>OpenClosed_StrategyPattern</AssemblyTitle>
-    <Product>OpenClosed_StrategyPattern</Product>
+    <AssemblyTitle>SimpleResponsibility_FacadePattern</AssemblyTitle>
+    <Product>SingleResponsibility_FacadePattern</Product>
     <Copyright>None</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
@@ -13,4 +13,5 @@
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
   </ItemGroup>
+  <Import Project="..\..\..\SingleResponsibility_Shared\SingleResponsibility_Shared.projitems" Label="Shared" />
 </Project>
