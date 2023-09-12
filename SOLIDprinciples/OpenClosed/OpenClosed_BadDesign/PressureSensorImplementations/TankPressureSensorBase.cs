@@ -1,10 +1,5 @@
-﻿namespace OpenClosed_GoodDesign.PressureSensorImplementations
+﻿namespace OpenClosed_BadDesign.PressureSensorImplementations
 {
-    /// <summary>
-    /// By moving the individual 'CalculatePressure' concerns into the base-class, we can forego
-    /// taking the distinct tankPressureSensor-implementations into account when the PressureSensorReader
-    /// calculates the combined pressures.
-    /// </summary>
     public abstract class TankPressureSensorBase
     {
         protected readonly int _tankCapacity = 10;
@@ -22,6 +17,5 @@
             return tankOutletSize;
         }
 
-        public abstract double CalculatePressure(int waterIntakeVelocity);
     }
 }

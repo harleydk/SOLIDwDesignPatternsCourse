@@ -3,18 +3,19 @@ using System;
 
 namespace OpenClosed_StrategyPattern.PressureSensorImplementations
 {
-    public sealed class InternalTankPressureSensor : AbstractTankPressureSensor
+    public sealed class InternalTankPressureSensor : TankPressureSensorBase
     {
         private const int TANK_INTERNAL_THICKNESS = 15;
 
-        public InternalTankPressureSensor(int tankCapacity = 3, int tankDiameter = 10, ITankOutletSizeCalculateStrategy tankOutletSizeCalculateStrategy = null) : base(tankCapacity, tankDiameter, tankOutletSizeCalculateStrategy)
+        public InternalTankPressureSensor(int tankCapacity = 3, int tankDiameter = 10, ITankSizeStrategy tankSizeStrategy = null) : 
+            base(tankCapacity, tankDiameter, tankSizeStrategy)
         {
         }
 
         public override double CalculatePressure(int waterIntakeVelocity)
         {
-            double internalTankoutletSize = GetTankOutletSize();
-            double totallyBogusPressureValue = (TANK_INTERNAL_THICKNESS * waterIntakeVelocity) * internalTankoutletSize;
+            double internalTankOutletSize = GetTankOutletSize();
+            double totallyBogusPressureValue = (TANK_INTERNAL_THICKNESS * waterIntakeVelocity) * internalTankOutletSize;
             return totallyBogusPressureValue;
         }
     }

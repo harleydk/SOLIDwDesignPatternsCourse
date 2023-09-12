@@ -3,12 +3,13 @@ using OpenClosed_StrategyPattern.PressureSensorImplementations.TankOutletSizeStr
 
 namespace OpenClosed_StrategyPattern.PressureSensorImplementations
 {
-    public sealed class ExternalTankPressureSensor : AbstractTankPressureSensor
+    public sealed class ExternalTankPressureSensor : TankPressureSensorBase
     {
         private const int TANK_ISOLATION_IMPEDANCE = 3;
         private const int TANK_ISOLATION_THICKNESS = 42;
 
-        public ExternalTankPressureSensor(int tankCapacity = 3, int tankDiameter = 10, ITankOutletSizeCalculateStrategy tankOutletSizeCalculateStrategy = null) : base(tankCapacity, tankDiameter, tankOutletSizeCalculateStrategy)
+        public ExternalTankPressureSensor(int tankCapacity = 3, int tankDiameter = 10, ITankSizeStrategy tankOutletSizeCalculateStrategy = null) : 
+            base(tankCapacity, tankDiameter, tankOutletSizeCalculateStrategy)
         {
         }
 

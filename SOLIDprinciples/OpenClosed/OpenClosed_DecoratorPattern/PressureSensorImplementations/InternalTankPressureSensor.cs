@@ -2,7 +2,7 @@
 
 namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
 {
-    public sealed class InternalTankPressureSensor : AbstractTankPressureSensor
+    public sealed class InternalTankPressureSensor : TankPressureSensorBase
     {
         private const int TANK_INTERNAL_THICKNESS = 15;
 

@@ -1,25 +1,28 @@
-﻿using System.Diagnostics;
+﻿using OpenClosed_GoodDesign.PressureSensorImplementations;
+using System.Diagnostics;
 
 namespace OpenClosed_GoodDesign
 {
     public sealed class Program
     {
         /// <summary>
-        /// In order to accomodate the open/closed principle, we introduce an abstraction that will allow our PressureSensorReader to read pressures in the same way across the various sensors.
+        /// In order to accommodate the open/closed principle, we move common concerns - i.e. the CalculatePressure-logic - into the 
+        /// abstract <see cref="TankPressureSensorBase"/> class. This opens the class up to extensions by injection of multiple and 
+        /// different sensors, and closes it for modification since the calculations are performed outside of the <see cref="PressureSensorReader" />.
         /// </summary>
         public static void Main()
         {
-            PressureSensorReader pressureSensorReader = new();
+            TankPressureSensorBase[] tankPressureSensors =
+             {
+                new InternalTankPressureSensor(tankCapacity: 4),
+                new InternalTankPressureSensor(tankDiameter: 15),
+                new ExternalTankPressureSensor(1, 100)
+            };
+            PressureSensorReader pressureSensorReader = new(tankPressureSensors);
 
-            int waterIntakeVelocity = 16;
+            int waterIntakeVelocity = 16; 
             double averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
             Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
-
-            // Given the introduction of the 'AbstractTankPressureSensor' abstraction,
-            // the class is now closed for modification but open for extension - in as much as introducing a new type of sensor requires it implementing the abstract base-class, thus the PressureSensorReader will still function as expected.
-
-            // Though, it still "new's up" those sensors... that's a hard coupling, we would preferably like to avoid.
-            // We can apply the Dependency Inversion-principle - and that's coming right up.
         }
     }
 }

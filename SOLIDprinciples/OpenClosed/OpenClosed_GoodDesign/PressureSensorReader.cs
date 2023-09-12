@@ -1,4 +1,5 @@
 ﻿using OpenClosed_GoodDesign.PressureSensorImplementations;
+using System.Linq;
 
 namespace OpenClosed_GoodDesign
 {
@@ -6,14 +7,9 @@ namespace OpenClosed_GoodDesign
     {
         private readonly TankPressureSensorBase[] _tankPressureSensors;
 
-        public PressureSensorReader()
+        public PressureSensorReader(TankPressureSensorBase[] tankPressureSensors)
         {
-            _tankPressureSensors = new TankPressureSensorBase[]
-            {
-                new InternalTankPressureSensor(tankCapacity: 4),
-                new InternalTankPressureSensor(tankDiameter: 15),
-                new ExternalTankPressureSensor(1,100)
-             };
+            _tankPressureSensors = tankPressureSensors;
         }
 
         /// <summary>
@@ -25,12 +21,13 @@ namespace OpenClosed_GoodDesign
         public double GetAveragePressureAcrossSensors(int waterIntakeVelocity)
         {
             double totalPressureFromAllSensors = 0;
-
-            foreach (TankPressureSensorBase tankPressureSensor in _tankPressureSensors)
-                totalPressureFromAllSensors += tankPressureSensor.CalculatePressure(waterIntakeVelocity);
-
-            int numberOfPressureSensores = _tankPressureSensors.Length;
-            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensores;
+            _tankPressureSensors.ToList().ForEach(sensor =>
+            {
+                totalPressureFromAllSensors += sensor.CalculatePressure(waterIntakeVelocity);
+            });
+            
+            int numberOfPressureSensors = _tankPressureSensors.Length;
+            double averagePressureAcrossSensors = totalPressureFromAllSensors / numberOfPressureSensors;
             return averagePressureAcrossSensors;
         }
     }

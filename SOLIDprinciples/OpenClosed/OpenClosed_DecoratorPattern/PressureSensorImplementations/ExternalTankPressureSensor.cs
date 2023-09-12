@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace OpenClosed_DecoratorPattern.PressureSensorImplementations
 {
-    public sealed class ExternalTankPressureSensor : AbstractTankPressureSensor
+    public sealed class ExternalTankPressureSensor : TankPressureSensorBase
     {
         private const int TANK_ISOLATION_IMPEDANCE = 3;
         private const int TANK_ISOLATION_THICKNESS = 42;
