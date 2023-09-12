@@ -1,18 +1,31 @@
-﻿namespace SingleResponsibility_GoodDesign
+﻿using SingleResponsibility;
+using System.Collections.Generic;
+
+namespace SingleResponsibility_GoodDesign
 {
     public sealed class Program
     {
         /// <summary>
-        /// The best solution to the SensorReader's multiple responsibilities is to simply seperate them.
+        /// The better we separate the concerns, the <i>usually</i> the better. 
+        /// 
+        /// Beyond the 'regular' benefits of honoring the single responsibility principle (i.e. reduced coupling, better maintainability,
+        /// easier testability, less risk of technical debt, etc.), note now, in the below, the 
+        /// separation of concerns allows us to defer the creation of the services. That's certainly a positive side-effect.
         /// </summary>
         private static void Main()
         {
-            // Separating the concerns is better:
-            SensorReader sensorReader = new();
-            string sensorValue = sensorReader.ReadSensorValue();
+            Player player = new();
 
-            FileLogger filelOgger = new();
-            filelOgger.WriteToLog(sensorValue);
+            GameHitPointManager gameHitPointManager = new(player);
+            gameHitPointManager.UpdateHitPoints(HitType.CriticalHit);
+
+            LeaderboardService leaderboardService = new LeaderboardService();
+            leaderboardService.UpdateScore(player);
+            if (leaderboardService.IsHighScore(player))
+            {
+                SaveGameService saveGameService = new(new List<Player> { player });
+                saveGameService.Save();
+            }
         }
     }
 }

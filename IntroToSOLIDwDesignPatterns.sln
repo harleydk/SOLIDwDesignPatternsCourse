@@ -146,6 +146,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility_Facade
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility_GoodDesign", "SOLIDprinciples\SingleResponsibility\SingleResponsibility_GoodDesign\SingleResponsibility_GoodDesign.csproj", "{D7390D9B-1869-4C15-9347-31338831D377}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SingleResponsibility_Shared", "SingleResponsibility_Shared\SingleResponsibility_Shared.shproj", "{B82C448B-6B46-489F-B160-46DFB19FC5BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -401,15 +403,20 @@ Global
 		{6F2825ED-484D-4D65-9DF6-C038AC1ED939} = {DEF0DC6A-7156-4578-AA8B-232066144988}
 		{BEA092C6-1984-486A-ACE0-6EC20E526728} = {DEF0DC6A-7156-4578-AA8B-232066144988}
 		{D7390D9B-1869-4C15-9347-31338831D377} = {DEF0DC6A-7156-4578-AA8B-232066144988}
+		{B82C448B-6B46-489F-B160-46DFB19FC5BB} = {DEF0DC6A-7156-4578-AA8B-232066144988}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DBD1FD10-66A6-4D20-BF13-62EC84D948FD}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		InterfaceSegregation_Shared\InterfaceSegregation_Shared.projitems*{05cc6e4f-b96b-4e7a-8f08-52f1980b16d8}*SharedItemsImports = 13
+		SingleResponsibility_Shared\SingleResponsibility_Shared.projitems*{6f2825ed-484d-4d65-9df6-c038ac1ed939}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{a43eb3a3-192a-47f9-9f51-69d3215861c4}*SharedItemsImports = 5
 		InterfaceSegregation_Shared\InterfaceSegregation_Shared.projitems*{a9c9ed49-dd5a-4466-9f2a-79b5006ba940}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{affcc124-8729-416a-a32b-e25d15a88869}*SharedItemsImports = 13
+		SingleResponsibility_Shared\SingleResponsibility_Shared.projitems*{b82c448b-6b46-489f-b160-46dfb19fc5bb}*SharedItemsImports = 13
+		SingleResponsibility_Shared\SingleResponsibility_Shared.projitems*{bea092c6-1984-486a-ace0-6ec20e526728}*SharedItemsImports = 5
+		SingleResponsibility_Shared\SingleResponsibility_Shared.projitems*{d7390d9b-1869-4c15-9347-31338831d377}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{d8338193-0bb8-4900-bc00-5b538bfee930}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{eb43956c-653e-45ab-aff8-1776596eb3d0}*SharedItemsImports = 5
 		DependencyInversion_Shared\DependencyInversion_Shared.projitems*{ec71d90b-7a28-4b2b-a2d0-e4bc32598153}*SharedItemsImports = 5

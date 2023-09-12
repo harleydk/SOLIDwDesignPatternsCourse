@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace SingleResponsibility_FacadePattern
+namespace SingleResponsibility_FaçadePattern
 {
     public sealed class FileLogger
     {
