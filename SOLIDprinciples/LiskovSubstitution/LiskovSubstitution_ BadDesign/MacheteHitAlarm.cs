@@ -1,4 +1,5 @@
-﻿using System.Diagnostics;
+﻿using System;
+using System.Diagnostics;
 
 namespace LiskovSubstitution_BadDesign
 {
@@ -16,19 +17,12 @@ namespace LiskovSubstitution_BadDesign
 
         public bool HasArmorDroppedBelowThreshold(int currentArmorDefensePoints)
         {
-            // Liskov violation - altered pre-condition! This class determ
-            // fds
-            // afdsa
-            // fds
-            // dsa
-            // fines a hit with a machete will prove deadly!
-            // But this breaks the intent of the contract and the other implementations of the IArmorHitAlarm interface.
-            return true;
-            if (currentArmorDefensePoints <= _armorAlarmThreshold * 2)
+            // Liskov Substitution violation - altered pre-condition! This class breaks the intent of the contract and the other
+            // implementations of the IArmorHitAlarm interface.
+            bool isNight = DateTime.UtcNow.TimeOfDay.Hours > 22 && DateTime.UtcNow.TimeOfDay.Hours < 6;
+            if (isNight)
             {
-                // In effect,  That doesn't square with the 
-                // intention of the interface nor the class siblings.
-                return true;
+                return true; // machete hits at night instantly indicates the armor has dropped below the threshold.
             }
             else
             {
@@ -39,7 +33,8 @@ namespace LiskovSubstitution_BadDesign
 
         public void RaiseAlarm()
         {
-            // violation - difference in the meaningfulness of the function's implementation. The other interface-implementations don't deal with repetitions.
+            // Liskov Substitution violation - difference in the meaningfulness of the function's implementation. The other
+            // interface-implementations don't deal with 'NUMBER_OF_ALARM_REPETITIONS'.
             for (int i = 0; i < NUMBER_OF_ALARM_REPETITIONS; i++)
             {
                 _numberOfAlarmsRaised += 1;

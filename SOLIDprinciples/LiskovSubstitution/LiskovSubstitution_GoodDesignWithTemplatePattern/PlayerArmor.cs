@@ -1,4 +1,4 @@
-﻿namespace LiskovSubstitution_BadDesign
+﻿namespace LiskovSubstitution_GoodDesignWithTemplatePattern
 {
     public sealed class PlayerArmor
     {

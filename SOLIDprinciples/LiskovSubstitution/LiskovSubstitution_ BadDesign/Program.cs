@@ -23,13 +23,15 @@ namespace LiskovSubstitution_BadDesign
         /// </summary>
         public static void Main()
         {
-            PlayerArmor playerArmor = new();
+            PlayerArmor playerArmor = new(initialArmorDefensePoints: 100);
 
-            playerArmor.SetArmorHitAlarm(new SwordHitAlarm(alarmThreshold: 3));
+            IArmorHitAlarm swordHitAlarm = new SwordHitAlarm(alarmThreshold: 3);
+            playerArmor.SetArmorHitAlarm(swordHitAlarm);
             playerArmor.SubtractDefensePoints(new Random().Next());
             playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
 
-            playerArmor.SetArmorHitAlarm(new MacheteHitAlarm(alarmThreshold: 3));
+            IArmorHitAlarm macheteHitAlarm = new MacheteHitAlarm(alarmThreshold: 6);
+            playerArmor.SetArmorHitAlarm(macheteHitAlarm);
             playerArmor.SubtractDefensePoints(new Random().Next());
             playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
         }
