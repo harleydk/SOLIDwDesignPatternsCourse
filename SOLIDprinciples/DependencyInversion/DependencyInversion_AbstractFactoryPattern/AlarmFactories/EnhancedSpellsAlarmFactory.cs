@@ -2,14 +2,14 @@
 
 namespace DependencyInversion_AbstractFactoryPattern.AlarmFactories
 {
-    public sealed class EnhancedAlarmFactory : IAlarmFactory
+    public sealed class EnhancedSpellsAlarmFactory : ISpellAlarmFactory
     {
-        public IAlarm CreateAudibleAlarm()
+        public ISpellAlarm CreateAudibleAlarm()
         {
             return new PersistentBeepAlarm();
         }
 
-        public IAlarm CreateVisibleAlarm()
+        public ISpellAlarm CreateVisibleAlarm()
         {
             return new EnhancedDisplayAlarm();
         }

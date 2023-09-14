@@ -6,10 +6,10 @@ namespace DependencyInversion_AbstractFactoryPattern.AlarmFactories
     /// Interface for creating an interface which creates objects - alarms, in this example - which 
     /// share a common theme.
     /// </summary>
-    public interface IAlarmFactory
+    public interface ISpellAlarmFactory
     {
-        IAlarm CreateVisibleAlarm();
+        ISpellAlarm CreateVisibleAlarm();
 
-        IAlarm CreateAudibleAlarm();
+        ISpellAlarm CreateAudibleAlarm();
     }
 }

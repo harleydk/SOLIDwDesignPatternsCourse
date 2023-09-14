@@ -1,6 +1,6 @@
 ﻿namespace DependencyInversion
 {
-    public sealed class PressureSensor : Sensor
+    public sealed class PressureSpell : Spell
     {
     }
 }

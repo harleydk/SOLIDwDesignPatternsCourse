@@ -23,49 +23,49 @@ namespace DependencyInversion_GoodDesign
         public static void Main(string[] args)
         {
             // Let's get the sensors from configuration. We could new them up, of course, if they don't lend themselves easily to configuration.
-            IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile(@"sensorsAndAlarms.json").Build();
-            List<SensorConfiguration> sensorsConfiguration = new();
-            config.Bind("Sensors", sensorsConfiguration);
-            Debug.Assert(sensorsConfiguration.Any(), "No sensors initialized from config");
+            IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile(@"spellsAndAlarms.json").Build();
+            List<SpellConfiguration> spellConfig = new();
+            config.Bind("Spells", spellConfig);
+            Debug.Assert(spellConfig.Any(), "No spells initialized from config");
 
             // Initialize the sensors based on their configuration data, and add them to the sensor-cabinet.
-            IEnumerable<ISensor> sensorCollection = InitializeSensors(sensorsConfiguration);
-            SensorCabinet sensorCabinet = new(sensorCollection);
+            IEnumerable<ISpell> spellsCollection = InitializeSpells(spellConfig);
+            SpellBook spellBook = new(spellsCollection);
 
             // At some point, we wish to write temperature sensor values to a log.
             // By removing the logger from the sensor-cabinet, we forego problems with the single-responsibility principle.
-            IEnumerable<TemperatureSensorData> temperatureSensorData = sensorCabinet.GetAllTemperatureSensorsData();
+            IEnumerable<TemperatureSpellData> temperatureSpellsData = spellBook.GetAllTemperatureSpellsData();
 
-            TemperatureSensorLogger temperatureSensorLogger = InitializeTemperatureSensorLogger();
-            temperatureSensorLogger.WriteAllTemperatureSensorsDataToLog(temperatureSensorData);
+            TemperatureSpellLogger temperatureSensorLogger = InitializeTemperatureSpellsLogger();
+            temperatureSensorLogger.WriteAllTemperatureSpellsDataToLog(temperatureSpellsData);
         }
 
-        private static IEnumerable<ISensor> InitializeSensors(List<SensorConfiguration> sensorConfigurations)
+        private static IEnumerable<ISpell> InitializeSpells(List<SpellConfiguration> spellConfigurations)
         {
-            foreach (SensorConfiguration sensorConfig in sensorConfigurations)
+            foreach (SpellConfiguration spellConfig in spellConfigurations)
             {
                 // Initialize sensor
-                ISensor sensor = sensorConfig.SensorType switch
+                ISpell sensor = spellConfig.SpellType switch
                 {
-                    SensorType.TemperatureSensor => new TemperatureSensor(sensorConfig.SensorId),
-                    SensorType.PressureSensor => new PressureSensor(),
-                    _ => throw new ArgumentException($"Invalid {nameof(SensorType)} {sensorConfig.SensorType}")
+                    SpellType.TemperatureSpell => new TemperatureSpell(spellConfig.SpellId),
+                    SpellType.PressureSpell => new PressureSpell(),
+                    _ => throw new ArgumentException($"Invalid {nameof(SpellType)} {spellConfig.SpellType}")
                 };
 
                 // attach alarms
-                foreach (AlarmConfiguration alarmConfig in sensorConfig.Alarms)
+                foreach (AlarmConfiguration alarmConfig in spellConfig.Alarms)
                 {
-                    IAlarm alarm = InitializeAlarm(alarmConfig);
-                    sensor.AttachAlarm(alarm);
+                    ISpellAlarm alarm = InitializeAlarm(alarmConfig);
+                    sensor.AttachSpellAlarm(alarm);
                 }
 
                 yield return sensor;
             }
         }
 
-        private static IAlarm InitializeAlarm(AlarmConfiguration alarmConfig)
+        private static ISpellAlarm InitializeAlarm(AlarmConfiguration alarmConfig)
         {
-            IAlarm alarm = alarmConfig.AlarmType switch
+            ISpellAlarm alarm = alarmConfig.AlarmType switch
             {
                 AlarmType.DisplayAlarm => new DisplayAlarm(),
                 AlarmType.WarningBellAlarm => new WarningBellAlarm(),
@@ -74,10 +74,10 @@ namespace DependencyInversion_GoodDesign
             return alarm;
         }
 
-        private static TemperatureSensorLogger InitializeTemperatureSensorLogger()
+        private static TemperatureSpellLogger InitializeTemperatureSpellsLogger()
         {
             DiagnosticsLogger diagnosticsLogger = new();
-            TemperatureSensorLogger temperatureSensorLogger = new(diagnosticsLogger);
+            TemperatureSpellLogger temperatureSensorLogger = new(diagnosticsLogger);
             return temperatureSensorLogger;
         }
     }

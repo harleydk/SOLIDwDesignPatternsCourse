@@ -2,9 +2,9 @@
 
 namespace DependencyInversion
 { 
-    public sealed class PersistentBeepAlarm : IAlarm
+    public sealed class PersistentBeepAlarm : ISpellAlarm
     {
-        public void RaiseAlarm()
+        public void RaiseSpellAlarm()
         {
             int i = 0;
             do

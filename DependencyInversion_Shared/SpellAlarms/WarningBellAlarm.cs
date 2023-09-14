@@ -2,9 +2,9 @@
 
 namespace DependencyInversion
 {
-    public sealed class WarningBellAlarm : IAlarm
+    public sealed class WarningBellAlarm : ISpellAlarm
     {
-        public void RaiseAlarm()
+        public void RaiseSpellAlarm()
         {
             Console.Beep();
         }

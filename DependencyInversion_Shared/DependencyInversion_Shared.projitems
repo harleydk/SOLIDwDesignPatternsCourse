@@ -9,20 +9,17 @@
     <Import_RootNamespace>DependencyInversion_Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Alarms\EnhancedDisplayAlarm.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Alarms\PersistentBeepAlarm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DiagnosticsLogger.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Alarms\DisplayAlarm.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Alarms\IAlarm.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sensors\ISensor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sensors\PressureSensor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sensors\Sensor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sensors\TemperatureSensor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Sensors\TemperatureSensorData.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Alarms\WarningBellAlarm.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)TemperatureSensorLogger.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Sensors\" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\DisplayAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\EnhancedDisplayAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\IAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\PersistentBeepAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\WarningBellAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\ISpell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\PressureSpell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\Spell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\TemperatureSpell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\TemperatureSpellData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TemperatureSpellLogger.cs" />
   </ItemGroup>
 </Project>

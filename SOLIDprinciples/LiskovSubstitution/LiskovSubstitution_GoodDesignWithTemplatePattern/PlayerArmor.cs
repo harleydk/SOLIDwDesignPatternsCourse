@@ -7,7 +7,7 @@
 
         public PlayerArmor(int initialArmorDefensePoints)
         {
-            _currentArmorDefensePoints = initialArmorDefensePoints
+            _currentArmorDefensePoints = initialArmorDefensePoints;
         }
 
         public void SetArmorHitAlarm(IArmorHitAlarm armorHitAlarm)

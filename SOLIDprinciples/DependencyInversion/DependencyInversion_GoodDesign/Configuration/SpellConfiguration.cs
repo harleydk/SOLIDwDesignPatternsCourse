@@ -2,10 +2,10 @@
 
 namespace DependencyInversion_GoodDesign.Configuration
 {
-    public class SensorConfiguration
+    public class SpellConfiguration
     {
-        public SensorType SensorType { get; set; }
-        public string SensorId { get; set; }
+        public SpellType SpellType { get; set; }
+        public string SpellId { get; set; }
         public AlarmConfiguration[] Alarms { get; set; }
     }
 

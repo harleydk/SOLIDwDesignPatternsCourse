@@ -26,30 +26,32 @@ namespace DependencyInversion_AbstractFactoryPattern
         /// </remarks>
         public static void Main()
         {
-            // A collection of sensors must have alarms attached to them:
-            TemperatureSensor temperatureSensor1 = new TemperatureSensor("Temp1");
-            TemperatureSensor temperatureSensor2 = new TemperatureSensor("Temp2");
-            List<ISensor> sensorCollection = new() { temperatureSensor1, temperatureSensor2 };
+            // A collection of spells must have alarms attached to them:
+            TemperatureSpell temperatureSpell1 = new TemperatureSpell("Temp1");
+            TemperatureSpell temperatureSpell2 = new TemperatureSpell("Temp2");
+            List<ISpell> spellsCollection = new() { temperatureSpell1, temperatureSpell2 };
 
             // For standard alarms, we use a standard alarm factory:
-            IAlarmFactory standardAlarmFactory = new StandardAlarmFactory();
-            sensorCollection.ForEach(sensor =>
+            ISpellAlarmFactory standardAlarmFactory = new StandardSpellsAlarmFactory();
+            spellsCollection.ForEach(sensor =>
             {
-                sensor.AttachAlarm(standardAlarmFactory.CreateVisibleAlarm());
-                sensor.AttachAlarm(standardAlarmFactory.CreateAudibleAlarm());
+                sensor.AttachSpellAlarm(standardAlarmFactory.CreateVisibleAlarm());
+                sensor.AttachSpellAlarm(standardAlarmFactory.CreateAudibleAlarm());
             });
-            SensorCabinet sensorCabinet = new(sensorCollection);
-            sensorCabinet.TestAlarms();
+
+            SpellBook spellBook = new(spellsCollection);
+            spellBook.TestAlarms();
 
             // But for other scenarios, we might create 'enhanced' alarms via a different factory implementation:
-            IAlarmFactory enhancedAlarmFactory = new EnhancedAlarmFactory();
-            sensorCollection.ForEach(sensor =>
+            spellBook = new(spellsCollection);
+            ISpellAlarmFactory enhancedAlarmFactory = new EnhancedSpellsAlarmFactory();
+            spellsCollection.ForEach(sensor =>
             {
-                sensor.AttachAlarm(enhancedAlarmFactory.CreateVisibleAlarm());
-                sensor.AttachAlarm(enhancedAlarmFactory.CreateAudibleAlarm());
+                sensor.AttachSpellAlarm(enhancedAlarmFactory.CreateVisibleAlarm());
+                sensor.AttachSpellAlarm(enhancedAlarmFactory.CreateAudibleAlarm());
             });
-            sensorCabinet = new(sensorCollection);
-            sensorCabinet.TestAlarms();
+            spellBook = new(spellsCollection);
+            spellBook.TestAlarms();
         }
     }
 }

@@ -1,8 +1,8 @@
 {
-  "Sensors": [
+  "Spells": [
     {
-      "SensorType": "TemperatureSensor",
-      "SensorId": "Temp1",
+      "SpellType": "TemperatureSpell",
+      "SpellId": "Temp1",
       "Alarms": [
         {
           "AlarmType": "DisplayAlarm"
@@ -10,8 +10,8 @@
       ]
     },
     {
-      "SensorType": "TemperatureSensor",
-      "SensorId": "Temp2",
+      "SpellType": "TemperatureSpell",
+      "SpellId": "Temp2",
       "Alarms": [
         {
           "AlarmType": "DisplayAlarm"
@@ -22,7 +22,7 @@
       ]
     },
     {
-      "SensorType": "PressureSensor",
+      "SpellType": "PressureSpell",
       "Alarms": [
         {
           "AlarmType": "DisplayAlarm"
