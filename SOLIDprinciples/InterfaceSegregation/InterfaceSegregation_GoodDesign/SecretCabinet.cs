@@ -1,19 +1,19 @@
-﻿using InterfaceSegregation;
-using System;
-using System.Diagnostics;
+﻿using System;
 
-namespace InterfaceSegregation_BadDesign
+namespace InterfaceSegregation_GoodDesign
 {
     /// <summary>
-    /// A 'regular' security-cabinet. Includes an alarm, that fires when the <see cref="CabinetOpenedEvent"/> 
+    /// A 'regular' secret cabinet. Includes an alarm. Implements multiple interfaces.
     /// </summary>
-    public class SecurityCabinet : ISecurityCabinet
+    /// <see cref="ICabinetOpening"/>
+    /// <seealso cref="ICabinetAlarming"/>
+    public class SecretCabinet : ICabinetOpening, ICabinetAlarming
     {
         private readonly CabinetAlarm _cabinetAlarm;
 
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
 
-        public SecurityCabinet(CabinetAlarm cabinetAlarm)
+        public SecretCabinet(CabinetAlarm cabinetAlarm)
         {
             _cabinetAlarm = cabinetAlarm;
         }
@@ -25,7 +25,6 @@ namespace InterfaceSegregation_BadDesign
 
         public void RaiseCabinetOpenAlarm()
         {
-            Debug.Assert(_cabinetAlarm != null, "Cabinet alarm not initialized");
             _cabinetAlarm.RaiseCabinetAlarm();
         }
     }

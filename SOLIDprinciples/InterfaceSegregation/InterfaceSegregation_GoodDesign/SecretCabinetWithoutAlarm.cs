@@ -1,9 +1,8 @@
-﻿using InterfaceSegregation;
-using System;
+﻿using System;
 
 namespace InterfaceSegregation_GoodDesign
 {
-    public sealed class SensorCabinetWithoutAlarm : ICabinetOpening
+    public sealed class SecretCabinetWithoutAlarm : ICabinetOpening
     {
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
 

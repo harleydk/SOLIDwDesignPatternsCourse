@@ -8,7 +8,7 @@ namespace InterfaceSegregation_BadDesign
     /// with the interface-segregation principle - i.e. that we should not be having to implement a contract
     /// we don't fully need.
     /// </summary>
-    public sealed class SensorCabinetWithoutAlarm : ISecurityCabinet
+    public sealed class SecretCabinetWithoutAlarm : ISecretCabinet
     {
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
     

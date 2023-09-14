@@ -1,12 +1,8 @@
-﻿using InterfaceSegregation;
-using System;
+﻿using System;
 
 namespace InterfaceSegregation_BadDesign
 {
-    /// <summary>
-    /// The contract that all implementing security-cabinets must honor.
-    /// </summary>
-    public interface ISecurityCabinet
+    public interface ISecretCabinet
     {
         event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
      
