@@ -1,6 +1,6 @@
-﻿namespace OpenClosed_BadDesign.PressureSensorImplementations
+﻿namespace OpenClosed_GoodDesign.HitPointModifiers
 {
-    public sealed class IntimidationHitPointModifier : HitPointModifier
+    public sealed class IntimidationHitPointModifier : HitPointModifierBase
     {
         private const double INTIMIDATION_FORCE = 3;
 
@@ -12,9 +12,9 @@
         public override double CalculateModifierValue(int hitPointValue)
         {
             double modifierValue = base.CalculateModifierValue(hitPointValue);
-            double calculatedModifierValue = INTIMIDATION_FORCE * modifierValue;
+            double calculatedModifierValue = INTIMIDATION_FORCE + modifierValue;
             return calculatedModifierValue;
         }
     }
 }
-}
+

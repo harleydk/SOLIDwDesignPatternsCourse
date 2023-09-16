@@ -1,34 +1,25 @@
-﻿using OpenClosed_DecoratorPattern.PressureSensorImplementations;
+﻿using OpenClosed_GoodDesign.HitPointModifiers;
 using System.Diagnostics;
 
-namespace OpenClosed_DecoratorPattern
+namespace OpenClosed_GoodDesign
 {
-    public static class Program
+    public sealed class Program
     {
-        /// <summary>
-        /// Now we're in the need to implement a tank-pressure sensor that takes into account temperatures, shock-absorbability, etc. 
-        /// We can't keep on sub-classing AbstractTankPressureSensor's - we'd drown in implementations. Instead, we can use the 
-        /// <i>decorator pattern</i> to add behavior, rather than continuously sub-classing.
-        /// </summary>
-        /// <remarks>
-        /// The advantage of the decorator pattern is in how we can truly abstract away only that code which changes, in this case 
-        /// the individual pressure-calculating logic.
-        /// </remarks>
         public static void Main()
         {
-            TankPressureSensorBase internalTankPressureSensor = new InternalTankPressureSensor(tankCapacity: 4);
+            int hitPoints = 10;
 
-            TankPressureSensorBase shockAbsorbableInternalTankPressureSensor =
-                new ShockAbsorbableTankPressureSensor( maXAllowableGForceLoad: 10, internalTankPressureSensor);
+            HitPointModifierDecorator modifier1 = new IntimidationHitPointModifier(modifierValue: 6, abilityBonus: 1, NullObjectHitPointModifier.Create()); 
+            //Debug.Assert(modifier1.CalculateModifierValue(hitPoints) == 10); // 6+1 +3 intimidation-points + 0 for the null-object modifier
+            HitPointModifierDecorator modifier2 = new ProficiencyHitPointModifier(modifierValue: 4, abilityBonus: 1, ProficiencyLevel.Guardian, modifier1); 
+            //Debug.Assert(modifier2.CalculateModifierValue(hitPoints) == 20); // 4+1+(int)Guardian + 10 for modifier1
+            HitPointModifierDecorator modifier3 = new IntimidationHitPointModifier(modifierValue: 3, abilityBonus: 2, modifier2);
+            //Debug.Assert(modifier3.CalculateModifierValue(hitPoints) == 28); // 3+2 +3 intimidation-points + 20 for modifier2
 
-            TankPressureSensorBase shockAbsorbableInternalTankPressureSensorWithTemperature =
-                new TemperatureTankPressureSensor(minimumDegreesCelsius: 10, maxDegreesCelsius: 12, shockAbsorbableInternalTankPressureSensor);
+            MagicSword magicSword = new(modifier3);
 
-            TankPressureSensorBase[] tankPressureSensors = { shockAbsorbableInternalTankPressureSensorWithTemperature /* Just one sensor, for the case of this example. */ };
-
-            PressureSensorReader pressureSensorReader = new(tankPressureSensors);
-            double averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(10);
-            Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
+            double totalModifierValue = magicSword.GetTotalModifierValue(hitPoints);
+            Debug.WriteLine($"{nameof(totalModifierValue)} across all modifiers is {totalModifierValue}");
         }
     }
 }

@@ -1,7 +1,7 @@
-﻿using OpenClosed_BadDesign.PressureSensorImplementations;
+﻿using OpenClosed_GoodDesign.HitPointModifiers;
 using System.Diagnostics;
 
-namespace OpenClosed_BadDesign
+namespace OpenClosed_GoodDesign
 {
     /// <summary>
     /// The Open/Closed Principle states that a component should be closed for modification, but open for extensions. In the below, 
@@ -11,17 +11,16 @@ namespace OpenClosed_BadDesign
     {
         public static void Main()
         {
-            HitPointModifier[] hitPointModifiers = 
+            HitPointModifierBase[] hitPointModifiers = 
             {
-                new ProficiencyHitPointModifier(modifierValue: 4, abilityBonus: 1),
-                new ProficiencyHitPointModifier(modifierValue: 7, abilityBonus: 1),
+                new ProficiencyHitPointModifier(modifierValue: 4, abilityBonus: 1, ProficiencyLevel.Guardian),
                 new IntimidationHitPointModifier( modifierValue: 10, abilityBonus: 1)
             };
             MagicSword magicSword = new(hitPointModifiers);
 
             int hitPoints = 16;
-            double averageModifierValue = magicSword.GetAverageModifierValue(hitPoints);
-            Debug.WriteLine($"{nameof(averageModifierValue)} across all {nameof(hitPointModifiers)} is {averageModifierValue}");
+            int totalModifierValue = magicSword.GetTotalModifierValue(hitPoints);
+            Debug.WriteLine($"{nameof(totalModifierValue)} across all {nameof(hitPointModifiers)} is {totalModifierValue}");
         }
     }
 }

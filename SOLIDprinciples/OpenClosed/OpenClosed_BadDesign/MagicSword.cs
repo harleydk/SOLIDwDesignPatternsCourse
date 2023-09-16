@@ -1,48 +1,55 @@
-﻿using OpenClosed_BadDesign.PressureSensorImplementations;
+﻿using OpenClosed_GoodDesign.HitPointModifiers;
 
-namespace OpenClosed_BadDesign
+namespace OpenClosed_GoodDesign
 {
     public sealed class MagicSword
     {
-        private readonly HitPointModifier[] _hitPointModifiers;
+        private readonly HitPointModifierBase[] _hitPointModifiers;
 
-        public MagicSword(HitPointModifier[] hitPointModifiers)
+        public MagicSword(HitPointModifierBase[] hitPointModifiers)
         {
             _hitPointModifiers = hitPointModifiers;
         }
 
         /// <summary>
-        /// Gets the average modifier values across all <see cref="HitPointModifier"/>s.
+        /// Gets the modifier values across all <see cref="HitPointModifierBase"/>s.
         /// </summary>
         /// <remarks>
         /// <i>This method breaks with the open/closed principle, in that we calculate the result in consideration 
-        /// to a specific <see cref="HitPointModifier"/>-type. So if we introduce a new type of <see cref="HitPointModifier"/>, we must now 
+        /// to a specific <see cref="HitPointModifierBase"/>-type. So if we introduce a new type of <see cref="HitPointModifierBase"/>, we must now 
         /// modify this method accordingly.</i>
         /// </remarks>
-        public double GetAverageModifierValue(int hitPointValue)
+        public int GetTotalModifierValue(int hitPointValue)
         {
-            double totalModifyValue = 0;
-            foreach (HitPointModifier hitPointModifier in _hitPointModifiers)
+            int totalModifyValue = 0;
+            foreach (HitPointModifierBase hitPointModifier in _hitPointModifiers)
             {
                 if (hitPointModifier is ProficiencyHitPointModifier)
                 {
-                    totalModifyValue += hitPointModifier.CalculateModifierValue(hitPointValue);
+                    int calculateModifierValue(int hitPointValue)
+                    {
+                        int modifierValue = hitPointModifier.CalculateModifierValue(hitPointValue);
+                        int proficiencyLevel = ((ProficiencyHitPointModifier)hitPointModifier).EvaluateProficiencyLevel();
+                        int calculatedModifierValue = proficiencyLevel + modifierValue;
+                        return calculatedModifierValue;
+                    }
+
+                    totalModifyValue += calculateModifierValue(hitPointValue);
                 }
                 else if (hitPointModifier is IntimidationHitPointModifier)
                 {
-                    double calculateModifierValue(int hitPointValue)
+                    int calculateModifierValue(int hitPointValue)
                     {
-                        double modifierValue = hitPointModifier.CalculateModifierValue(hitPointValue);
-                        double intimidationForce = ((IntimidationHitPointModifier)hitPointModifier).GetIntimidationForce();
-                        double calculatedModifierValue = intimidationForce * modifierValue;
+                        int modifierValue = hitPointModifier.CalculateModifierValue(hitPointValue);
+                        int intimidationForce = ((IntimidationHitPointModifier)hitPointModifier).GetIntimidationForce();
+                        int calculatedModifierValue = intimidationForce + modifierValue;
                         return calculatedModifierValue;
                     }
                     totalModifyValue += calculateModifierValue(hitPointValue);
                 }
             }
 
-            double averageModifyValue = totalModifyValue / _hitPointModifiers.Length;
-            return averageModifyValue;
+            return totalModifyValue;
         }
     }
 }

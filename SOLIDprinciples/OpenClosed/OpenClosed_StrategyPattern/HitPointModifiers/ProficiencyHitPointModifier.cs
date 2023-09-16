@@ -1,4 +1,4 @@
-﻿namespace OpenClosed_GoodDesign.HitPointModifiers
+﻿namespace OpenClosed_StrategyPattern.HitPointModifiers
 {
     public sealed class ProficiencyHitPointModifier : HitPointModifierBase
     {
@@ -8,6 +8,13 @@
             base(modifierValue, abilityBonus)
         {
             _proficiencyLevel = proficiencyLevel;
+        }
+
+        public override double CalculateModifierValue(int hitPointValue)
+        {
+            double modifierValue = base.CalculateModifierValue(hitPointValue);
+            double calculatedModifierValue = modifierValue + EvaluateProficiencyLevel();
+            return calculatedModifierValue;
         }
 
         public int EvaluateProficiencyLevel()
@@ -22,4 +29,5 @@
         Guardian = 5,
         Legend = 15
     }
+
 }

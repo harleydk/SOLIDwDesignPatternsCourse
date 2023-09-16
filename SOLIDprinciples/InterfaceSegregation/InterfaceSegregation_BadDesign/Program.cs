@@ -1,6 +1,4 @@
-﻿using InterfaceSegregation;
-
-namespace InterfaceSegregation_BadDesign
+﻿namespace InterfaceSegregation_BadDesign
 {
     /// <summary>
     /// The interface segregation principle states that no class should be forced to implement interface-methods it has not need for. 
@@ -20,14 +18,14 @@ namespace InterfaceSegregation_BadDesign
         {
             // For a 'regular' treasureChestFilledWithGold we attach a an event that raises an alarm when the open event occurs,
             // because we have that method available to us via the <see cref="ISecretCabinet"/>-interface.
-            SecretCabinet treasureChestFilledWithGold = new SecretCabinet(new CabinetAlarm());
+            SecretCabinet treasureChestFilledWithGold = new (new CabinetAlarm());
             treasureChestFilledWithGold.CabinetOpenedEvent += CabinetOpenedEvent;
             treasureChestFilledWithGold.FireCabinetOpenedEvent();
             treasureChestFilledWithGold.CabinetOpenedEvent -= CabinetOpenedEvent;
 
             // But for a fakeEmptyTreasureChest without alarm, we'll get an exception when we try to raise an alarm,
             // since for this <see cref="ISecretCabinet"/>-implementation we haven't implemented the 'RaiseCabinetOpenAlarm' method. 
-            SecretCabinetWithoutAlarm fakeEmptyTreasureChest = new SecretCabinetWithoutAlarm();
+            SecretCabinetWithoutAlarm fakeEmptyTreasureChest = new();
             fakeEmptyTreasureChest.CabinetOpenedEvent += CabinetOpenedEvent;
             fakeEmptyTreasureChest.FireCabinetOpenedEvent();
             fakeEmptyTreasureChest.CabinetOpenedEvent -= CabinetOpenedEvent;

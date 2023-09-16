@@ -1,11 +1,11 @@
-﻿namespace OpenClosed_BadDesign.PressureSensorImplementations
+﻿namespace OpenClosed_GoodDesign.HitPointModifiers
 {
-    public abstract class HitPointModifier
+    public abstract class HitPointModifierBase : IHitPointModifier
     {
         protected readonly int _modifierValue;
         protected readonly int _abilityBonus;
 
-        public HitPointModifier(int modifierValue, int abilityBonus)
+        public HitPointModifierBase(int modifierValue, int abilityBonus)
         {
             _modifierValue = modifierValue;
             _abilityBonus = abilityBonus;
@@ -13,8 +13,8 @@
 
         public virtual double CalculateModifierValue(int hitPointValue)
         {
-            double modifierValue = (double)_modifierValue / _abilityBonus;
-            return modifierValue * hitPointValue;
+            int modifierValue = _modifierValue + _abilityBonus;
+            return modifierValue;
         }
 
     }

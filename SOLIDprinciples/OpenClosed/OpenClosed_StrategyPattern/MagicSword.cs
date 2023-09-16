@@ -1,7 +1,7 @@
-﻿using OpenClosed_GoodDesign.HitPointModifiers;
+﻿using OpenClosed_StrategyPattern.HitPointModifiers;
 using System.Linq;
 
-namespace OpenClosed_GoodDesign
+namespace OpenClosed_StrategyPattern
 {
     public sealed class MagicSword
     {
