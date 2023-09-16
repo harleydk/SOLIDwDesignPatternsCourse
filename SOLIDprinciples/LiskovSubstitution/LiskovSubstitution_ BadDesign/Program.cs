@@ -1,16 +1,39 @@
-﻿namespace LiskovSubstitution_BadDesign
+﻿using System;
+
+namespace LiskovSubstitution_BadDesign
 {
+    /// <summary>
+    /// The Liskov Substitution Principle states that an object with a certain interface should be replaceable by a different object that implements 
+    /// that same interface while retaining all the correctness of the original intent. That means that not only does the interface have to 
+    /// have exactly the same types, but the behavior has to remain correct as well.
+    /// 
+    /// The main issue with breaking the principle comes from unrealized or faulty expectations. We're led to adopt and believe
+    /// one kind of behavior, but trust is breached and insecurities arise (and technical debt accrues) when it turns 
+    /// out we can't count on what we're been told.
+    /// </summary>
+    /// <remarks>
+    /// Barbara Liskov is an American computer scientist. <see cref="https://en.wikipedia.org/wiki/Barbara_Liskov"/>
+    /// </remarks>
     public sealed class Program
     {
-        // The Liskov Substitution Principle states that an object with a certain interface can be replaced by a different object that implements that same interface while retaining all the correctness of the original program. That means that not only does the interface have to have exactly the same types, but the behavior has to remain correct as well.
-
-        // A VoltageSensor-class reads a sensor-voltage and raises an alarm if the voltage dips below a given threshold. This works well for a Standard-voltage alarm, but a newly introduced NewVoltageAlarm() implementation introduces different requirements and thus breaks the Liskov substitution principle.
+        /// <summary>
+        /// A <see cref="PlayerArmor"/> subtracts a number of defense-points and raises an <see cref="IArmorHitAlarm"/> if the armor-level
+        /// dips below a given threshold. This works well for a standard <see cref="SwordHitAlarm"/> implementation, but a newly introduced
+        /// <see cref="MacheteHitAlarm"/> introduces different requirements and thus breaks with the Liskov Substitution principle.
+        /// </summary>
         public static void Main()
         {
-            VoltageSensor voltageSensor = new();
-            voltageSensor.SetVoltageAlarm(new StandardVoltageAlarm(3.3d));
-            voltageSensor.ReadCurrentSensorVoltage();
-            voltageSensor.RaiseAlarmIfVoltageBelowMinimum();
+            PlayerArmor playerArmor = new(initialArmorDefensePoints: 100);
+
+            IArmorHitAlarm swordHitAlarm = new SwordHitAlarm(alarmThreshold: 3);
+            playerArmor.SetArmorHitAlarm(swordHitAlarm);
+            playerArmor.SubtractDefensePoints(new Random().Next());
+            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
+
+            IArmorHitAlarm macheteHitAlarm = new MacheteHitAlarm(alarmThreshold: 6);
+            playerArmor.SetArmorHitAlarm(macheteHitAlarm);
+            playerArmor.SubtractDefensePoints(new Random().Next());
+            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
         }
     }
 }

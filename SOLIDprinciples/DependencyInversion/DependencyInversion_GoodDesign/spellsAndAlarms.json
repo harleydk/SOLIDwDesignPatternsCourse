@@ -1,0 +1,36 @@
+{
+  "Spells": [
+    {
+      "SpellType": "TemperatureSpell",
+      "SpellId": "Temp1",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        }
+      ]
+    },
+    {
+      "SpellType": "TemperatureSpell",
+      "SpellId": "Temp2",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        },
+        {
+          "AlarmType": "WarningBellAlarm"
+        }
+      ]
+    },
+    {
+      "SpellType": "PressureSpell",
+      "Alarms": [
+        {
+          "AlarmType": "DisplayAlarm"
+        },
+        {
+          "AlarmType": "WarningBellAlarm"
+        }
+      ]
+    }
+  ]
+}

@@ -1,11 +1,8 @@
-﻿using InterfaceSegregation;
-using System.Diagnostics;
-
-namespace InterfaceSegregation_BadDesign
+﻿namespace InterfaceSegregation_BadDesign
 {
     /// <summary>
     /// The interface segregation principle states that no class should be forced to implement interface-methods it has not need for. 
-    /// Below, a SensorCabinetWithoutAlarm() shouldn't have to implement ISensorCabinet-methods regarding alarms.
+    /// Below, a <see cref="SecretCabinetWithoutAlarm"/>() shouldn't have to implement <see cref="ISecretCabinet"/>-methods regarding alarms.
     /// 
     /// The principle mainly addresses the concern of bloat, in as much as it's a clear sign something that would usually be split into 
     /// its own has not been.
@@ -19,19 +16,19 @@ namespace InterfaceSegregation_BadDesign
     {
         public static void Main()
         {
-            // For a 'regular' security-cabinet we attach a an event that raises an alarm when the open event occurs,
-            // because we have that method available to us via the ISecurityCabinet-interface.
-            SecurityCabinet securityCabinet = new SecurityCabinet(new CabinetAlarm());
-            securityCabinet.CabinetOpenedEvent += CabinetOpenedEvent;
-            securityCabinet.FireCabinetOpenedEvent();
-            securityCabinet.CabinetOpenedEvent -= CabinetOpenedEvent;
+            // For a 'regular' treasureChestFilledWithGold we attach a an event that raises an alarm when the open event occurs,
+            // because we have that method available to us via the <see cref="ISecretCabinet"/>-interface.
+            SecretCabinet treasureChestFilledWithGold = new (new CabinetAlarm());
+            treasureChestFilledWithGold.CabinetOpenedEvent += CabinetOpenedEvent;
+            treasureChestFilledWithGold.FireCabinetOpenedEvent();
+            treasureChestFilledWithGold.CabinetOpenedEvent -= CabinetOpenedEvent;
 
-            // But for a security-cabinet without alarm, we'll get an exception when we try to raise an alarm,
-            // since for this ISecurityCabinet we haven't implemented the 'RaiseCabinetOpenAlarm' method. 
-            SensorCabinetWithoutAlarm securityCabinetWithoutAlarm = new SensorCabinetWithoutAlarm();
-            securityCabinetWithoutAlarm.CabinetOpenedEvent += CabinetOpenedEvent;
-            securityCabinetWithoutAlarm.FireCabinetOpenedEvent();
-            securityCabinetWithoutAlarm.CabinetOpenedEvent -= CabinetOpenedEvent;
+            // But for a fakeEmptyTreasureChest without alarm, we'll get an exception when we try to raise an alarm,
+            // since for this <see cref="ISecretCabinet"/>-implementation we haven't implemented the 'RaiseCabinetOpenAlarm' method. 
+            SecretCabinetWithoutAlarm fakeEmptyTreasureChest = new();
+            fakeEmptyTreasureChest.CabinetOpenedEvent += CabinetOpenedEvent;
+            fakeEmptyTreasureChest.FireCabinetOpenedEvent();
+            fakeEmptyTreasureChest.CabinetOpenedEvent -= CabinetOpenedEvent;
         }
 
         private static void CabinetOpenedEvent(object sender, CabinetOpenedEventArgs cabinetOpenedEventArgs)
@@ -39,7 +36,7 @@ namespace InterfaceSegregation_BadDesign
             System.DateTime openTime = cabinetOpenedEventArgs.CabinetOpenTime;
             if (openTime.DayOfWeek >= System.DayOfWeek.Sunday && openTime.DayOfWeek <= System.DayOfWeek.Saturday)
             {
-                ((ISecurityCabinet)sender).RaiseCabinetOpenAlarm();
+                ((ISecretCabinet)sender).RaiseCabinetOpenAlarm();
             }
         }
     }

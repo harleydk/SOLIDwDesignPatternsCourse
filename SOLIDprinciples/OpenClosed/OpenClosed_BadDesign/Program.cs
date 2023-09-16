@@ -1,7 +1,7 @@
-﻿using OpenClosed_BadDesign.PressureSensorImplementations;
+﻿using OpenClosed_GoodDesign.HitPointModifiers;
 using System.Diagnostics;
 
-namespace OpenClosed_BadDesign
+namespace OpenClosed_GoodDesign
 {
     /// <summary>
     /// The Open/Closed Principle states that a component should be closed for modification, but open for extensions. In the below, 
@@ -9,22 +9,18 @@ namespace OpenClosed_BadDesign
     /// </summary>
     public sealed class Program
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public static void Main()
         {
-            TankPressureSensorBase[] tankPressureSensors = 
+            HitPointModifierBase[] hitPointModifiers = 
             {
-                new InternalTankPressureSensor(tankCapacity: 4),
-                new InternalTankPressureSensor(tankDiameter: 15),
-                new ExternalTankPressureSensor(1, 100)
+                new ProficiencyHitPointModifier(modifierValue: 4, abilityBonus: 1, ProficiencyLevel.Guardian),
+                new IntimidationHitPointModifier( modifierValue: 10, abilityBonus: 1)
             };
-            PressureSensorReader pressureSensorReader = new(tankPressureSensors);
+            MagicSword magicSword = new(hitPointModifiers);
 
-            int waterIntakeVelocity = 16;
-            double averagePressureAcrossSensors = pressureSensorReader.GetAveragePressureAcrossSensors(waterIntakeVelocity);
-            Debug.WriteLine($"Average pressure across all pressure sensors is {averagePressureAcrossSensors}");
+            int hitPoints = 16;
+            int totalModifierValue = magicSword.GetTotalModifierValue(hitPoints);
+            Debug.WriteLine($"{nameof(totalModifierValue)} across all {nameof(hitPointModifiers)} is {totalModifierValue}");
         }
     }
 }

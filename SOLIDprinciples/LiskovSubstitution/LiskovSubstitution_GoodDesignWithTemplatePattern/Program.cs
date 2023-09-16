@@ -1,20 +1,29 @@
-﻿namespace LiskovSubstitution_GoodDesign
+﻿using System;
+
+namespace LiskovSubstitution_GoodDesignWithTemplatePattern
 {
+    /// <summary>
+    /// The Liskov Substitution principle, in comparison to the other principles in the SOLID acronym, doesn't lend 
+    /// itself well to code-smells detection. Best we can do is to foster the discipline and weed it out as we see it.
+    /// In the <see cref="HitAlarmBase"/>-class we've encompassed the combined functionality of the <seealso cref="IArmorHitAlarm"/> 
+    /// implementations. In this way we can ensure the different implementations are substitutable with each other.
+    /// </summary>
+    /// <seealso cref="https://deviq.com/principles/liskov-substitution-principle"/> - great phone-realization of the principle.
     public sealed class Program
     {
-        // A 'good example' on Liskov substitution is simply to not allow our sub-classes to differ in the meaning of their
-        // implementations. I.e. no explicit paths for certain sub-types, no strenghtening of conditions etc. 
-        // If a need to break away from limitations of the originals class arises, 
-        // we can add the required functionality to that original class.
-
-        // By introducing an abstract base-class, which takes into consideration the diverse implementations, 
-        // we can ensure sub-class compatibility. Given additional requirements - for example, we only need to modify the base-class,
-        // single point of maintainability.
         public static void Main()
         {
-            VoltageSensor voltageSensor = new();
-            voltageSensor.ReadCurrentSensorVoltage();
-            voltageSensor.RaiseAlarmIfVoltageBelowThreshold();
+            PlayerArmor playerArmor = new(initialArmorDefensePoints: 100);
+
+            HitAlarmBase swordHitAlarm = new SwordHitAlarm(alarmThreshold: 3);
+            playerArmor.SetArmorHitAlarm(swordHitAlarm);
+            playerArmor.SubtractDefensePoints(new Random().Next());
+            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
+
+            HitAlarmBase macheteHitAlarm = new MacheteHitAlarm(alarmThreshold: 6);
+            playerArmor.SetArmorHitAlarm(macheteHitAlarm);
+            playerArmor.SubtractDefensePoints(new Random().Next());
+            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using InterfaceSegregation;
-using System;
+﻿using System;
 
 namespace InterfaceSegregation_GoodDesign
 {

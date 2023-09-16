@@ -1,6 +1,4 @@
-﻿using InterfaceSegregation;
-using System;
-using System.Diagnostics;
+﻿using System;
 
 namespace InterfaceSegregation_GoodDesign
 {
@@ -15,16 +13,16 @@ namespace InterfaceSegregation_GoodDesign
         public static void Main()
         {
             // For a 'regular' security-cabinet we attach a an event when the open event occurs,
-            SecurityCabinet securityCabinet = new SecurityCabinet(new CabinetAlarm());
-            securityCabinet.CabinetOpenedEvent += CabinetOpenedEvent;
-            securityCabinet.FireCabinetOpenedEvent();
-            securityCabinet.CabinetOpenedEvent -= CabinetOpenedEvent;
+            SecretCabinet treasureChestFilledWithGold = new SecretCabinet(new CabinetAlarm());
+            treasureChestFilledWithGold.CabinetOpenedEvent += CabinetOpenedEvent;
+            treasureChestFilledWithGold.FireCabinetOpenedEvent();
+            treasureChestFilledWithGold.CabinetOpenedEvent -= CabinetOpenedEvent;
 
             // and the same for the cabinet without an alarm.
-            SensorCabinetWithoutAlarm securityCabinetWithoutAlarm = new SensorCabinetWithoutAlarm();
-            securityCabinetWithoutAlarm.CabinetOpenedEvent += CabinetOpenedEvent;
-            securityCabinetWithoutAlarm.FireCabinetOpenedEvent();
-            securityCabinetWithoutAlarm.CabinetOpenedEvent -= CabinetOpenedEvent;
+            SecretCabinetWithoutAlarm fakeEmptyTreasureChest = new SecretCabinetWithoutAlarm();
+            fakeEmptyTreasureChest.CabinetOpenedEvent += CabinetOpenedEvent;
+            fakeEmptyTreasureChest.FireCabinetOpenedEvent();
+            fakeEmptyTreasureChest.CabinetOpenedEvent -= CabinetOpenedEvent;
         }
 
         /// <summary>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SingleResponsibility
+﻿namespace SingleResponsibility
 {
     public enum HitType
     {

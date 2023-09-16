@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace AbstractFactoryPattern
+﻿namespace AbstractFactoryPattern
 {
     public sealed class Program
     {

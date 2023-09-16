@@ -9,7 +9,7 @@
     <Import_RootNamespace>InterfaceSegregation_Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)CabinetOpenAlarm\CabinetAlarm.cs" />
+    <Compile Include="..\..\..\InterfaceSegregation_Shared\CabinetOpenAlarm\ChestOpenedAlarm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)CabinetOpenAlarm\CabinetOpenedEventArgs.cs" />
   </ItemGroup>
 </Project>

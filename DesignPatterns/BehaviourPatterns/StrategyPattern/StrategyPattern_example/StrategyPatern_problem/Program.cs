@@ -1,19 +1,21 @@
 ﻿using StrategyPattern;
 using System.Diagnostics;
 
-namespace StrategyPatern_problem
+namespace StrategyPattern_problem
 {
     public sealed class Program
     {
         /// <summary>
-        /// Dilemma: we need to calculate a 'user reputation' for our dating service users, based on which type of member they are. How do we go about that in the best, most flexible way? In the below example, the DatingUser-class shifts between types to accomodate different UserReputation values.
+        /// Dilemma: we need to calculate a 'user reputation' for our dating service users, based on which type of member they are. 
+        /// How do we go about that in the best, most flexible way? In the below example, the DatingUser-class shifts between types to accommodate different UserReputation values.
         /// </summary>
         private static void Main()
         {
-            DatingUser someUser = new();
-
-            someUser.NumberOfAnsweredQuestions = 3;
-            someUser.userReputation = UserReputationEnum.BasicUserReputation;
+            DatingUser someUser = new()
+            {
+                NumberOfAnsweredQuestions = 3,
+                userReputation = UserReputationEnum.BasicUserReputation
+            };
 
             int calculatedReputation = someUser.CalculateReputation();
 
