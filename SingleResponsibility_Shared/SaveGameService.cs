@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SingleResponsibility
 {
@@ -11,12 +13,33 @@ namespace SingleResponsibility
             _players = players;
         }
 
-        public void Save()
+        public async Task Save()
         {
-            _players.ForEach(player =>
+            try
             {
-                System.Diagnostics.Debug.WriteLine($"Saving {player.Name}...");
-            });
+                _players.ForEach(player =>
+                {
+                    System.Diagnostics.Debug.WriteLine($"Saving {player.Name}...");
+                });
+
+                await Task.CompletedTask;
+            }
+            catch (Exception)
+            {
+                throw new SaveGameException();
+            }
+
         }
+    }
+
+    [System.Serializable]
+    public class SaveGameException : System.Exception
+    {
+        public SaveGameException() { }
+        public SaveGameException(string message) : base(message) { }
+        public SaveGameException(string message, System.Exception inner) : base(message, inner) { }
+        protected SaveGameException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }

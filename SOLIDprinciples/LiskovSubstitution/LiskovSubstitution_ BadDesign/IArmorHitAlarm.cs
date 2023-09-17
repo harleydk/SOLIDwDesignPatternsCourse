@@ -4,6 +4,6 @@
     {
         bool HasArmorDroppedBelowThreshold(int currentArmorDefensePoints);
 
-        void RaiseAlarm();
+        AlarmRaiseStatus RaiseAlarm();
     }
 }

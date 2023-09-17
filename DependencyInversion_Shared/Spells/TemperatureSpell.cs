@@ -20,4 +20,5 @@ namespace DependencyInversion
             return rnd.NextDouble();
         }
     }
+
 }

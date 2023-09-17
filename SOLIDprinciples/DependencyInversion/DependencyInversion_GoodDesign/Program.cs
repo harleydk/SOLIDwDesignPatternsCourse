@@ -20,13 +20,13 @@ namespace DependencyInversion_GoodDesign
         /// Here, the 'main' method is our so-called 'composition root', i.e. the entry-point into the application and 
         /// thus the suitable place for all the dependencies to be created. 
         /// </remarks>
-        public static void Main(string[] args)
+        public static void Main()
         {
             // Let's get the sensors from configuration. We could new them up, of course, if they don't lend themselves easily to configuration.
             IConfigurationRoot config = new ConfigurationBuilder().AddJsonFile(@"spellsAndAlarms.json").Build();
             List<SpellConfiguration> spellConfig = new();
             config.Bind("Spells", spellConfig);
-            Debug.Assert(spellConfig.Any(), "No spells initialized from config");
+            Debug.Assert(spellConfig.Count == 0, "No spells initialized from config");
 
             // Initialize the sensors based on their configuration data, and add them to the sensor-cabinet.
             IEnumerable<ISpell> spellsCollection = InitializeSpells(spellConfig);

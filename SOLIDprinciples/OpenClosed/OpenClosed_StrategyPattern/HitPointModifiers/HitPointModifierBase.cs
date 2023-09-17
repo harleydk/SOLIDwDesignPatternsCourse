@@ -11,7 +11,7 @@
             _abilityBonus = abilityBonus;
         }
 
-        public virtual double CalculateModifierValue(int hitPointValue)
+        public virtual int CalculateModifierValue(int hitPointValue)
         {
             int modifierValue = _modifierValue + _abilityBonus;
             return modifierValue;

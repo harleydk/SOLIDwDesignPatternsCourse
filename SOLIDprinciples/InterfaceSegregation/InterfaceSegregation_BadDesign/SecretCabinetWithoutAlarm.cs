@@ -1,10 +1,9 @@
-﻿using InterfaceSegregation;
-using System;
+﻿using System;
 
 namespace InterfaceSegregation_BadDesign
 {
     /// <summary>
-    /// This class honors the full ISensorCabinet-contract - but it doesn't need to, and thus breaks
+    /// This class honors the full <see cref="ISecretCabinet"/>-contract - but it doesn't need to, and thus breaks
     /// with the interface-segregation principle - i.e. that we should not be having to implement a contract
     /// we don't fully need.
     /// </summary>
@@ -12,14 +11,15 @@ namespace InterfaceSegregation_BadDesign
     {
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
     
-        public void FireCabinetOpenedEvent()
+        public CabinetOperationResult FireCabinetOpenedEvent()
         {
             CabinetOpenedEvent?.Invoke(this, new CabinetOpenedEventArgs { CabinetOpenTime = DateTime.UtcNow });
+            return CabinetOperationResult.PresumedSucceeded;
         }
 
-        public void RaiseCabinetOpenAlarm()
+        public CabinetOperationResult RaiseCabinetOpenAlarm()
         {
-            throw new NotImplementedException("Interface segregation violation");
+            throw new ArgumentException("Interface segregation violation");
         }
     }
 }

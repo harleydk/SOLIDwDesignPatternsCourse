@@ -17,9 +17,10 @@ namespace LiskovSubstitution_BadDesign
             return hasArmorDefenseDroppedBelowMinimum;
         }
 
-        public void RaiseAlarm()
+        public AlarmRaiseStatus RaiseAlarm()
         {
             Debug.WriteLine($"{nameof(SwordHitAlarm)} raised.");
+            return AlarmRaiseStatus.AlarmPresumedRaised;
         }
     }
 }

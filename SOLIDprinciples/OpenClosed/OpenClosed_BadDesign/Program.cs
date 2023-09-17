@@ -5,7 +5,9 @@ namespace OpenClosed_GoodDesign
 {
     /// <summary>
     /// The Open/Closed Principle states that a component should be closed for modification, but open for extensions. In the below, 
-    /// a PressureSensorReader 'news up' a number of sensors - wherefore we would need open it up in case we need to modify it.
+    /// a <see cref="MagicSword" /> is instantiated with a number of <see cref="HitPointModifierBase"/> variants, which is good practice according 
+    /// to the dependency inversion principle - but in the class' <see cref="MagicSword.GetTotalModifierValue(int)"/>-method, we superficially
+    /// test on the type of variant, which breaks with the open/closed principle.
     /// </summary>
     public sealed class Program
     {

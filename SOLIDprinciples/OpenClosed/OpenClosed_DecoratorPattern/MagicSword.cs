@@ -16,9 +16,9 @@ namespace OpenClosed_GoodDesign
         /// Gets the modifier values by un-winding all <see cref="HitPointModifierDecorator"/>s.
         /// </summary>
         /// <remarks>
-        public double GetTotalModifierValue(int hitPointValue)
+        public int GetTotalModifierValue(int hitPointValue)
         {
-            double totalModifyValue = _hitPointModifierDecorator.CalculateModifierValue(hitPointValue);
+            int totalModifyValue = _hitPointModifierDecorator.CalculateModifierValue(hitPointValue);
             return totalModifyValue;
         }
     }

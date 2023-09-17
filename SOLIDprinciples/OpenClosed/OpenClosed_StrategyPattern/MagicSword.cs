@@ -16,9 +16,9 @@ namespace OpenClosed_StrategyPattern
         /// Gets the modifier values across all <see cref="HitPointModifierBase"/>s.
         /// </summary>
         /// <remarks>
-        public double GetTotalModifierValue(int hitPointValue)
+        public int GetTotalModifierValue(int hitPointValue)
         {
-            double totalModifyValue = _hitPointModifiers.Sum(hitPointModifier => hitPointModifier.CalculateModifierValue(hitPointValue));
+            int totalModifyValue = _hitPointModifiers.Sum(hitPointModifier => hitPointModifier.CalculateModifierValue(hitPointValue));
             return totalModifyValue;
         }
     }

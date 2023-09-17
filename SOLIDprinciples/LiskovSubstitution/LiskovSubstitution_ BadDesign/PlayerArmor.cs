@@ -10,23 +10,34 @@
             _currentArmorDefensePoints = initialArmorDefensePoints;
         }
 
-        public void SetArmorHitAlarm(IArmorHitAlarm armorHitAlarm)
+        public PlayerArmorOperationResult SetArmorHitAlarm(IArmorHitAlarm armorHitAlarm)
         {
             _armorHitAlarm = armorHitAlarm;
+            return PlayerArmorOperationResult.PresumedSucceeded;
         }
 
-        public void SubtractDefensePoints(int defensePointsToSubtract)
+        public PlayerArmorOperationResult SubtractDefensePoints(int defensePointsToSubtract)
         {
             _currentArmorDefensePoints -= defensePointsToSubtract;
+            return PlayerArmorOperationResult.PresumedSucceeded;
         }
 
-        public void RaiseAlarmIfArmorDefenseBelowThreshold()
+        public PlayerArmorOperationResult RaiseAlarmIfArmorDefenseBelowThreshold()
         {
             bool hasVoltageDroppedBelowAcceptableLevel = _armorHitAlarm.HasArmorDroppedBelowThreshold(_currentArmorDefensePoints); // knows only about the interface. Any IArmorHitAlarm is supported.
             if (hasVoltageDroppedBelowAcceptableLevel)
             {
                 _armorHitAlarm.RaiseAlarm();
             }
+
+            return PlayerArmorOperationResult.PresumedSucceeded;
         }
+    }
+
+    public enum PlayerArmorOperationResult
+    {
+        Succeeded,
+        Failed,
+        PresumedSucceeded
     }
 }

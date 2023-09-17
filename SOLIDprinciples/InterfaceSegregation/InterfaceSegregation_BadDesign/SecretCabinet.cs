@@ -17,14 +17,16 @@ namespace InterfaceSegregation_BadDesign
             _cabinetAlarm = cabinetAlarm;
         }
 
-        public void FireCabinetOpenedEvent()
+        public CabinetOperationResult FireCabinetOpenedEvent()
         {
             CabinetOpenedEvent?.Invoke(this, new CabinetOpenedEventArgs { CabinetOpenTime = DateTime.UtcNow });
+            return CabinetOperationResult.PresumedSucceeded;
         }
 
-        public void RaiseCabinetOpenAlarm()
+        public CabinetOperationResult RaiseCabinetOpenAlarm()
         {
             _cabinetAlarm.RaiseCabinetAlarm();
+            return CabinetOperationResult.PresumedSucceeded;
         }
     }
 }

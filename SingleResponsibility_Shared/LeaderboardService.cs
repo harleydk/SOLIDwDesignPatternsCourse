@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace SingleResponsibility
 {
@@ -16,11 +17,19 @@ namespace SingleResponsibility
             _players = new List<Player>();
         }
 
-        public void UpdateScore(Player player)
+        public async Task UpdateScore(Player player)
         {
-            if (player.HitPoints > 100)
+            try
             {
-                System.Diagnostics.Debug.WriteLine($"{player.Name}: {player.HitPoints}");
+                if (player.HitPoints > 100)
+                {
+                    System.Diagnostics.Debug.WriteLine($"{player.Name}: {player.HitPoints}");
+                    await Task.CompletedTask;
+                }
+            }
+            catch (Exception)
+            {
+                throw new LeaderBoardServiceException();
             }
         }
 
@@ -46,5 +55,17 @@ namespace SingleResponsibility
                 }
             }
         }
+    }
+
+
+    [Serializable]
+    public class LeaderBoardServiceException : Exception
+    {
+        public LeaderBoardServiceException() { }
+        public LeaderBoardServiceException(string message) : base(message) { }
+        public LeaderBoardServiceException(string message, Exception inner) : base(message, inner) { }
+        protected LeaderBoardServiceException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
 }

@@ -13,9 +13,10 @@ namespace DependencyInversion_AbstractFactoryPattern
             _spells = spells;
         }
 
-        public void TestAlarms()
+        public SpellBookOperationResult TestAlarms()
         {
             _spells.ForEach(alarm => alarm.RaiseSpellAlarms());
+            return SpellBookOperationResult.PresumedSucceeded;
         }
     }
 }

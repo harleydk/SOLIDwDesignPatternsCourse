@@ -21,10 +21,10 @@ namespace SingleResponsibility_BadDesign
         {
             Player player = new();
             SaveGameService saveGameService = new(new List<Player> { player });
-            LeaderboardService leaderboardService = new LeaderboardService();
+            LeaderboardService leaderboardService = new();
 
             GameHitPointManager gameHitPointManager = new(player, saveGameService, leaderboardService);
-            gameHitPointManager.UpdateHitPoints(HitType.CriticalHit);
+            _ = gameHitPointManager.UpdateHitPoints(HitType.CriticalHit);
         }
     }
 }

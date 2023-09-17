@@ -1,4 +1,5 @@
 ﻿using SingleResponsibility;
+using System.Threading.Tasks;
 
 namespace SingleResponsibility_BadDesign
 {
@@ -24,7 +25,7 @@ namespace SingleResponsibility_BadDesign
         /// - or modify the logic regarding updating of scores and high-scores,
         /// - and the save-logic should not be the responsibility of a class that calculates hit points.
         /// </summary>
-        public void UpdateHitPoints(HitType hitType)
+        public async Task<GameHitPointManagerOperationStatus> UpdateHitPoints(HitType hitType)
         {
             _player.HitPoints += hitType switch
             {
@@ -34,11 +35,20 @@ namespace SingleResponsibility_BadDesign
                 _ => 0 // for all other types of hit, add 0.
             };
 
-            _leaderboardService.UpdateScore(_player);
+            await _leaderboardService.UpdateScore(_player);
             if (_leaderboardService.IsHighScore(_player))
             {
-                _saveGameService.Save();
+                await _saveGameService.Save();
             }
+
+            return await Task.FromResult(GameHitPointManagerOperationStatus.PresumedSucceeded);
         }
+    }
+
+    public enum GameHitPointManagerOperationStatus
+    {
+        Succeeded,
+        Failed,
+        PresumedSucceeded
     }
 }

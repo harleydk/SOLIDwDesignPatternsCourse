@@ -31,7 +31,7 @@ namespace LiskovSubstitution_BadDesign
             }
         }
 
-        public void RaiseAlarm()
+        public AlarmRaiseStatus RaiseAlarm()
         {
             // Liskov Substitution violation - difference in the meaningfulness of the function's implementation. The other
             // interface-implementations don't deal with 'NUMBER_OF_ALARM_REPETITIONS'.
@@ -40,6 +40,8 @@ namespace LiskovSubstitution_BadDesign
                 _numberOfAlarmsRaised += 1;
                 Debug.WriteLine($"Alarm raised {_numberOfAlarmsRaised} times.");
             }
+
+            return AlarmRaiseStatus.AlarmPresumedRaised;
         }
 
 

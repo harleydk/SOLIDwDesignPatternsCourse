@@ -2,9 +2,9 @@
 {
     public interface ISpell
     {
-        void AttachSpellAlarm(ISpellAlarm spellAlarm);
+        SpellAlarmAttachStatus AttachSpellAlarm(ISpellAlarm spellAlarm);
 
-        void RaiseSpellAlarms();
+        SpellAlarmRaiseStatus RaiseSpellAlarms();
     }
 
 }
