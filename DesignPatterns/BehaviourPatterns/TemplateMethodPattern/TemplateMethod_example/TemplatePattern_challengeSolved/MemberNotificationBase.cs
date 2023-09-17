@@ -1,4 +1,7 @@
-﻿namespace TemplatePattern
+﻿using System;
+using System.Diagnostics;
+
+namespace TemplatePattern
 {
     // The Template Pattern lets us define a series of common steps, deferring some steps to sub-classes.
     // Let's redo the notifications in the style of the pattern:

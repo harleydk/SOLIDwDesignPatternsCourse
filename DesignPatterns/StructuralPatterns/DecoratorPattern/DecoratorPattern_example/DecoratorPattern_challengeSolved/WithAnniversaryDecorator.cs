@@ -1,4 +1,6 @@
-﻿namespace DecoratorPattern
+﻿using System.Diagnostics;
+
+namespace DecoratorPattern
 {
     public class WithAnniversaryDecorator : MemberDecoratorbase
     {

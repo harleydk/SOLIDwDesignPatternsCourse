@@ -1,4 +1,5 @@
 ﻿using DecoratorPattern;
+using System.Diagnostics;
 
 namespace DecoratorPattern_challengeSolved
 {

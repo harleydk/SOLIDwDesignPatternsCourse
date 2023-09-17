@@ -1,4 +1,6 @@
-﻿namespace AbstractFactoryPattern
+﻿using System.Diagnostics;
+
+namespace AbstractFactoryPattern
 {
     public sealed class BasicUserAuthorizer : IAuthorizer
     {

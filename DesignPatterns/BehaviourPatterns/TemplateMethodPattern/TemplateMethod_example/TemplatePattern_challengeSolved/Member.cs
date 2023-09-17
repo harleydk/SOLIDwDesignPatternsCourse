@@ -1,4 +1,6 @@
-﻿namespace TemplatePattern
+﻿using System;
+
+namespace TemplatePattern
 {
     public struct Member
     {

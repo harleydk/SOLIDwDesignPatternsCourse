@@ -1,4 +1,6 @@
-﻿namespace AbstractFactoryPattern
+﻿using System.Diagnostics;
+
+namespace AbstractFactoryPattern
 {
     public sealed class SuperUserAuthorizer : IAuthorizer
     {
@@ -13,7 +15,7 @@
 
         void IAuthorizer.AuthorizeUser(string userName)
         {
-            Debug.WriteLine($"{this.GetType().Name}: Prentending to authorize user {userName}...");
+            Debug.WriteLine($"{this.GetType().Name}: Pretending to authorize user {userName}...");
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace FactoryPattern
+﻿using System.Diagnostics;
+
+namespace FactoryPattern
 {
     public sealed class BasicUserAuthorizer : IAuthorizer
     {

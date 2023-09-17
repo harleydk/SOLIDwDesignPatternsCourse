@@ -1,4 +1,6 @@
-﻿namespace FactoryPattern
+﻿using System.Diagnostics;
+
+namespace FactoryPattern
 {
     public class BasicUserAuthenticator : IAuthenticator
     {

@@ -1,4 +1,6 @@
-﻿namespace DecoratorPattern
+﻿using System.Diagnostics;
+
+namespace DecoratorPattern
 {
     // Note how we only override that which we actually need to override. 
     public sealed class WithSpecialOfferDecorator : MemberDecoratorbase
