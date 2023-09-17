@@ -1,5 +1,6 @@
 ﻿using SingleResponsibility;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace SingleResponsibility_GoodDesign
 {
@@ -12,7 +13,7 @@ namespace SingleResponsibility_GoodDesign
         /// easier testability, less risk of technical debt, etc.), note now, in the below, the 
         /// separation of concerns allows us to defer the creation of the services. That's certainly a positive side-effect.
         /// </summary>
-        private static void Main()
+        private static async Task Main()
         {
             Player player = new();
 
@@ -20,11 +21,11 @@ namespace SingleResponsibility_GoodDesign
             gameHitPointManager.UpdateHitPoints(HitType.CriticalHit);
 
             LeaderboardService leaderboardService = new LeaderboardService();
-            leaderboardService.UpdateScore(player);
+            await leaderboardService.UpdateScore(player);
             if (leaderboardService.IsHighScore(player))
             {
                 SaveGameService saveGameService = new(new List<Player> { player });
-                saveGameService.Save();
+                await saveGameService.Save();
             }
         }
     }

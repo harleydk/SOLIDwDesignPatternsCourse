@@ -6,8 +6,8 @@ namespace InterfaceSegregation_GoodDesign
     /// A 'regular' secret cabinet. Includes an alarm. Implements multiple interfaces.
     /// </summary>
     /// <see cref="ICabinetOpening"/>
-    /// <seealso cref="ICabinetAlarming"/>
-    public class SecretCabinet : ICabinetOpening, ICabinetAlarming
+    /// <seealso cref="ICabinetAlarm"/>
+    public class SecretCabinet : ICabinetOpening, ICabinetAlarm
     {
         private readonly CabinetAlarm _cabinetAlarm;
 
@@ -18,14 +18,16 @@ namespace InterfaceSegregation_GoodDesign
             _cabinetAlarm = cabinetAlarm;
         }
 
-        public void FireCabinetOpenedEvent()
+        public CabinetOpeningResult FireCabinetOpenedEvent()
         {
             CabinetOpenedEvent?.Invoke(this, new CabinetOpenedEventArgs { CabinetOpenTime = DateTime.UtcNow });
+            return CabinetOpeningResult.PresumedOpened;
         }
 
-        public void RaiseCabinetOpenAlarm()
+        public CabinetAlarmResult RaiseCabinetOpenAlarm()
         {
             _cabinetAlarm.RaiseCabinetAlarm();
+            return CabinetAlarmResult.AlarmPresumedRaised;
         }
     }
 }

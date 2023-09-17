@@ -12,10 +12,10 @@ namespace OpenClosed_StrategyPattern.HitPointModifiers
             _intimidationForceStrategy = intimidationForceStrategy;
         }
 
-        public override double CalculateModifierValue(int hitPointValue)
+        public override int CalculateModifierValue(int hitPointValue)
         {
-            double modifierValue = base.CalculateModifierValue(hitPointValue);
-            double calculatedModifierValue = _intimidationForceStrategy.GetIntimidationForce() + modifierValue;
+            int modifierValue = base.CalculateModifierValue(hitPointValue);
+            int calculatedModifierValue = _intimidationForceStrategy.GetIntimidationForce() + modifierValue;
             return calculatedModifierValue;
         }
     }

@@ -16,14 +16,14 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
             PlayerArmor playerArmor = new(initialArmorDefensePoints: 100);
 
             HitAlarmBase swordHitAlarm = new SwordHitAlarm(alarmThreshold: 3);
-            playerArmor.SetArmorHitAlarm(swordHitAlarm);
-            playerArmor.SubtractDefensePoints(new Random().Next());
-            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
+            _ = playerArmor.SetArmorHitAlarm(swordHitAlarm);
+            _ = playerArmor.SubtractDefensePoints(new Random().Next());
+            _ = playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
 
             HitAlarmBase macheteHitAlarm = new MacheteHitAlarm(alarmThreshold: 6);
-            playerArmor.SetArmorHitAlarm(macheteHitAlarm);
-            playerArmor.SubtractDefensePoints(new Random().Next());
-            playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
+            _ = playerArmor.SetArmorHitAlarm(macheteHitAlarm);
+            _ = playerArmor.SubtractDefensePoints(new Random().Next());
+            _ = playerArmor.RaiseAlarmIfArmorDefenseBelowThreshold();
         }
     }
 }

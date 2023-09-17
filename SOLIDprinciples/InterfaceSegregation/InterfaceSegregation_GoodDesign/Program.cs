@@ -7,7 +7,7 @@ namespace InterfaceSegregation_GoodDesign
     /// allow the SensorCabinetWithoutAlarm to only implement those interfaces it should implement.
     /// </summary>
     /// <see cref="ICabinetOpening"/>
-    /// <seealso cref="ICabinetAlarming"/>
+    /// <seealso cref="ICabinetAlarm"/>
     public sealed class Program
     {
         public static void Main()
@@ -27,14 +27,14 @@ namespace InterfaceSegregation_GoodDesign
 
         /// <summary>
         /// For both types of security-cabinet, we react to their <see cref="ICabinetOpening.CabinetOpenedEvent"/> - but
-        /// since we've split the ISecurityCabinet up into individual interfaces, we can test for the <see cref="ICabinetAlarming"/> interface -
+        /// since we've split the ISecurityCabinet up into individual interfaces, we can test for the <see cref="ICabinetAlarm"/> interface -
         /// if we hadn't applied the interface segregation principle, this would not have been possible.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="cabinetOpenedEventArgs"></param>
         private static void CabinetOpenedEvent(object sender, CabinetOpenedEventArgs cabinetOpenedEventArgs)
         {
-            if (sender is ICabinetAlarming cabinetThatImplementsAlarm)
+            if (sender is ICabinetAlarm cabinetThatImplementsAlarm)
             {
                 DateTime openTime = cabinetOpenedEventArgs.CabinetOpenTime;
                 if (openTime.DayOfWeek >= System.DayOfWeek.Sunday && openTime.DayOfWeek <= System.DayOfWeek.Saturday)

@@ -7,7 +7,14 @@ namespace InterfaceSegregation_GoodDesign
     {
         event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
 
-        void FireCabinetOpenedEvent();
-    
+        CabinetOpeningResult FireCabinetOpenedEvent();
     }
+
+    public enum CabinetOpeningResult
+    {
+        Opened,
+        NotOpened,
+        PresumedOpened
+    }
+
 }

@@ -15,6 +15,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\IAlarm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\PersistentBeepAlarm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SpellAlarms\WarningBellAlarm.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Spells\SpellBookOperationResult.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Spells\ISpell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Spells\PressureSpell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Spells\Spell.cs" />

@@ -5,9 +5,16 @@ namespace InterfaceSegregation_BadDesign
     public interface ISecretCabinet
     {
         event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
-     
-        void RaiseCabinetOpenAlarm();
 
-        void FireCabinetOpenedEvent();
+        CabinetOperationResult RaiseCabinetOpenAlarm();
+
+        CabinetOperationResult FireCabinetOpenedEvent();
+    }
+
+    public enum CabinetOperationResult
+    {
+        Succeeded,
+        Failed,
+        PresumedSucceeded
     }
 }

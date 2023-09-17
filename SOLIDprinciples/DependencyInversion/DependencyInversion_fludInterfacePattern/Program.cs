@@ -12,14 +12,13 @@ namespace DependencyInversion_fluidInterfacePattern
     {
         public static void Main()
         {
-            SpellBook sensorCabinet = new SpellBook(/* No list of spells  here - we'll granularly add them via the fluid interface pattern instead */)
+            _ = new SpellBook(/* No list of spells  here - we'll granularly add them via the fluid interface pattern instead */)
                 .WithSpell(new TemperatureSpell(spellId: "Temp1"))
                 .WithSpell(new PressureSpell())
                 .WithSpell(new TemperatureSpell(spellId: "Temp2"))
                 .WithSpell(new TemperatureSpell(spellId: "Temp3"))
                 .WithSpell(new TemperatureSpell(spellId: "Temp4"))
                 .WithSpell(new PressureSpell());
-         
         }
     }
 }

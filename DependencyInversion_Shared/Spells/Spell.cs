@@ -6,14 +6,31 @@ namespace DependencyInversion
     {
         protected List<ISpellAlarm> _spellAlarms = new();
 
-        public void AttachSpellAlarm(ISpellAlarm spellAlarm)
+        public SpellAlarmAttachStatus AttachSpellAlarm(ISpellAlarm spellAlarm)
         {
             _spellAlarms.Add(spellAlarm);
+            return SpellAlarmAttachStatus.PresumedAttached;
         }
 
-        public void RaiseSpellAlarms()
+        public SpellAlarmRaiseStatus RaiseSpellAlarms()
         {
             _spellAlarms.ForEach(alarm => alarm.RaiseSpellAlarm());
+            return SpellAlarmRaiseStatus.PresumedRaised;
         }
     }
+
+    public enum SpellAlarmAttachStatus
+    {
+        Attached,
+        NotAttached,
+        PresumedAttached
+    }
+
+    public enum SpellAlarmRaiseStatus
+    {
+        Raised,
+        NotRaised,
+        PresumedRaised
+    }
+
 }

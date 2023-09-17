@@ -14,7 +14,7 @@ namespace SingleResponsibility_GoodDesign
             _player = player;
         }
 
-        public void UpdateHitPoints(HitType hitType)
+        public GameHitPointManagerOperationStatus UpdateHitPoints(HitType hitType)
         {
             _player.HitPoints += hitType switch
             {
@@ -23,6 +23,15 @@ namespace SingleResponsibility_GoodDesign
                 HitType.CriticalHit => 5,
                 _ => 0 // for all other types of hit, add 0.
             };
+
+            return GameHitPointManagerOperationStatus.PresumedSucceeded;
         }
+    }
+
+    public enum GameHitPointManagerOperationStatus
+    {
+        Succeeded,
+        Failed,
+        PresumedSucceeded
     }
 }

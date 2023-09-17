@@ -18,7 +18,7 @@ namespace OpenClosed_GoodDesign
 
             MagicSword magicSword = new(modifier3);
 
-            double totalModifierValue = magicSword.GetTotalModifierValue(hitPoints);
+            int totalModifierValue = magicSword.GetTotalModifierValue(hitPoints);
             Debug.WriteLine($"{nameof(totalModifierValue)} across all modifiers is {totalModifierValue}");
         }
     }

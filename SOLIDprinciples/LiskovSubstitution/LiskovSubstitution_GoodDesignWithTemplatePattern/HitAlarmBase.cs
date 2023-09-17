@@ -42,7 +42,7 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
             return false;
         }
 
-        public void RaiseAlarm()
+        public AlarmRaiseStatus RaiseAlarm()
         {
             // Liskov violation - difference in the meaningfulness of the function's implementation. The other interface-implementations don't deal with repetitions.
             for (int i = 0; i < _numberOfAlarmRepetitions; i++)
@@ -50,6 +50,8 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
                 _numberOfAlarmsRaised += 1;
                 Debug.WriteLine($"Alarm raised {_numberOfAlarmsRaised} times.");
             }
+
+            return AlarmRaiseStatus.AlarmPresumedRaised;
         }
     }
 }
