@@ -6,19 +6,8 @@ namespace SingleResponsibility_FaçadePattern
     /// The <see cref="GameHitPointManagerFaçade"/> manages the calculation of a player's hit points, 
     /// as well as comparing against a <see cref="LeaderboardService"/> and saving game state via a <seealso cref="SaveGameService"/>
     /// </summary>
-    public sealed class GameHitPointManagerFaçade
+    public sealed class GameHitPointManagerFaçade(Player player, SaveGameService saveGameService, LeaderboardService leaderboardService)
     {
-        private readonly Player _player;
-        private readonly SaveGameService _saveGameService;
-        private readonly LeaderboardService _leaderboardService;
-
-        public GameHitPointManagerFaçade(Player player, SaveGameService saveGameService, LeaderboardService leaderboardService)
-        {
-            _player = player;
-            _saveGameService = saveGameService;
-            _leaderboardService = leaderboardService;
-        }
-
         /// <summary>
         /// This method really has too much responsibility on its hands. For a number of reasons we might need to change it:
         /// - to add further hit-types,
@@ -27,7 +16,7 @@ namespace SingleResponsibility_FaçadePattern
         /// </summary>
         public void UpdateHitPoints(HitType hitType)
         {
-            _player.HitPoints += hitType switch
+            player.HitPoints += hitType switch
             {
                 HitType.NoHit => 0,
                 HitType.Hit => 1,
@@ -38,14 +27,14 @@ namespace SingleResponsibility_FaçadePattern
 
         public void UpdateLeaderBoardServiceScore()
         {
-            _leaderboardService.UpdateScore(_player);
+            leaderboardService.UpdateScore(player);
         }
 
         public void SaveIfPlayerGotHighScore()
         {
-            if (_leaderboardService.IsHighScore(_player))
+            if (leaderboardService.IsHighScore(player))
             {
-                _saveGameService.Save();
+                saveGameService.Save();
             }
         }
     }

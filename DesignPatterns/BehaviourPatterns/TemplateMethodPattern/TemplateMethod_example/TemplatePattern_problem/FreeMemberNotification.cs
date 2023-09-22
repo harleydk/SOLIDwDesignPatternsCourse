@@ -3,18 +3,11 @@ using System.Diagnostics;
 
 namespace TemplatePattern
 {
-    public sealed class FreeMemberNotification : IMemberNotification
+    public sealed class FreeMemberNotification(Member memberToNotify) : IMemberNotification
     {
-        private Member _memberToNotify;
-
-        public FreeMemberNotification(Member memberToNotify)
-        {
-            _memberToNotify = memberToNotify;
-        }
-
         public void MarkMemberAsNotified()
         {
-            _memberToNotify.SetNotificationDate(DateTime.Now);
+            memberToNotify.SetNotificationDate(DateTime.Now);
         }
 
         // Here's the important bit - pay heed to the signatures.
@@ -26,7 +19,7 @@ namespace TemplatePattern
 
         private void MarkUserAsNotified()
         {
-            _memberToNotify.SetNotificationDate(DateTime.Now);
+            memberToNotify.SetNotificationDate(DateTime.Now);
         }
 
         private void SendNotificationEmail()

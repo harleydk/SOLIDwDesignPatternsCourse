@@ -6,16 +6,8 @@ namespace CompositePattern_concept
     /// <summary>
     /// The 'Leaf' or 'node' class
     /// </summary>
-    internal class Leaf : IComponent
+    internal class Leaf(string name) : IComponent
     {
-        private readonly string _name;
-
-        // Constructor
-        public Leaf(string name)
-        {
-            _name = name;
-        }
-
         public void Add(IComponent c)
         {
             Debug.WriteLine("Cannot add to a leaf");
@@ -28,7 +20,7 @@ namespace CompositePattern_concept
 
         public void Display(int depth)
         {
-            Debug.WriteLine(new String('-', depth) + _name);
+            Debug.WriteLine(new String('-', depth) + name);
         }
     }
 }

@@ -1,9 +1,6 @@
 ﻿namespace TemplatePattern
 {
-    public sealed class FreeMemberNotification : MemberNotificationBase
+    public sealed class FreeMemberNotification(Member memberToNotify) : MemberNotificationBase(memberToNotify)
     {
-        public FreeMemberNotification(Member memberToNotify) : base(memberToNotify)
-        {
-        }
     }
 }

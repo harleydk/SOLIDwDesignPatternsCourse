@@ -1,29 +1,23 @@
 ﻿namespace FacadePattern
 {
-    public sealed class UserRelocationProcessingFacade
+    public sealed class UserRelocationProcessingFacade(string userName)
     {
-        private readonly string _userName;
         private (string Address, string City) _userAddress;
-
-        public UserRelocationProcessingFacade(string userName)
-        {
-            _userName = userName;
-        }
-
+    
         public bool CanGetAndValidateUserAddress()
         {
             // validate user:
             UserValidationService validationService = new();
-            bool isUserValid = validationService.IsUserValid(_userName);
+            bool isUserValid = validationService.IsUserValid(userName);
             if (!isUserValid)
                 return false;
 
             UserAddressService userAddressService = new();
-            _userAddress = userAddressService.GetAddress(_userName);
+            _userAddress = userAddressService.GetAddress(userName);
 
             // confirm user's address
             GovernmentAddressService governmentAddressService = new();
-            bool addressCanBeConfirmed = governmentAddressService.CanConfirmAddress(_userName, _userAddress);
+            bool addressCanBeConfirmed = governmentAddressService.CanConfirmAddress(userName, _userAddress);
             if (!addressCanBeConfirmed)
                 return false;
 
@@ -35,12 +29,12 @@
             // mark user as moved in primary database
             DataBaseService dataBaseService = new();
 
-            dataBaseService.UpdateUsersAddress(_userName, _userAddress);
+            dataBaseService.UpdateUsersAddress(userName, _userAddress);
 
             // indicate user's move in our data-warehouse
             DataWarehouseService dataWarehouseService = new();
 
-            dataWarehouseService.RegisterUserRelocation(_userName);
+            dataWarehouseService.RegisterUserRelocation(userName);
         }
     }
 }

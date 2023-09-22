@@ -1,20 +1,14 @@
 ﻿namespace OpenClosed_GoodDesign.HitPointModifiers
 {
-    public abstract class HitPointModifierBase
+    public abstract class HitPointModifierBase(int modifierValue, int abilityBonus)
     {
-        protected readonly int _modifierValue;
-        protected readonly int _abilityBonus;
+        protected readonly int _modifierValue = modifierValue;
+        protected readonly int _abilityBonus = abilityBonus;
 
-        public HitPointModifierBase(int modifierValue, int abilityBonus)
+        public virtual int CalculateModifier(int hitPointValue)
         {
-            _modifierValue = modifierValue;
-            _abilityBonus = abilityBonus;
-        }
-
-        public virtual int CalculateModifierValue(int hitPointValue)
-        {
-            int modifierValue = _modifierValue + _abilityBonus;
-            return modifierValue;
+            int modifier = _modifierValue + _abilityBonus;
+            return modifier;
         }
 
     }

@@ -3,14 +3,9 @@
     /// <summary>
     /// The 'Decorator' abstract class
     /// </summary>
-    internal abstract class ComponentDecoratorBase : Component
+    internal abstract class ComponentDecoratorBase(Component component) : Component
     {
-        protected Component _component;
-
-        public ComponentDecoratorBase(Component component)
-        {
-            _component = component;
-        }
+        protected Component _component = component;
 
         public override void Operation()
         {

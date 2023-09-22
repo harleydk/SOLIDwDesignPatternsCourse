@@ -7,16 +7,9 @@ namespace InterfaceSegregation_GoodDesign
     /// </summary>
     /// <see cref="ICabinetOpening"/>
     /// <seealso cref="ICabinetAlarm"/>
-    public class SecretCabinet : ICabinetOpening, ICabinetAlarm
+    public class SecretCabinet(CabinetAlarm cabinetAlarm) : ICabinetOpening, ICabinetAlarm
     {
-        private readonly CabinetAlarm _cabinetAlarm;
-
         public event EventHandler<CabinetOpenedEventArgs> CabinetOpenedEvent;
-
-        public SecretCabinet(CabinetAlarm cabinetAlarm)
-        {
-            _cabinetAlarm = cabinetAlarm;
-        }
 
         public CabinetOpeningResult FireCabinetOpenedEvent()
         {
@@ -26,7 +19,7 @@ namespace InterfaceSegregation_GoodDesign
 
         public CabinetAlarmResult RaiseCabinetOpenAlarm()
         {
-            _cabinetAlarm.RaiseCabinetAlarm();
+            cabinetAlarm.RaiseCabinetAlarm();
             return CabinetAlarmResult.AlarmPresumedRaised;
         }
     }

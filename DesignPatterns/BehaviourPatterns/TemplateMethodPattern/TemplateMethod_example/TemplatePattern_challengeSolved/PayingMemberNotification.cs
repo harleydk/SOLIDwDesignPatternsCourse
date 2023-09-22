@@ -1,11 +1,7 @@
 ﻿namespace TemplatePattern
 {
-    public sealed class PayingMemberNotification : MemberNotificationBase
+    public sealed class PayingMemberNotification(Member memberToNotify) : MemberNotificationBase(memberToNotify)
     {
-        public PayingMemberNotification(Member memberToNotify) : base(memberToNotify)
-        {
-        }
-
         public override bool ShouldNotifyMemberBySMS()
         {
             return true;

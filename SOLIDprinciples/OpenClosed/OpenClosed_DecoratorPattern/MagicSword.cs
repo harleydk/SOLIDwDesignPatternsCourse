@@ -3,22 +3,15 @@ using System.Linq;
 
 namespace OpenClosed_GoodDesign
 {
-    public sealed class MagicSword
+    public sealed class MagicSword(HitPointModifierDecorator hitPointModifierDecorator)
     {
-        private readonly HitPointModifierDecorator _hitPointModifierDecorator;
-
-        public MagicSword(HitPointModifierDecorator hitPointModifierDecorator)
-        {
-            _hitPointModifierDecorator = hitPointModifierDecorator;
-        }
-
         /// <summary>
         /// Gets the modifier values by un-winding all <see cref="HitPointModifierDecorator"/>s.
         /// </summary>
         /// <remarks>
         public int GetTotalModifierValue(int hitPointValue)
         {
-            int totalModifyValue = _hitPointModifierDecorator.CalculateModifierValue(hitPointValue);
+            int totalModifyValue = hitPointModifierDecorator.CalculateModifier(hitPointValue);
             return totalModifyValue;
         }
     }

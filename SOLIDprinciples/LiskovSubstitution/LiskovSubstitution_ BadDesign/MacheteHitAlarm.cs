@@ -3,18 +3,12 @@ using System.Diagnostics;
 
 namespace LiskovSubstitution_BadDesign
 {
-    public sealed class MacheteHitAlarm : IArmorHitAlarm
+    public sealed class MacheteHitAlarm(int alarmThreshold) : IArmorHitAlarm
     {
         private const int NUMBER_OF_ALARM_REPETITIONS = 3;
 
         private int _numberOfAlarmsRaised = 0;
-        private readonly int _armorAlarmThreshold;
-
-        public MacheteHitAlarm(int alarmThreshold)
-        {
-            _armorAlarmThreshold = alarmThreshold;
-        }
-
+       
         public bool HasArmorDroppedBelowThreshold(int currentArmorDefensePoints)
         {
             // Liskov Substitution violation - altered pre-condition! This class breaks the intent of the contract and the other
@@ -26,7 +20,7 @@ namespace LiskovSubstitution_BadDesign
             }
             else
             {
-                bool hasArmorDefenseDroppedBelowMinimum = currentArmorDefensePoints < _armorAlarmThreshold;
+                bool hasArmorDefenseDroppedBelowMinimum = currentArmorDefensePoints < alarmThreshold;
                 return hasArmorDefenseDroppedBelowMinimum;
             }
         }

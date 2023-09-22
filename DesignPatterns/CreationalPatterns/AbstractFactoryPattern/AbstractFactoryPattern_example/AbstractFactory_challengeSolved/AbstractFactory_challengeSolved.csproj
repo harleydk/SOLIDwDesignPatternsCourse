@@ -1,40 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <OutputType>Exe</OutputType>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <AssemblyTitle>AbstractFactory_challengeSolved</AssemblyTitle>
-    <Product>AbstractFactory_challengeSolved</Product>
-    <Copyright>None</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
-  </PropertyGroup>
-  <ItemGroup>
-    <Compile Update="BasicUserAuthenticator.cs">
-      <DependentUpon>IAuthenticator.cs</DependentUpon>
-    </Compile>
-    <Compile Update="BasicUserAuthorizer.cs">
-      <DependentUpon>IAuthohorizer.cs</DependentUpon>
-    </Compile>
-    <Compile Update="BasicUserSecurityProviderFactory.cs">
-      <DependentUpon>ISecurityProviderFactory.cs</DependentUpon>
-    </Compile>
-    <Compile Update="SuperUserAuthenticator.cs">
-      <DependentUpon>IAuthenticator.cs</DependentUpon>
-    </Compile>
-    <Compile Update="SuperUserAuthorizer.cs">
-      <DependentUpon>IAuthohorizer.cs</DependentUpon>
-    </Compile>
-    <Compile Update="SuperUserSecurityProviderFactory.cs">
-      <DependentUpon>ISecurityProviderFactory.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
-  </ItemGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<OutputType>Exe</OutputType>
+		<SccProjectName>SAK</SccProjectName>
+		<SccLocalPath>SAK</SccLocalPath>
+		<SccAuxPath>SAK</SccAuxPath>
+		<SccProvider>SAK</SccProvider>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<AssemblyTitle>AbstractFactory_challengeSolved</AssemblyTitle>
+		<Product>AbstractFactory_challengeSolved</Product>
+		<Copyright>None</Copyright>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<LangVersion>preview</LangVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<Compile Update="BasicUserAuthenticator.cs">
+			<DependentUpon>IAuthenticator.cs</DependentUpon>
+		</Compile>
+		<Compile Update="BasicUserAuthorizer.cs">
+			<DependentUpon>IAuthohorizer.cs</DependentUpon>
+		</Compile>
+		<Compile Update="BasicUserSecurityProviderFactory.cs">
+			<DependentUpon>ISecurityProviderFactory.cs</DependentUpon>
+		</Compile>
+		<Compile Update="SuperUserAuthenticator.cs">
+			<DependentUpon>IAuthenticator.cs</DependentUpon>
+		</Compile>
+		<Compile Update="SuperUserAuthorizer.cs">
+			<DependentUpon>IAuthohorizer.cs</DependentUpon>
+		</Compile>
+		<Compile Update="SuperUserSecurityProviderFactory.cs">
+			<DependentUpon>ISecurityProviderFactory.cs</DependentUpon>
+		</Compile>
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+		<PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+	</ItemGroup>
 </Project>

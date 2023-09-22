@@ -1,10 +1,10 @@
 ﻿namespace DecoratorPattern
 {
-    public sealed class SpecialOfferAnniversaryMember : IMember
+    public sealed class SpecialOfferAnniversaryMember(int extraPoints) : IMember
     {
         private const int ANNIVERSARY_MEMBER_POINTS = 1000;
 
-        private readonly int _extraPoints;
+
         private int _points;
         private string _name;
 
@@ -12,7 +12,7 @@
         {
             get
             {
-                // add 'is anniversary to the name, if that's indeed the case.
+                // Add 'is anniversary' to the name, if that's indeed the case.
                 bool asAnniversary = this.hasAnniversary(_name) ? true : false;
                 _name = asAnniversary ? _name + " - anniversary." : Name;
                 return _name;
@@ -23,22 +23,7 @@
             }
         }
 
-        public int Points
-        {
-            get
-            {
-                return _points + _extraPoints + ANNIVERSARY_MEMBER_POINTS;
-            }
-            set
-            {
-                _points = value;
-            }
-        }
-
-        public SpecialOfferAnniversaryMember(int extraPoints)
-        {
-            _extraPoints = extraPoints;
-        }
+        public int Points { get => _points + extraPoints + ANNIVERSARY_MEMBER_POINTS; set => _points = value; }
 
         private bool hasAnniversary(string name)
         {

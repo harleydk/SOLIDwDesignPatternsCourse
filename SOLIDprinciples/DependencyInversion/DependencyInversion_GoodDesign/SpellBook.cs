@@ -5,21 +5,14 @@ using System.Linq;
 
 namespace DependencyInversion_GoodDesign
 {
-    public sealed class SpellBook
+    public sealed class SpellBook(IEnumerable<ISpell> spells)
     {
-        private readonly IEnumerable<ISpell> _spells;
-
-        public SpellBook(IEnumerable<ISpell> spells)
-        {
-            _spells = spells;
-        }
-
         public IEnumerable<TemperatureSpellData> GetAllTemperatureSpellsData()
         {
-            IEnumerable<TemperatureSpell> spells = _spells.Where(sensor => sensor is TemperatureSpell).Cast<TemperatureSpell>();
-            foreach (TemperatureSpell spell in spells)
+            IEnumerable<TemperatureSpell> temperatureSpells = spells.Where(sensor => sensor is TemperatureSpell).Cast<TemperatureSpell>();
+            foreach (TemperatureSpell temperatureSpell in temperatureSpells)
             {
-                TemperatureSpellData temperatureSensorData = GetTemperatureSpellData(spell);
+                TemperatureSpellData temperatureSensorData = GetTemperatureSpellData(temperatureSpell);
                 yield return temperatureSensorData;
             };
         }

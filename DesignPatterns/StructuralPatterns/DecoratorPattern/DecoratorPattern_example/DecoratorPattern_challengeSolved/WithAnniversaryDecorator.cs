@@ -2,13 +2,11 @@
 
 namespace DecoratorPattern
 {
-    public class WithAnniversaryDecorator : MemberDecoratorbase
+    public class WithAnniversaryDecorator(IMember member) : MemberDecoratorbase(member)
     {
         private const int ANNIVERSARY_MEMBER_POINTS = 1000;
 
-        public WithAnniversaryDecorator(IMember member) : base(member)
-        {
-        }
+       
 
         public override int Points
         {

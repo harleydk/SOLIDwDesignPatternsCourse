@@ -13,7 +13,7 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
     {
         public static void Main()
         {
-            PlayerArmor playerArmor = new(initialArmorDefensePoints: 100);
+            PlayerArmor playerArmor = new(armorDefensePoints: 100);
 
             HitAlarmBase swordHitAlarm = new SwordHitAlarm(alarmThreshold: 3);
             _ = playerArmor.SetArmorHitAlarm(swordHitAlarm);

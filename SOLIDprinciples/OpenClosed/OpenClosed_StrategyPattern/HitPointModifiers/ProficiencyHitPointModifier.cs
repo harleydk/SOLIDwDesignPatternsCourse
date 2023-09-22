@@ -1,25 +1,17 @@
 ﻿namespace OpenClosed_StrategyPattern.HitPointModifiers
 {
-    public sealed class ProficiencyHitPointModifier : HitPointModifierBase
+    public sealed class ProficiencyHitPointModifier(int modifierValue, int abilityBonus, ProficiencyLevel proficiencyLevel) : HitPointModifierBase(modifierValue, abilityBonus)
     {
-        private readonly ProficiencyLevel _proficiencyLevel;
-
-        public ProficiencyHitPointModifier(int modifierValue, int abilityBonus, ProficiencyLevel proficiencyLevel) :
-            base(modifierValue, abilityBonus)
+        public override int CalculateModifier(int hitPointValue)
         {
-            _proficiencyLevel = proficiencyLevel;
-        }
-
-        public override int CalculateModifierValue(int hitPointValue)
-        {
-            int modifierValue = base.CalculateModifierValue(hitPointValue);
+            int modifierValue = base.CalculateModifier(hitPointValue);
             int calculatedModifierValue = modifierValue + EvaluateProficiencyLevel();
             return calculatedModifierValue;
         }
 
         public int EvaluateProficiencyLevel()
         {
-            return (int)_proficiencyLevel;
+            return (int)proficiencyLevel;
         }
     }
 

@@ -13,7 +13,7 @@
     <Product>AdapterPattern</Product>
     <Copyright>Copyright ©  2014</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion><LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="Adaptee.cs">

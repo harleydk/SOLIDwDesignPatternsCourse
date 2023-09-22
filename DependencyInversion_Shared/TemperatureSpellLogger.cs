@@ -5,15 +5,8 @@ namespace DependencyInversion
     /// <summary>
     /// A logger that writes temperature spell data.
     /// </summary>
-    public sealed class TemperatureSpellLogger
+    public sealed class TemperatureSpellLogger(DiagnosticsLogger _diagnosticsLogger)
     {
-        private readonly DiagnosticsLogger _diagnosticsLogger;
-
-        public TemperatureSpellLogger(DiagnosticsLogger diagnosticsLogger)
-        {
-            _diagnosticsLogger = diagnosticsLogger;
-        }
-
         /// <summary>
         /// Write data for all temperature-sensors to the log.
         /// </summary>

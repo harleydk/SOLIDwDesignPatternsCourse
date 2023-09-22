@@ -1,16 +1,11 @@
 ﻿namespace AbstractFactoryPattern
 {
-    public sealed class UserSecurityManager
+    public sealed class UserSecurityManager(ISecurityProviderFactory securityProviderFactory)
     {
-        private readonly IAuthorizer _authorizer;
-        private readonly IAuthenticator _authenticator;
+        private readonly IAuthorizer _authorizer = securityProviderFactory.CreateAuthorizer();
+        private readonly IAuthenticator _authenticator = securityProviderFactory.CreateAuthenticator();
 
-        public UserSecurityManager(ISecurityProviderFactory securityProviderFactory)
-        {
-            _authorizer = securityProviderFactory.CreateAuthorizer();
-            _authenticator = securityProviderFactory.CreateAuthenticator();
-        }
-
+      
         public void PerformUserSecurityOperations(User user)
         {
             // authenticate user

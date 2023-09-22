@@ -5,12 +5,9 @@ namespace DecoratorPattern
     /// <summary>
     /// The 'ConcreteDecoratorB' class
     /// </summary>
-    internal class ConcreteDecoratorB : ComponentDecoratorBase
+    internal class ConcreteDecoratorB(Component component) : ComponentDecoratorBase(component)
     {
-        public ConcreteDecoratorB(Component component) : base(component)
-        {
-        }
-
+        
         public override void Operation()
         {
             base.Operation();

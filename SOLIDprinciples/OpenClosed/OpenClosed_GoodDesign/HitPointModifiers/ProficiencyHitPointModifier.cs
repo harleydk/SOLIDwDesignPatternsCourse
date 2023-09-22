@@ -10,9 +10,9 @@
             _proficiencyLevel = proficiencyLevel;
         }
 
-        public override int CalculateModifierValue(int hitPointValue)
+        public override int CalculateModifier(int hitPointValue)
         {
-            int modifierValue = base.CalculateModifierValue(hitPointValue);
+            int modifierValue = base.CalculateModifier(hitPointValue);
             int calculatedModifierValue = modifierValue + EvaluateProficiencyLevel();
             return calculatedModifierValue;
         }

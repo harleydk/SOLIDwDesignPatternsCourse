@@ -11,12 +11,7 @@ namespace CompositePattern_concept
     {
         private readonly List<IComponent> _children = new();
 
-        // Constructor
-        public Composite()
-        {
-        }
-
-        public void Add(IComponent component)
+              public void Add(IComponent component)
         {
             _children.Add(component);
         }

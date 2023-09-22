@@ -5,18 +5,11 @@ namespace SingleResponsibility_GoodDesign
     /// <summary>
     /// The <see cref="GameHitPointManager"/> manages the calculation of a player's hit points.
     /// </summary>
-    public sealed class GameHitPointManager
+    public sealed class GameHitPointManager(Player player)
     {
-        private readonly Player _player;
-
-        public GameHitPointManager(Player player)
-        {
-            _player = player;
-        }
-
         public GameHitPointManagerOperationStatus UpdateHitPoints(HitType hitType)
         {
-            _player.HitPoints += hitType switch
+            player.HitPoints += hitType switch
             {
                 HitType.NoHit => 0,
                 HitType.Hit => 1,

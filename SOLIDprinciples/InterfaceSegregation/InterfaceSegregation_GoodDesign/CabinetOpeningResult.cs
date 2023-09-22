@@ -1,4 +1,0 @@
-﻿namespace InterfaceSegregation_GoodDesign
-{
-   
-}
