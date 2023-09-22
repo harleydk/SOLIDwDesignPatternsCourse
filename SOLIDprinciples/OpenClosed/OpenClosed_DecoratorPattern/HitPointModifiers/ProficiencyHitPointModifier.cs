@@ -12,9 +12,9 @@ namespace OpenClosed_GoodDesign.HitPointModifiers
             _proficiencyLevel = proficiencyLevel;
         }
 
-        public override int CalculateModifierValue(int hitPointValue)
+        public override int CalculateModifier(int hitPointValue)
         {
-            int modifierValue = base.CalculateModifierValue(hitPointValue);
+            int modifierValue = base.CalculateModifier(hitPointValue);
             Debug.WriteLine($"Returning {modifierValue} from a {base.GetType().Name}. Will be added.");
             int proficiencyLevel = EvaluateProficiencyLevel();
             int calculatedModifierValue = proficiencyLevel + modifierValue;

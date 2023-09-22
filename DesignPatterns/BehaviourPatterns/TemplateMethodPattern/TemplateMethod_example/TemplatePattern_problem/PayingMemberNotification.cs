@@ -3,15 +3,8 @@ using System.Diagnostics;
 
 namespace TemplatePattern
 {
-    public sealed class PayingMemberNotification : IMemberNotification
+    public sealed class PayingMemberNotification(Member memberToNotify) : IMemberNotification
     {
-        private Member _memberToNotify;
-
-        public PayingMemberNotification(Member memberToNotify)
-        {
-            _memberToNotify = memberToNotify;
-        }
-
         // Here's the important bit, part 2 - one extra method, though.
         public void NotifyMember()
         {
@@ -22,7 +15,7 @@ namespace TemplatePattern
 
         private void SendNotificationSMS()
         {
-            Debug.WriteLine("An sms was sent to " + _memberToNotify.MobilePhoneNumber);
+            Debug.WriteLine("An sms was sent to " + memberToNotify.MobilePhoneNumber);
         }
 
         private void SendNotificationEmail()
@@ -32,7 +25,7 @@ namespace TemplatePattern
 
         public void MarkMemberAsNotified()
         {
-            _memberToNotify.SetNotificationDate(DateTime.Now);
+            memberToNotify.SetNotificationDate(DateTime.Now);
         }
     }
 }

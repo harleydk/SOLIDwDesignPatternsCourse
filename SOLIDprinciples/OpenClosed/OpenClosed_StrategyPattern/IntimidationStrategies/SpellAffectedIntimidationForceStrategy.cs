@@ -2,18 +2,11 @@
 
 namespace OpenClosed_StrategyPattern.IntimidationStrategies
 {
-    public sealed class SpellAffectedIntimidationForceStrategy : IIntimidationForceStrategy
+    public sealed class SpellAffectedIntimidationForceStrategy(Spell spell) : IIntimidationForceStrategy
     {
-        private readonly Spell _spell;
-
-        public SpellAffectedIntimidationForceStrategy(Spell spell)
-        {
-            _spell = spell;
-        }
-
         public int GetIntimidationForce()
         {
-            int spellIntimidationForces = (int)_spell;
+            int spellIntimidationForces = (int)spell;
             return spellIntimidationForces;
         }
     }

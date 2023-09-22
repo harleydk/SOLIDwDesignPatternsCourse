@@ -8,23 +8,15 @@ namespace OpenClosed_GoodDesign.HitPointModifiers
     /// implements this decorator-class, they send an interface implementations along - which allows us to chain, or decorate, similar implementations and 
     /// inject new functionality into existing <see cref="HitPointModifierDecorator"/> sub-classes.
     /// </summary>
-    public abstract class HitPointModifierDecorator : HitPointModifierBase
+    public abstract class HitPointModifierDecorator(int modifierValue, int abilityBonus, IHitPointModifier hitPointModifier) : HitPointModifierBase(modifierValue, abilityBonus)
     {
-        private readonly IHitPointModifier _hitPointModifier;
-
-        protected HitPointModifierDecorator(int modifierValue, int abilityBonus, IHitPointModifier hitPointModifier) : 
-            base(modifierValue, abilityBonus)
-        {
-            _hitPointModifier = hitPointModifier;
-        }
-
         /// <summary>
-        /// Implements the <see cref="HitPointModifierBase.CalculateModifierValue(int)"/> method with an option to override.
+        /// Implements the <see cref="HitPointModifierBase.CalculateModifier(int)"/> method with an option to override.
         /// </summary>
-        public override int CalculateModifierValue(int hitPointValue)
+        public override int CalculateModifier(int hitPointValue)
         {
-            int decoratorHitPointModifier = _hitPointModifier.CalculateModifierValue(hitPointValue);
-            int baseHitPointModifier = base.CalculateModifierValue(hitPointValue);
+            int decoratorHitPointModifier = hitPointModifier.CalculateModifier(hitPointValue);
+            int baseHitPointModifier = base.CalculateModifier(hitPointValue);
 
             return baseHitPointModifier + decoratorHitPointModifier;
         }

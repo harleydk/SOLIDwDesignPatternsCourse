@@ -4,15 +4,11 @@ namespace OpenClosed_GoodDesign.HitPointModifiers
 {
     /// <summary>
     /// A <see cref="NullObjectHitPointModifier"/> is an implementation of an <seealso cref="IHitPointModifier"/> that returns 0 (zero) for
-    /// its <seealso cref="CalculateModifierValue(int)"/> method.
+    /// its <seealso cref="CalculateModifier(int)"/> method.
     /// </summary>
     public sealed class NullObjectHitPointModifier : IHitPointModifier
     {
-        public NullObjectHitPointModifier()
-        {
-        }
-
-        public int CalculateModifierValue(int hitPointValue)
+        public int CalculateModifier(int hitPointValue)
         {
             Debug.WriteLine($"{typeof(NullObjectHitPointModifier).Name} returns 0");
             return 0;

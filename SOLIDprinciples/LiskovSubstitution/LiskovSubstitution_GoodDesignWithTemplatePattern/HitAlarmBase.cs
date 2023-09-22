@@ -6,17 +6,9 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
     /// In this <see cref="HitAlarmBase"/> abstract class we encompass the range of functionality of all the 
     /// implementations of the <seealso cref="IArmorHitAlarm"/> interface. 
     /// </summary>
-    public abstract class HitAlarmBase : IArmorHitAlarm
+    public abstract class HitAlarmBase(int numberOfAlarmRepetitions, int alarmThreshold) : IArmorHitAlarm
     {
-        private readonly int _numberOfAlarmRepetitions = 3;
-        private readonly int _armorAlarmThreshold;
         private int _numberOfAlarmsRaised = 0;
-
-        public HitAlarmBase(int numberOfAlarmRepetitions, int alarmThreshold)
-        {
-            _numberOfAlarmRepetitions = numberOfAlarmRepetitions;
-            _armorAlarmThreshold = alarmThreshold;
-        }
 
         public bool HasArmorDroppedBelowThreshold(int currentArmorDefensePoints)
         {
@@ -27,7 +19,7 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
             }
             else
             {
-                bool hasArmorDefenseDroppedBelowMinimum = currentArmorDefensePoints < _armorAlarmThreshold;
+                bool hasArmorDefenseDroppedBelowMinimum = currentArmorDefensePoints < alarmThreshold;
                 return hasArmorDefenseDroppedBelowMinimum;
             }
         }
@@ -45,7 +37,7 @@ namespace LiskovSubstitution_GoodDesignWithTemplatePattern
         public AlarmRaiseStatus RaiseAlarm()
         {
             // Liskov violation - difference in the meaningfulness of the function's implementation. The other interface-implementations don't deal with repetitions.
-            for (int i = 0; i < _numberOfAlarmRepetitions; i++)
+            for (int i = 0; i < numberOfAlarmRepetitions; i++)
             {
                 _numberOfAlarmsRaised += 1;
                 Debug.WriteLine($"Alarm raised {_numberOfAlarmsRaised} times.");

@@ -6,7 +6,7 @@
     <Product>DesignPatterns.Tests</Product>
     <Copyright>None</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion><LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\DesignPatterns\BehaviourPatterns\StrategyPattern\StrategyPattern_example\StrategyPattern_challengeSolved\StrategyPattern_challengeSolved.csproj" />

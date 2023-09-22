@@ -1,6 +1,6 @@
 ﻿namespace DecoratorPattern
 {
-    public sealed class SpecialOfferMember : IMember
+    public sealed class SpecialOfferMember(int extraPoints) : IMember
     {
         private readonly int _extraPoints;
         private int _points;
@@ -19,11 +19,6 @@
         }
 
         public string Name { get => _name; set => _name = value; }
-
-        public SpecialOfferMember(int extraPoints)
-        {
-            _extraPoints = extraPoints;
-        }
 
         public string GetMemberStatus()
         {

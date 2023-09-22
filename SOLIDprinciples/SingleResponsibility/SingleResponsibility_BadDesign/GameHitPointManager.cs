@@ -6,19 +6,8 @@ namespace SingleResponsibility_BadDesign
     /// <summary>
     /// The <see cref="GameHitPointManager"/> manages the calculation of a player's hit points.
     /// </summary>
-    public sealed class GameHitPointManager
+    public sealed class GameHitPointManager(Player player, SaveGameService saveGameService, LeaderboardService leaderboardService)
     {
-        private readonly Player _player;
-        private readonly SaveGameService _saveGameService;
-        private readonly LeaderboardService _leaderboardService;
-
-        public GameHitPointManager(Player player, SaveGameService saveGameService, LeaderboardService leaderboardService)
-        {
-            _player = player;
-            _saveGameService = saveGameService;
-            _leaderboardService = leaderboardService;
-        }
-
         /// <summary>
         /// This method really has too much responsibility on its hands. For a number of reasons we might need to change it:
         /// - to add further hit-types,
@@ -27,7 +16,7 @@ namespace SingleResponsibility_BadDesign
         /// </summary>
         public async Task<GameHitPointManagerOperationStatus> UpdateHitPoints(HitType hitType)
         {
-            _player.HitPoints += hitType switch
+            player.HitPoints += hitType switch
             {
                 HitType.NoHit => 0,
                 HitType.Hit => 1,
@@ -35,10 +24,10 @@ namespace SingleResponsibility_BadDesign
                 _ => 0 // for all other types of hit, add 0.
             };
 
-            await _leaderboardService.UpdateScore(_player);
-            if (_leaderboardService.IsHighScore(_player))
+            await leaderboardService.UpdateScore(player);
+            if (leaderboardService.IsHighScore(player))
             {
-                await _saveGameService.Save();
+                await saveGameService.Save();
             }
 
             return await Task.FromResult(GameHitPointManagerOperationStatus.PresumedSucceeded);

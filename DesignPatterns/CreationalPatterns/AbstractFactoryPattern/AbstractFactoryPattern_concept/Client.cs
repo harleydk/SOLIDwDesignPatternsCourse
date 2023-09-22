@@ -3,17 +3,10 @@
     /// <summary>
     /// The 'Client' class. Interaction environment for the products.
     /// </summary>
-    internal class Client
+    internal class Client(AbstractFactory factory)
     {
-        private readonly AbstractProductA _abstractProductA;
-        private readonly AbstractProductB _abstractProductB;
-
-        // Constructor
-        public Client(AbstractFactory factory)
-        {
-            _abstractProductB = factory.CreateProductB();
-            _abstractProductA = factory.CreateProductA();
-        }
+        private readonly AbstractProductA _abstractProductA = factory.CreateProductA();
+        private readonly AbstractProductB _abstractProductB = factory.CreateProductB();
 
         public void Run()
         {

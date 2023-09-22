@@ -2,15 +2,8 @@
 
 namespace OpenClosed_GoodDesign
 {
-    public sealed class MagicSword
+    public sealed class MagicSword(HitPointModifierBase[] hitPointModifiers)
     {
-        private readonly HitPointModifierBase[] _hitPointModifiers;
-
-        public MagicSword(HitPointModifierBase[] hitPointModifiers)
-        {
-            _hitPointModifiers = hitPointModifiers;
-        }
-
         /// <summary>
         /// Gets the modifier values across all <see cref="HitPointModifierBase"/>s.
         /// </summary>
@@ -22,13 +15,13 @@ namespace OpenClosed_GoodDesign
         public int GetTotalModifierValue(int hitPointValue)
         {
             int totalModifyValue = 0;
-            foreach (HitPointModifierBase hitPointModifier in _hitPointModifiers)
+            foreach (HitPointModifierBase hitPointModifier in hitPointModifiers)
             {
                 if (hitPointModifier is ProficiencyHitPointModifier)
                 {
                     int calculateModifierValue(int hitPointValue)
                     {
-                        int modifierValue = hitPointModifier.CalculateModifierValue(hitPointValue);
+                        int modifierValue = hitPointModifier.CalculateModifier(hitPointValue);
                         int proficiencyLevel = ((ProficiencyHitPointModifier)hitPointModifier).EvaluateProficiencyLevel();
                         int calculatedModifierValue = proficiencyLevel + modifierValue;
                         return calculatedModifierValue;
@@ -40,7 +33,7 @@ namespace OpenClosed_GoodDesign
                 {
                     int calculateModifierValue(int hitPointValue)
                     {
-                        int modifierValue = hitPointModifier.CalculateModifierValue(hitPointValue);
+                        int modifierValue = hitPointModifier.CalculateModifier(hitPointValue);
                         int intimidationForce = ((IntimidationHitPointModifier)hitPointModifier).GetIntimidationForce();
                         int calculatedModifierValue = intimidationForce + modifierValue;
                         return calculatedModifierValue;

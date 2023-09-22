@@ -11,7 +11,7 @@
     <Product>TemplatePattern_challenge</Product>
     <Copyright>None</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <FileVersion>1.0.0.0</FileVersion><LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
     <Compile Update="FreeMemberNotification.cs">

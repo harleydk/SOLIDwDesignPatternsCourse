@@ -2,6 +2,6 @@
 {
     public interface IHitPointModifier
     {
-        int CalculateModifierValue(int hitPointValue);
+        int CalculateModifier(int hitPointValue);
     }
 }

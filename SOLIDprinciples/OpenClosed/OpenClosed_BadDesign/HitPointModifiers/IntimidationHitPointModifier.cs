@@ -1,13 +1,8 @@
 ﻿namespace OpenClosed_GoodDesign.HitPointModifiers
 {
-    public sealed class IntimidationHitPointModifier : HitPointModifierBase
+    public sealed class IntimidationHitPointModifier(int modifierValue, int abilityBonus) : HitPointModifierBase(modifierValue, abilityBonus)
     {
         private const int INTIMIDATION_FORCE = 3;
-
-        public IntimidationHitPointModifier(int modifierValue, int abilityBonus):
-               base(modifierValue, abilityBonus)
-        {
-        }
 
         public int GetIntimidationForce()
         {

@@ -1,13 +1,12 @@
 ﻿namespace DecoratorPattern
 {
     /// <summary>
-    /// TODO: delete this class, since after implementing anniversary- and special-offer functionality, we can rely on the decorater pattern instead of class explosion.
+    /// TODO: delete this class, since after implementing anniversary- and special-offer functionality, we can rely on the decorator pattern instead of class explosion.
     /// </summary>
-    public sealed class SpecialOfferAnniversaryMember : IMember
+    public sealed class SpecialOfferAnniversaryMember(int extraPoints) : IMember
     {
         private const int ANNIVERSARY_MEMBER_POINTS = 1000;
 
-        private readonly int _extraPoints;
         private int _points;
         private string _name;
 
@@ -30,7 +29,7 @@
         {
             get
             {
-                return _points + _extraPoints + ANNIVERSARY_MEMBER_POINTS;
+                return _points + extraPoints + ANNIVERSARY_MEMBER_POINTS;
             }
             set
             {
@@ -38,11 +37,7 @@
             }
         }
 
-        public SpecialOfferAnniversaryMember(int extraPoints)
-        {
-            _extraPoints = extraPoints;
-        }
-
+       
         private bool hasAnniversary(string name)
         {
             bool hasAnniversary = name == "Clint Eastwood" ? true : false;
